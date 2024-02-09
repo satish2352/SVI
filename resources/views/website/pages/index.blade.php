@@ -8,7 +8,7 @@
       <!-- ------------------------------------------------------------------------------------>
       <section class="HomeAboutSection pb-4">
         <div class="container">
-          <h4 class="text-center HomeAbout heading">About Us</h4>
+          <h1 class="text-center HomeAbout heading">About Us</h1>
           <div class="row justify-content-center">
             <div class="col-lg-5 HomeAboutRow aboutVideoMain">
               <div class="">
@@ -20,7 +20,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-7 d-flex align-items-center bg-white">
+            <div class="col-lg-7 d-flex align-items-center bg-white shadow-lg">
               <p class="pText ms-md-5 pt-md-4 py-md-1 pe-md-3">
                 SVI Carbon Private Limited (SVICPL) is an ISO 9001:2015 certified
                 company, engaged in designing (both process and mechanical) and
@@ -35,7 +35,7 @@
               </p>
             </div>
             <div class="HomeAboutButton1 text-md-end mt-md-3 ">
-                <a href="{{ asset('website/assets/images/home/about.html')}}" type="button" class="text-decoration-none HomeAboutButton text-white">View More </a>
+                <a href="{{ route('aboutus') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View More </a>
             </div>
           </div>
         </div>
@@ -62,13 +62,12 @@
             </div>
             <div class="col-lg-7 d-flex align-items-center">
               <div class="productCard">
-                <h4
-                  class="heading text-md-start text-sm-center"
-                  style="color: #1e4f9c; font-weight: bold"
+                <h1
+                  class="heading text-md-start text-sm-center productH1"
                 >
                   Product
-                </h4>
-                <div class="card p-3 w-100 cardContent shadow-lg">
+                </h1>
+                <div class="card px-5 py-4 w-100 cardContent shadow-lg">
                   <h5 class="cardContent_text">
                     Graphite Heat & Mass Transfer Equipment
                   </h5>
@@ -79,11 +78,12 @@
                     absorbers have concentration about 33%. Falling film absorbers
                     can be designed to obtain higher product concentrations. SVI
                     carbon make falling film absorbers are designed for duty
-                    conditions prevailing in plant. Therefore Falling film
-                    absorbers of SVICPL make can have turned down ratio as high as
-                    5.
+                    conditions prevailing in plant.
                   </p>
                 </div>
+                <div class="HomeAboutButton1 text-md-end mt-md-3 ">
+                  <a href="{{ asset('website/assets/images/home/about.html')}}" type="button" class="text-decoration-none HomeAboutButton text-white">View all </a>
+              </div>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
       <!-- ------------------------------------------------------------------------------------>
       <section class="my-md-5 my-3">
         <div class="container">
-          <h4 class="heading">SVICPL’s Core Competencies</h4>
+          <h2 class="heading svpilHeading">SVICPL’s Core Competencies</h2>
           <div class="row justify-content-center">
             <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
@@ -133,7 +133,7 @@
                 />
                 <div class="card-body cardBodyCoreComp text-center">
                   <h6 class="card-title">
-                    Manufacturing Excellence In High Volumes (Three Units)
+                    Manufacturing Excellence In High Volumes
                   </h6>
                 </div>
               </div>
