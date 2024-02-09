@@ -1,0 +1,15 @@
+.mediaCard {
+    border-radius: 5%;
+}
+.mediaVideo {
+    height: 450px !important;
+    width: 100%;
+}
+@media only screen and (max-width: 576px) {
+    .mediaVideo {
+        height: 210px !important;
+    }
+    .mediaCard {
+        border-radius: 0%;
+    }
+}

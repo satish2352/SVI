@@ -1,0 +1,85 @@
+.aboutVideoMain {
+    height: 240px;
+    width: 300px;
+    transform: translate(0px, 0px);
+    background: linear-gradient(
+        180deg,
+        #332ba2 0%,
+        rgba(160, 238, 255, 0.99) 100%
+    );
+}
+.videoSize {
+    height: 260px;
+    width: 390px;
+    object-fit: cover;
+}
+.HomeAboutRow {
+    height: 315px;
+}
+.aboutVideo {
+    transform: translate(30px, 40px);
+}
+.HomeAbout {
+    color: #224677;
+}
+.HomeAboutSection {
+    background: #f4f4f4;
+}
+.HomeAboutCol1 {
+    background: linear-gradient(
+        90deg,
+        #f4f4f4 0%,
+        rgba(255, 255, 255, 0.99) 100%
+    );
+}
+.pText {
+    text-align: justify;
+    font-size: 0.8rem;
+}
+.HomeAboutButton{
+    background: #332ba2;
+}
+.cardBodyCoreComp {
+    height: 5rem;
+}
+.coreCompCards:hover {
+    background: #332ba2;
+    color: white;
+    transform: scale(1.03);
+}
+.productCard .cardContent {
+    text-align: justify;
+    font-size: 0.5rem;
+    transform: translate(-75px);
+    border: 0;
+}
+.productCard .cardContent .cardContent_text {
+    color: #1c2b38;
+}
+.productImg img {
+    width: 65%;
+}
+/* media query */
+
+@media only screen and (max-width: 576px) {
+    .aboutVideoMain {
+        height: 200px;
+        width: 300px;
+        transform: translate(0px, 0px) !important;
+        background: linear-gradient(
+            180deg,
+            #332ba2 0%,
+            rgba(160, 238, 255, 0.99) 100%
+        );
+    }
+    .videoSize {
+        height: 250px;
+        width: 300px;
+    }
+    .HomeAboutRow {
+        height: 300px !important;
+    }
+    .productCard .cardContent {
+        transform: translate(0px);
+    }
+}

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: #f4f4f4;
+}
+/* ------------------------------------------------------------ */
+/* Common CSS */
+/* ------------------------------------------------------------ */
+
+.heading {
+    font-family: Montserrat;
+    text-align: center;
+    color: #224677;
+    font-weight: 800;
+}
+
+/* ------------------------------------------------------------ */
+/* Header */
+/* ------------------------------------------------------------ */
+.headerBtn {
+    background: #5349cc;
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+}
+.nav-item a {
+    color: black;
+    font-weight: 500;
+}
+.nav-item a:hover {
+    color: #224677;
+    font-weight: 500;
+}
+.navbarView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarLogo {
+    width: 50%;
+    float: right;
+}
+.videoBanner {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+}
+.onVideoBanner {
+    position: absolute;
+    right: 0;
+    top: 35%;
+}
+.videoCard {
+    position: relative;
+    bottom: 50px;
+}
+.videoCard_card {
+    background: #5349cc;
+    color: white;
+    text-align: center;
+}
+/* ------------------------------------------------------------ */
+/* Banner */
+/* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ */
+/* Footer */
+/* ------------------------------------------------------------ */
+
+.footerLine {
+    background: #5349cc;
+    height: 8px;
+}
+.footerLineIcon {
+    float: right;
+}
+.sviFooter {
+    background: #383838;
+}
+.footerSocialIcons {
+    background: white;
+    padding: 11px;
+    border-radius: 20px;
+    height: 40px;
+}
+.footerSocialIcons:hover {
+    background: #5349cc;
+    color: white;
+}
+.footerBack {
+    background-image: url("../../../website/assets/images/footerBack.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 300px;
+    border-radius: 10%;
+}

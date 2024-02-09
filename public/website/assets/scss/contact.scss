@@ -1,0 +1,27 @@
+.contactSection {
+  transform: translate(0px, 0px);
+  height: 610px;
+  background: linear-gradient(
+    90deg,
+    #23569e 30%,
+    #edfeff 30%,
+    #edfeff 70%,
+    #23569e 70%
+  );
+}
+.formSubmit {
+  background: #23569e;
+  color: white;
+}
+.unitCard {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 5px solid #23569e;
+}
+.unitCard h5 {
+  color: #23569e;
+}
+.cardContactUnit {
+  height: 10rem;
+}

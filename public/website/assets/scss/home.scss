@@ -1,0 +1,52 @@
+.aboutVideoMain {
+  height: 200px;
+  width: 300px;
+  transform: translate(30px, 30px);
+  background: linear-gradient(
+    180deg,
+    #332ba2 0%,
+    rgba(160, 238, 255, 0.99) 100%
+  );
+}
+.aboutVideo {
+  transform: translate(30px, 5px);
+}
+.HomeAbout {
+  color: #224677;
+}
+.HomeAboutSection {
+  background: #f4f4f4;
+}
+.pText {
+  text-align: justify;
+  font-size: 0.8rem;
+}
+.HomeAboutBtn{
+  background: #332ba2;
+  float: right;
+  width: auto;
+  color: white;
+  text-align: end;
+}
+.cardBodyCoreComp {
+  height: 5rem;
+}
+.coreCompCards:hover {
+  background: #332ba2;
+  color: white;
+  transform: scale(1.03);
+}
+.productCard .cardContent {
+  text-align: justify;
+  font-size: 0.5rem;
+  transform: translate(-75px);
+  border: 0;
+}
+.productCard .cardContent .cardContent_text {
+  color: #1c2b38;
+}
+.productImg img {
+  width: 65%;
+}
+
+

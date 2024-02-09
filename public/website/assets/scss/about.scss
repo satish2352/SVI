@@ -1,0 +1,52 @@
+.aboutVideoMain {
+  height: 240px;
+  width: 380px;
+  transform: translate(0px, 0px);
+  background: linear-gradient(
+    180deg,
+    #332ba2 0%,
+    rgba(160, 238, 255, 0.99) 100%
+  );
+}
+.aboutVideo {
+  transform: translate(30px, 40px);
+}
+.HomeAbout {
+  color: #224677;
+}
+.HomeAboutSection {
+  background: #f4f4f4;
+}
+.pText {
+  text-align: justify;
+  font-size: 0.75rem;
+}
+.HomeAboutBtn {
+  background: #332ba2;
+  float: right;
+  width: auto;
+  color: white;
+  text-align: end;
+}
+.certificate {
+  width: 65%;
+}
+.certificateSection {
+  transform: translate(0px, 0px);
+  height: 610px;
+  background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
+}
+
+@media only screen and (max-width: 576px) {
+  .certificateSection {
+    transform: translate(0px, 0px);
+    height: max-content;
+    background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
+  }
+  .certificate {
+    width: 100%;
+  }
+}
+
+
+

@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Constants;
+
+return [
+    //Home
+    'VISION_MISSION_IMAGE_MAX_SIZE'=>'1048',
+    'VISION_MISSION_IMAGE_MIN_SIZE'=>'150',
+
+    'PRODUCT_IMAGE_MAX_SIZE'=>'1048',
+    'PRODUCT_IMAGE_MIN_SIZE'=>'50',
+
+    'PRODUCT_SERVICES_IMAGE_MAX_SIZE'=>'1048',
+    'PRODUCT_SERVICES_IMAGE_MIN_SIZE'=>'50',
+
+    'MEDIA_IMAGE_MAX_SIZE'=>'1048',
+    'MEDIA_IMAGE_MIN_SIZE'=>'50',
+   
+];
