@@ -22,8 +22,6 @@ class ContactUsController extends Controller
             return $e;
         }
     }
-
-    
     public function addContactUs(Request $request) {
         $rules = [
             'full_name' => 'required',

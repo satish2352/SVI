@@ -14,6 +14,10 @@
               <div class="card border-0 shadow p-3">
                 <div class="row">
                   <h4 class="text-center heading">CONTACT US</h4>
+
+                  <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
+                  enctype="multipart/form-data">
+              @csrf
                   <div class="col-lg-6 col-md-6 col-12">
                     <div class="mb-3">
                       <label for="formGroupExampleInput" class="form-label"
@@ -21,9 +25,11 @@
                       >
                       <input
                         type="text"
+                        name="full_name"
                         class="form-control"
                         id="formGroupExampleInput"
                         placeholder="Enter your name here"
+                        value="{{ old('full_name') }}"
                       />
                     </div>
                   </div>
@@ -34,9 +40,11 @@
                       >
                       <input
                         type="email"
+                        name="email"
                         class="form-control"
                         id="formGroupExampleInput"
                         placeholder="Enter your email here"
+                        value="{{ old('email') }}"
                       />
                     </div>
                   </div>
@@ -47,9 +55,11 @@
                       >
                       <input
                         type="number"
+                        name="mobile_number"
                         class="form-control"
                         id="formGroupExampleInput"
                         placeholder="Enter your phone here"
+                        value="{{ old('mobile_number') }}"
                       />
                     </div>
                   </div>
@@ -60,9 +70,11 @@
                       >
                       <input
                         type="text"
+                        name="subject"
                         class="form-control"
                         id="formGroupExampleInput"
                         placeholder="Enter your subject here"
+                        value="{{ old('subject') }}"
                       />
                     </div>
                   </div>
@@ -71,15 +83,22 @@
                       <label for="formGroupExampleInput">Comments</label>
                       <textarea
                         class="form-control"
+                        name="message"
                         aria-label="With textarea"
                         id="formGroupExampleInput"
                         placeholder="Leave a comment here"
-                      ></textarea>
+                      >{{ old('message') }}</textarea>
                     </div>
                   </div>
                   <div class="text-center">
-                    <button type="button" class="btn formSubmit">Submit</button>
+                    <button type="submit" id="submitButton" class="btn formSubmit">Submit</button>
                   </div>
+                </form>
+                @if(Session::has('success_message'))
+                <script>
+                    alert("{{ Session::get('success_message') }}");
+                </script>
+            @endif
                 </div>
               </div>
             </div>
@@ -229,82 +248,81 @@
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
-
 <script>
-    $(document).ready(function() {
+  $(document).ready(function() {
 
-        $("#regForm").validate({
-            errorClass: "error",
-            rules: {
-                full_name: {
-                    required: true,
-                    spcenotallow: true,
-                },
-                email: {
-                    required: true,
-                    email: true,
-                },
-                mobile_number: {
-                    required: true,
-                    spcenotallow: true,
-                },
-                subject: {
-                    required: true,
-                },
-                message: {
-                    required: true,
-                    spcenotallow: true,
-                },
-            },
-            messages: {
-                full_name: {
-                    required: "Enter Full Name",
-                    spcenotallow: "Enter Some Text",
-                },
-                email: {
-                    required: "Enter Email Id",
-                    spcenotallow: "Enter Some Text",
-                },
-                mobile_number: {
-                    required: "Enter Mobile Number",
-                    pattern: "Invalid Mobile Number",
-                    remote: "This mobile number already exists.",
-                    spcenotallow: "Enter Some Text",
-                },
-                subject: {
-                    required: "Enter Subject",
-                },
-                message: {
-                    required: "Enter Message",
-                },
-            },
-            highlight: function(element, errorClass) {
-                $(element).removeClass(errorClass);
-            },
-            submitHandler: function(form) {
-                // Check if reCAPTCHA challenge is completed
-                if (grecaptcha.getResponse() === "") {
-                    alert("Please complete the reCAPTCHA challenge.");
-                } else {
-                    // Proceed with form submission
-                    form.submit();
-                }
-            }
-        });
+      $("#regForm").validate({
+          errorClass: "error",
+          rules: {
+              full_name: {
+                  required: true,
+                  spcenotallow: true,
+              },
+              email: {
+                  required: true,
+                  email: true,
+              },
+              mobile_number: {
+                  required: true,
+                  spcenotallow: true,
+              },
+              subject: {
+                  required: true,
+              },
+              message: {
+                  required: true,
+                  spcenotallow: true,
+              },
+          },
+          messages: {
+              full_name: {
+                  required: "Enter Full Name",
+                  spcenotallow: "Enter Some Text",
+              },
+              email: {
+                  required: "Enter Email Id",
+                  spcenotallow: "Enter Some Text",
+              },
+              mobile_number: {
+                  required: "Enter Mobile Number",
+                  pattern: "Invalid Mobile Number",
+                  remote: "This mobile number already exists.",
+                  spcenotallow: "Enter Some Text",
+              },
+              subject: {
+                  required: "Enter Subject",
+              },
+              message: {
+                  required: "Enter Message",
+              },
+          },
+          highlight: function(element, errorClass) {
+              $(element).removeClass(errorClass);
+          },
+          submitHandler: function(form) {
+              // Check if reCAPTCHA challenge is completed
+              if (grecaptcha.getResponse() === "") {
+                  alert("Please complete the reCAPTCHA challenge.");
+              } else {
+                  // Proceed with form submission
+                  form.submit();
+              }
+          }
+      });
 
-        $("input#document_file").hide();
+      $("input#document_file").hide();
 
-    });
+  });
 
-    $.extend($.validator.methods, {
-        spcenotallow: function(b, c, d) {
-            if (!this.depend(d, c)) return "dependency-mismatch";
-            if ("select" === c.nodeName.toLowerCase()) {
-                var e = a(c).val();
-                return e && e.length > 0
-            }
-            return this.checkable(c) ? this.getLength(b, c) > 0 : b.trim().length > 0
-        }
-    });
+  $.extend($.validator.methods, {
+      spcenotallow: function(b, c, d) {
+          if (!this.depend(d, c)) return "dependency-mismatch";
+          if ("select" === c.nodeName.toLowerCase()) {
+              var e = a(c).val();
+              return e && e.length > 0
+          }
+          return this.checkable(c) ? this.getLength(b, c) > 0 : b.trim().length > 0
+      }
+  });
 </script>
 @endsection
