@@ -13,7 +13,7 @@
             <div class="col-lg-5 HomeAboutRow aboutVideoMain">
               <div class="">
                 <div class="aboutVideo">
-                  <video class="videoSize" autoplay loop muted playsinline class="videoBanner">
+                  <video class="videoSize shadow-lg" autoplay loop muted playsinline class="videoBanner">
                     <source src="{{ asset('website/assets/images/home/aboutVideo.mp4') }}" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>

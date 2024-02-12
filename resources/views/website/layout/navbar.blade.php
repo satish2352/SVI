@@ -3,15 +3,15 @@
 <!-- ------------------------------------------------------------------------------------>
 <nav class="navbar navbar-expand-lg bg-white">
   <div class="container-fluid">
-    <a class="navbar-brand d-block d-md-none d-lg-none" href="#"><img class="navbarLogo"
-              src="{{ asset('website/assets/images/logo.png')}}" class="logo" alt="logo" /> SVI</a>
+    <a class="navbar-brand navBarBrand d-md-none d-lg-none" href="#"><img class="navbarLogo"
+              src="{{ asset('website/assets/images/home/mobLogo.png')}}" class="logo" alt="logo" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-md-auto navbarView">
-        <li class="nav-item d-none">
+        <li class="nav-item d-none d-md-block">
           <a class="navbar-brand" href="{{url('/')}}"> <img class="navbarLogo"
               src="{{ asset('website/assets/images/logo.png')}}" class="logo" alt="logo" /></a>
         </li>
@@ -28,7 +28,7 @@
           <a class="nav-link px-md-3" href="{{ route('media') }}">Media</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link headerBtn text-white mx-md-4" href="{{ route('contactus') }}">Contact</a>
+          <a class="nav-link headerBtn text-white mx-md-4 mx-1" href="{{ route('contactus') }}">Contact</a>
         </li>
       </ul>
     </div>
@@ -61,21 +61,18 @@
   <div class="card videoCard_card border-0 pt-3 pb-1">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>
-          ISO 9000 CERTIFIED <br />
-          COMPANY
+        <h6 class="px-md-5 bannerCardHeading">
+          ISO 9000 CERTIFIED COMPANY
         </h6>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>
-          PROFESSIONAL AND <br />
-          TIMELY SERVICE
+        <h6 class="px-md-5 bannerCardHeading">
+          PROFESSIONAL AND TIMELY SERVICE
         </h6>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>
-          WE MAKE DURABLE <br />
-          GRAPHITE PRODUCTS
+        <h6 class="px-md-5 bannerCardHeading">
+          WE MAKE DURABLE GRAPHITE PRODUCTS
         </h6>
       </div>
     </div>
