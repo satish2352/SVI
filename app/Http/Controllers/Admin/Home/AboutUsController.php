@@ -27,13 +27,14 @@ class AboutUsController extends Controller
         }
         public function store(Request $request){
             $rules = [
-                'video_link' => 'required',
                 'description' => 'required',
+                'video_link' => 'required',
                
             ];
             $messages = [    
-                'video_link.required'=>'Please enter video link.',
-                'description.required' => 'Please  enter description.',
+                'description.required' => 'The image is required.',
+                'video_link.required' => 'Upload Video.',
+               
             ];
     
             try {
@@ -61,6 +62,7 @@ class AboutUsController extends Controller
                 return redirect('add-aboutus')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);
             }
         }
+      
         public function show(Request $request){
             try {
                 $showData = $this->service->getById($request->show_id);
@@ -75,31 +77,34 @@ class AboutUsController extends Controller
            
             return view('admin.pages.home.aboutus.edit-aboutus', compact('editData'));
         }
-        public function update(Request $request)
-        {
-            $id = $request->input('id'); // Assuming the 'id' value is present in the request
+
+        public function update(Request $request){
             $rules = [
-                'video_link' => 'required',
-                'description' => 'required',            ];
-        
-            $messages = [
-                'video_link.required'=>'Please enter video link.',
-                'description.required' => 'Please  enter description.',
+                'description' => 'required',
+                // 'video_link' => 'required',
+                
             ];
-        
+    
+            if($request->has('video_link')) {
+                $rules['video_link'] = 'required';
+            }
+            $messages = [   
+                'description.required'=>'Please enter description.',
+                'video_link.required' => 'Please  upload video upload.',
+                             
+            ];
+    
             try {
-                $validation = Validator::make($request->all(), $rules, $messages);
+                $validation = Validator::make($request->all(),$rules, $messages);
                 if ($validation->fails()) {
                     return redirect()->back()
                         ->withInput()
                         ->withErrors($validation);
                 } else {
-                    $update_incidenttype_data = $this->service->updateAll($request);
-                    // dd($update_incidenttype_data);
-                    if ($update_incidenttype_data) {
-                        $msg = $update_incidenttype_data['msg'];
-                        $status = $update_incidenttype_data['status'];
-        
+                    $update_data = $this->service->updateAll($request);
+                    if ($update_data) {
+                        $msg = $update_data['msg'];
+                        $status = $update_data['status'];
                         if ($status == 'success') {
                             return redirect('list-aboutus')->with(compact('msg', 'status'));
                         } else {
@@ -115,6 +120,7 @@ class AboutUsController extends Controller
                     ->with(['msg' => $e->getMessage(), 'status' => 'error']);
             }
         }
+       
         public function updateOne(Request $request){
             try {
                 $active_id = $request->active_id;

@@ -34,11 +34,14 @@
                                     </div>
                                     <div class="row ">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <label>video link :</label>
+                                            <label>video :</label>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <label>{{ strip_tags($showData->video_link) }}</label>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <video width="200" height="160" controls>
+                                                <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $showData->video_upload }}" type="video/mp4">
+                                            </video>
                                         </div>
+                                    
                                     </div>
                                     
                                 </div>

@@ -10,5 +10,5 @@ class AnimatedVideo extends Model
     use HasFactory;
     protected $table = 'animated_video';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'video_link'];
+    protected $fillable = ['name', 'video_upload'];
 }

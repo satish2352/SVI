@@ -6,25 +6,37 @@
      <div class="container-fluid">
        <h4 class="product-name">Product</h4>
        <div class="row">
-           <div class="col-lg-4 col-md-4 col-sm-4">
+
+
+           {{-- <div class="col-lg-4 col-md-4 col-sm-4">
              <div class="card">
              <img src="{{ asset('website/assets/images/product/1.png')}}" alt="Home_Banner" class="img-fluid" />
                <div class="card-body shadow-sm card-title" >Largest Heat Exchanger </div>
              </div>
-           </div>
- 
-           <div class="col-lg-4 col-md-4 col-sm-4">
+           </div> --}}           
+            @if (empty($data_output))
+            <div class="container">
+                <div class="row">
+                    <h3 class="d-flex justify-content-center" style="color: #00000">No Data Found For Services</h3>
+                </div>
+            </div>
+        @else
+            @foreach ($data_output as $product)
+            <div class="col-lg-4 col-md-4 col-sm-4">
              <div class="card">
-             <img src="{{ asset('website/assets/images/product/2.png')}}" alt="Home_Banner" class="img-fluid" />
-             <div class="card-body shadow-sm card-title" >Packed Bed Scrubber</div>
+             <img src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}" alt="{{ strip_tags($product['title']) }}" class="img-fluid" />
+             <div class="card-body shadow-sm card-title" >{{ strip_tags($product['title']) }}</div>
            </div>
-           </div>
+          </div>
+           @endforeach
+           @endif
+           
  
-           <div class="col-lg-4 col-md-4 col-sm-4">
+           {{-- <div class="col-lg-4 col-md-4 col-sm-4">
              <div class="card">
              <img src="{{ asset('website/assets/images/product/3.png')}}" alt="Home_Banner" class="img-fluid" />
              <div class="card-body shadow-sm card-title" >Pickling Heat Exchanger</div>
-           </div>
+           </div> --}}
            </div>
        </div>
      </div>

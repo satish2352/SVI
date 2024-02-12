@@ -26,10 +26,12 @@
                                 <div class="col-12">
                                     <div class="row ">
                                         <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <label>video link :</label>
+                                            <label>video :</label>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <label>{{ strip_tags($showData->video_link) }}</label>
+                                            <video width="200" height="160" controls>
+                                                <source src="{{ Config::get('DocumentConstant.ABOUTUS_VIEW') }}{{ $showData->video_upload }}" type="video/mp4">
+                                            </video>
                                         </div>
                                     </div>
                                     <div class="row ">

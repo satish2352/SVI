@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('animated_video', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('video_link');
+            $table->string('video_upload');
             $table->string('is_deleted')->default(false);
             $table->boolean('is_active')->default(true);
             $table->timestamps();

@@ -27,10 +27,21 @@
           <div class="card border-0 py-3 px-3 mediaCard">
             <h4 class="heading text-start mx-md-4 mt-3">Media</h4>
             <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-3 col-sm-10">
-                <img src="{{ asset('website/assets/images/media/media1.png')}}" class="w-100" alt="media1" />
+              @if (empty($data_output))
+              <div class="container">
+                  <div class="row">
+                      <h3 class="d-flex justify-content-center" style="color: #00000">No Data Found For Media</h3>
+                  </div>
               </div>
+          @else
+              @foreach ($data_output as $media)
+
               <div class="col-lg-3 col-md-3 col-sm-10">
+                <img src="{{ Config::get('DocumentConstant.MEDIA_VIEW') }}{{ $media['image'] }}" class="w-100" alt="media1" />
+              </div>
+              @endforeach
+              @endif
+              {{-- <div class="col-lg-3 col-md-3 col-sm-10">
                 <img src="{{ asset('website/assets/images/media/media2.png')}}" class="w-100" alt="media2" />
               </div>
               <div class="col-lg-3 col-md-3 col-sm-10">
@@ -52,7 +63,7 @@
               </div>
               <div class="col-lg-3 col-md-3 col-sm-10">
                 <img src="{{ asset('website/assets/images/media/media8.png')}}" class="w-100" alt="media8" />
-              </div>
+              </div> --}}
             </div>
           </div>
         </div>

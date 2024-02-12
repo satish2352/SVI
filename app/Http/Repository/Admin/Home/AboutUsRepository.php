@@ -22,12 +22,23 @@ class AboutUsRepository  {
 
     public function addAll($request){
         try {
+            $data =array();
             $dataOutput = new AboutUs();
-            $dataOutput->video_link  = $request['video_link'];
             $dataOutput->description  = $request['description'];
-            $dataOutput->save();       
-              
-            return $dataOutput;
+         
+        
+            $dataOutput->save(); 
+            $last_insert_id = $dataOutput->id;
+
+            $ImageName = $last_insert_id .'_' . rand(100000, 999999) . '_video.' . $request->video_link->extension();
+            
+            $finalOutput = AboutUs::find($last_insert_id); // Assuming $request directly contains the ID
+            $finalOutput->video_link = $ImageName; // Save the image filename to the database
+            $finalOutput->save();
+         
+            $data['ImageName'] =$ImageName;
+           
+            return $data;
 
         } catch (\Exception $e) {
             return [
@@ -36,7 +47,6 @@ class AboutUsRepository  {
             ];
         }
     }
-
    
     public function getById($id){
         try {
@@ -57,29 +67,33 @@ class AboutUsRepository  {
 
     public function updateAll($request){
         try {
+            $return_data = array();
             $dataOutput = AboutUs::find($request->id);
-            
+
             if (!$dataOutput) {
                 return [
-                    'msg' => ' Data not found.',
+                    'msg' => 'Update Data not found.',
                     'status' => 'error'
                 ];
             }
-        // Store the previous image names
-            $dataOutput->video_link = $request['video_link'];
-            $dataOutput->description  = $request['description'];
+            // Store the previous image names
+            $previousEnglishImage = $dataOutput->video_link;
 
-            $dataOutput->save();        
+            // Update the fields from the request
+            $dataOutput->description  = $request['description'];
+            
+            $dataOutput->save();
+            $last_insert_id = $dataOutput->id;
+
+            $return_data['last_insert_id'] = $last_insert_id;
+            $return_data['video_link'] = $previousEnglishImage;
+            return  $return_data;
         
-            return [
-                'msg' => 'Data updated successfully.',
-                'status' => 'success'
-            ];
         } catch (\Exception $e) {
-            return $e;
             return [
-                'msg' => 'Failed to update Data.',
-                'status' => 'error'
+                'msg' => 'Failed to Update Data.',
+                'status' => 'error',
+                'error' => $e->getMessage() // Return the error message for debugging purposes
             ];
         }
     }
@@ -112,21 +126,21 @@ class AboutUsRepository  {
         }
     }
     public function deleteById($id){
-            try {
-                $deleteDataById = AboutUs::find($id);
-                if ($deleteDataById) {
-                    if (file_exists_view(Config::get('DocumentConstant.AboutUs_DELETE') . $deleteDataById->image)){
-                        removeImage(Config::get('DocumentConstant.AboutUs_DELETE') . $deleteDataById->image);
-                    }
-                    $deleteDataById->delete();
-                    
-                    return $deleteDataById;
-                } else {
-                    return null;
+        try {
+            $deleteDataById = AboutUs::find($id);
+            if ($deleteDataById) {
+                if (file_exists_view(Config::get('DocumentConstant.AboutUs_DELETE') . $deleteDataById->video_link)){
+                    removeImage(Config::get('DocumentConstant.AboutUs_DELETE') . $deleteDataById->video_link);
                 }
-            } catch (\Exception $e) {
-                return $e;
+                $deleteDataById->delete();
+                
+                return $deleteDataById;
+            } else {
+                return null;
             }
-    }
-
+        } catch (\Exception $e) {
+            return $e;
+        }
+}
+ 
 }

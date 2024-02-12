@@ -60,14 +60,24 @@
                                     </div> 
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
+                                            <label for="video_upload">Video</label>&nbsp;<span class="red-text">*</span><br>
+                                            <input type="file" name="video_upload" id="video_upload" accept="video/*" class="form-control mb-2">
+                                            @if ($errors->has('video_upload'))
+                                                <span class="red-text">{{ $errors->first('video_upload') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    
+                                    {{-- <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
                                             <label for="video_link">Video Link</label>&nbsp<span class="red-text">*</span>
                                             <input type="text" class="form-control mb-2" name="video_link" id="video_link"
                                                 value="{{ old('video_link') }}" placeholder="Enter the Name">
                                             @if ($errors->has('video_link'))
-                                                <span class="red-text"><?php echo $errors->first('video_link', ':message'); ?></span>
+                                                <span class="red-text"><?php //echo $errors->first('video_link', ':message'); ?></span>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-md-12 col-sm-12 text-center">
                                         <button type="submit" class="btn btn-sm btn-success" id="submitButton">
                                             Save &amp; Submit

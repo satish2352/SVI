@@ -22,13 +22,23 @@ class AnimatedVideoRepository  {
 
     public function addAll($request){
         try {
+            $data =array();
             $dataOutput = new AnimatedVideo();
             $dataOutput->name  = $request['name'];
-            $dataOutput->video_link  = $request['video_link'];
+         
+        
+            $dataOutput->save(); 
+            $last_insert_id = $dataOutput->id;
+
+            $ImageName = $last_insert_id .'_' . rand(100000, 999999) . '_video.' . $request->video_upload->extension();
+            
+            $finalOutput = AnimatedVideo::find($last_insert_id); // Assuming $request directly contains the ID
+            $finalOutput->video_upload = $ImageName; // Save the image filename to the database
+            $finalOutput->save();
+            
+            $data['ImageName'] =$ImageName;
            
-            $dataOutput->save();       
-              
-            return $dataOutput;
+            return $data;
 
         } catch (\Exception $e) {
             return [
@@ -58,29 +68,33 @@ class AnimatedVideoRepository  {
 
     public function updateAll($request){
         try {
+            $return_data = array();
             $dataOutput = AnimatedVideo::find($request->id);
-            
+
             if (!$dataOutput) {
                 return [
-                    'msg' => ' Data not found.',
+                    'msg' => 'Update Data not found.',
                     'status' => 'error'
                 ];
             }
-        // Store the previous image names
-        $dataOutput->name  = $request['name'];
-        $dataOutput->video_link  = $request['video_link'];
+            // Store the previous image names
+            $previousEnglishImage = $dataOutput->video_upload;
 
-            $dataOutput->save();        
+            // Update the fields from the request
+            $dataOutput->name = $request['name'];
+            
+            $dataOutput->save();
+            $last_insert_id = $dataOutput->id;
+
+            $return_data['last_insert_id'] = $last_insert_id;
+            $return_data['video_upload'] = $previousEnglishImage;
+            return  $return_data;
         
-            return [
-                'msg' => 'Data updated successfully.',
-                'status' => 'success'
-            ];
         } catch (\Exception $e) {
-            return $e;
             return [
-                'msg' => 'Failed to update Data.',
-                'status' => 'error'
+                'msg' => 'Failed to Update Data.',
+                'status' => 'error',
+                'error' => $e->getMessage() // Return the error message for debugging purposes
             ];
         }
     }
@@ -112,13 +126,23 @@ class AnimatedVideoRepository  {
             ];
         }
     }
+  
     public function deleteById($id){
-            try {
-                $deleteDataById = AnimatedVideo::find($id);
+        try {
+            $deleteDataById = AnimatedVideo::find($id);
+            if ($deleteDataById) {
+                if (file_exists_view(Config::get('DocumentConstant.ANIMATED_VIDEO_DELETE') . $deleteDataById->video_upload)){
+                    removeImage(Config::get('DocumentConstant.ANIMATED_VIDEO_DELETE') . $deleteDataById->video_upload);
+                }
+                $deleteDataById->delete();
+                
                 return $deleteDataById;
-            } catch (\Exception $e) {
-                return $e;
+            } else {
+                return null;
             }
-    }
+        } catch (\Exception $e) {
+            return $e;
+        }
+}
 
 }

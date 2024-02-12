@@ -31,7 +31,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Sr. No.</th>
-                                                    <th>Name</th>
+                                                    <th>Video</th>
                                                     <th>Description</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
@@ -41,7 +41,11 @@
                                                 @foreach ($getOutput as $item)
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
-                                                        <td>{{ strip_tags($item->video_link) }}</td>
+                                                        {{-- <td>{{ strip_tags($item->video_link) }}</td> --}}
+                                                        <td><video width="200" height="160" controls>
+                                                            <source src="{{ Config::get('DocumentConstant.ABOUTUS_VIEW') }}{{ $item->video_link }}" type="video/mp4">
+                                                        </video></td>
+
                                                         <td>{{ strip_tags($item->description) }}</td>
                                                         <td>
                                                             <label class="switch">

@@ -40,7 +40,7 @@ class ProductController extends Controller
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.PRODUCT_IMAGE_MAX_SIZE").'KB .',
                 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.PRODUCT_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
+                'image.dimensions' => 'The image dimensions must be between 300X1000 and 1000x2000 pixels.',
             ];
     
             try {
@@ -89,17 +89,18 @@ class ProductController extends Controller
             ];
     
             if($request->has('image')) {
-                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.PRODUCT_IMAGE_MAX_SIZE").'|dimensions:min_width=300,min_height=1000,max_width=1000,max_height=2000|min'.Config::get("AllFileValidation.PRODUCT_IMAGE_MIN_SIZE");
+                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.PRODUCT_IMAGE_MAX_SIZE").'|dimensions:min_width=300,min_height=1000,max_width=1000,max_height=2000|min:'.Config::get("AllFileValidation.PRODUCT_IMAGE_MIN_SIZE");
             }
            
             $messages = [   
-                'title.required'=>'Please enter Title.',
+                'title.required'=>'Please enter title.',
+                'description.required' => 'Please  enter description.',
                 'image.required' => 'The image is required.',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.PRODUCT_IMAGE_MAX_SIZE").'KB .',
                 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.PRODUCT_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
+                'image.dimensions' => 'The image dimensions must be between 300X1000 and 1000x2000 pixels.',
                
             ];
     

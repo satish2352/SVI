@@ -171,16 +171,16 @@ Route::group(['middleware' => ['admin']], function () {
 // website====================================================================
     Route::get('/', ['as' => '/', 'uses' => 'App\Http\Controllers\Website\IndexController@index']);
     //About Us========
-    Route::get('/aboutus', ['as' => 'aboutus', 'uses' => 'App\Http\Controllers\Website\AboutUs\AboutUsController@index']);
+    Route::get('/aboutus', ['as' => 'aboutus', 'uses' => 'App\Http\Controllers\Website\AboutUs\VisionMissionController@index']);
  
     //Start Application========
-    Route::get('/media', ['as' => 'media', 'uses' => 'App\Http\Controllers\Website\Media\MediaController@index']);
+    Route::get('/media', ['as' => 'media', 'uses' => 'App\Http\Controllers\Website\Media\MediaController@getAllMedia']);
     Route::get('/product', ['as' => 'product', 'uses' => 'App\Http\Controllers\Website\Product\ProductController@index']);
-    Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\Product\ProductController@getServices']);
+    Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\ProductServices\ProductServicesController@index']);
 
     
 
-  
+    
     //End Application========
 
 

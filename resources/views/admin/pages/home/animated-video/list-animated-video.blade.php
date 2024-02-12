@@ -42,7 +42,12 @@
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td>{{ strip_tags($item->name) }}</td>
-                                                        <td>{{ strip_tags($item->video_link) }}</td>
+                                                        {{-- <td>{{ strip_tags($item->video_upload) }}</td> --}}
+                                                        <td>
+                                                            <video width="200" height="160" controls>
+                                                                <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item->video_upload }}" type="video/mp4">
+                                                            </video>
+                                                        </td>
                                                         <td>
                                                             <label class="switch">
                                                                 <input data-id="{{ $item->id }}" type="checkbox"

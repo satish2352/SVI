@@ -125,8 +125,8 @@ class ProductRepository  {
             try {
                 $deleteDataById = Product::find($id);
                 if ($deleteDataById) {
-                    if (file_exists_view(Config::get('DocumentConstant.Product_DELETE') . $deleteDataById->image)){
-                        removeImage(Config::get('DocumentConstant.Product_DELETE') . $deleteDataById->image);
+                    if (file_exists_view(Config::get('DocumentConstant.PRODUCT_DELETE') . $deleteDataById->image)){
+                        removeImage(Config::get('DocumentConstant.PRODUCT_DELETE') . $deleteDataById->image);
                     }
                     $deleteDataById->delete();
                     

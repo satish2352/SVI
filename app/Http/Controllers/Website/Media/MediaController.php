@@ -4,32 +4,27 @@ namespace App\Http\Controllers\Website\Media;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-// use App\Http\Services\Website\AboutUs\AboutUsServices;
+use App\Http\Services\Website\Media\MediaServices;
 use Session;
 use Validator;
-use App\Models\ {
-    LocationAddress,
-    EducationBoard,
-    ApplicationForm,
-    EducationClass
-
-};
+// use App\Models\ {
+// };
 
 class MediaController extends Controller
 {
     public function __construct()
     {
-        // $this->service = new AboutUsServices();
+        $this->service = new MediaServices();
     }
-    public function index()
+
+    public function getAllMedia()
     {
         try {
-            // return view('website.pages.aboutus.updadhyeclasses');
-            return view('website.pages.media.media');
-
+            $data_output = $this->service->getAllMedia();
         } catch (\Exception $e) {
             return $e;
         }
-    } 
+        return view('website.pages.media.media',compact('data_output'));
+    }  
 }
 

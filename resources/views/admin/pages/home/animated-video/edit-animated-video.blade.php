@@ -63,18 +63,37 @@
                                             @endif
                                         </div>
                                     </div>
+
                                     <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="video_upload">video</label>
+                                            <input type="file" name="video_upload" class="form-control mb-2"
+                                                id="video_upload" accept="video/*" placeholder="video upload">
+                                            @if ($errors->has('video_upload'))
+                                                <span class="red-text"><?php echo $errors->first('video_upload', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                        <img id="english"
+                                            src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $editData->video_upload }}"
+                                            class="img-fluid img-thumbnail" width="150" style="background-color: aliceblue;">
+                                        <img id="english_imgPreview" src="#"
+                                            alt=" {{ strip_tags($editData['title']) }} Image"
+                                            class="img-fluid img-thumbnail" width="150" style="display:none">
+                                    </div>
+
+
+                                    {{-- <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label for="name">Video Link</label>&nbsp<span class="red-text">*</span>
                                             <input class="form-control mb-2" name="video_link" id="name"
                                                 placeholder="Enter the Name"
                                                 value="@if (old('video_link')) {{ old('video_link') }}@else{{ $editData->video_link }} @endif">
                                             @if ($errors->has('name'))
-                                                <span class="red-text"><?php echo $errors->first('video_link', ':message'); ?></span>
+                                                <span class="red-text"><?php //echo $errors->first('video_link', ':message'); ?></span>
                                             @endif
                                         </div>
                                     </div>
-                                   
+                                    --}}
                                     <div class="col-md-12 col-sm-12 text-center">
                                         <button type="submit" class="btn btn-sm btn-success" id="submitButton">Save &amp;
                                             Update</button>

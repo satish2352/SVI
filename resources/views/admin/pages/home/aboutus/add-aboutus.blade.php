@@ -22,16 +22,29 @@
                                 enctype="multipart/form-data" id="regForm">
                                 @csrf
                                 <div class="row d-flex justify-content-center">
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                    {{-- <div class="col-lg-8 col-md-8 col-sm-8">
                                         <div class="form-group">
                                             <label for="video_link">Video Link</label>&nbsp<span class="red-text">*</span>
                                             <input type="text" class="form-control mb-2" name="video_link" id="video_link"
                                                 value="{{ old('video_link') }}" placeholder="Enter the Name">
                                             @if ($errors->has('video_link'))
-                                                <span class="red-text"><?php echo $errors->first('video_link', ':message'); ?></span>
+                                                <span class="red-text"><?php //echo $errors->first('video_link', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div> --}}
+
+
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <div class="form-group">
+                                            <label for="video_link">Video</label>&nbsp;<span class="red-text">*</span><br>
+                                            <input type="file" name="video_link" id="video_link" accept="video/*" class="form-control mb-2">
+                                            @if ($errors->has('video_link'))
+                                                <span class="red-text">{{ $errors->first('video_link') }}</span>
                                             @endif
                                         </div>
                                     </div>
+
+
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                         <div class="form-group" id="summernote_id">
                                             <label for="description">Description <span class="red-text">*</span></label>

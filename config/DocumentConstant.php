@@ -33,8 +33,16 @@ return [
     'OUR_RESULT_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/ourresult/',
 
     'PRODUCT_DETAILS_VIEW'=> env("FILE_VIEW").'/all_web_data/images/productdetails/',
-    'PRODUCT_DELETE'=>"/all_web_data/images/productdetails/",
-    'PRODUCT_ADD'=>'/all_web_data/images/productdetails/',
+    'PRODUCT_DETAILS_DELETE'=>"/all_web_data/images/productdetails/",
+    'PRODUCT_DETAILS_ADD'=>'/all_web_data/images/productdetails/',
+
+
+
+
+    'ANIMATED_VIDEO_ADD'	         => "/all_web_data/images/home/video/",
+    'ANIMATED_VIDEO_DELETE'	         => '/all_web_data/images/home/video/',
+    'ANIMATED_VIDEO_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/video/',
+    
 
     'DB_BACKUP'	 => "/all_web_data/DBBackup//",
 ];

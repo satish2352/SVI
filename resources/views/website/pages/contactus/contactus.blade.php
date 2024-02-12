@@ -14,91 +14,83 @@
               <div class="card border-0 shadow p-3">
                 <div class="row">
                   <h4 class="text-center heading">CONTACT US</h4>
-
                   <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
                   enctype="multipart/form-data">
               @csrf
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput" class="form-label"
-                        >Name</label
-                      >
-                      <input
-                        type="text"
-                        name="full_name"
-                        class="form-control"
-                        id="formGroupExampleInput"
-                        placeholder="Enter your name here"
-                        value="{{ old('full_name') }}"
-                      />
-                    </div>
+              <div class="row">
+                  <div class="col-md-6 py-3">
+                      <div class="">
+                          <input type="text" placeholder="Your Full Name" name="full_name"
+                              value="{{ old('full_name') }}" class="form-control">
+                          <span id="number-validate" class="red-text"></span>
+                          @if ($errors->has('full_name'))
+                              <span class="red-text"><?php echo $errors->first('full_name', ':message'); ?></span>
+                          @endif
+                      </div>
                   </div>
-                  <div class="col-lg-5 col-md-5 col-12">
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput" class="form-label"
-                        >Email</label
-                      >
-                      <input
-                        type="email"
-                        name="email"
-                        class="form-control"
-                        id="formGroupExampleInput"
-                        placeholder="Enter your email here"
-                        value="{{ old('email') }}"
-                      />
-                    </div>
+                  <div class="col-md-6 py-3">
+                      <div class="">
+                          <input type="email" placeholder="Email Address" name="email"
+                              value="{{ old('email') }}" class="form-control">
+                          <span id="number-validate" class="red-text"></span>
+                          @if ($errors->has('email'))
+                              <span class="red-text"><?php echo $errors->first('email', ':message'); ?></span>
+                          @endif
+                      </div>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput" class="form-label"
-                        >Phone</label
-                      >
-                      <input
-                        type="number"
-                        name="mobile_number"
-                        class="form-control"
-                        id="formGroupExampleInput"
-                        placeholder="Enter your phone here"
-                        value="{{ old('mobile_number') }}"
-                      />
-                    </div>
+                  <div class="col-md-6 py-3">
+                      <div class="">
+                          <input type="text" placeholder="Mobile Number" name="mobile_number"
+                              value="{{ old('mobile_number') }}" class="form-control">
+                          <span id="number-validate" class="red-text"></span>
+                          @if ($errors->has('mobile_number'))
+                              <span class="red-text"><?php echo $errors->first('mobile_number', ':message'); ?></span>
+                          @endif
+            
+                      </div>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput" class="form-label"
-                        >Subject</label
-                      >
-                      <input
-                        type="text"
-                        name="subject"
-                        class="form-control"
-                        id="formGroupExampleInput"
-                        placeholder="Enter your subject here"
-                        value="{{ old('subject') }}"
-                      />
-                    </div>
+                  <div class="col-md-6 py-3">
+                      <div class="">
+                          <input type="text" placeholder="Subject" name="subject"  value="{{ old('subject') }}" class="form-control">
+                          <span id="number-validate" class="red-text"></span>
+                          @if ($errors->has('subject'))
+                              <span class="red-text"><?php echo $errors->first('subject', ':message'); ?></span>
+                          @endif
+                      </div>
                   </div>
-                  <div class="col-lg-12 col-md-12 col-12">
-                    <div class="mb-3">
-                      <label for="formGroupExampleInput">Comments</label>
-                      <textarea
-                        class="form-control"
-                        name="message"
-                        aria-label="With textarea"
-                        id="formGroupExampleInput"
-                        placeholder="Leave a comment here"
-                      >{{ old('message') }}</textarea>
-                    </div>
+                  <div class="col-md-12 py-3">
+                      <div class=" text-message-box">
+                          <textarea name="message" id="message" placeholder="Write a Message" class="form-control">{{ old('message') }}</textarea>
+                          <span id="number-validate" class="red-text"></span>
+                          @if ($errors->has('message'))
+                              <span class="red-text"><?php echo $errors->first('message', ':message'); ?></span>
+                          @endif
+                      </div>
                   </div>
-                  <div class="text-center">
-                    <button type="submit" id="submitButton" class="btn formSubmit">Submit</button>
-                  </div>
-                </form>
-                @if(Session::has('success_message'))
-                <script>
-                    alert("{{ Session::get('success_message') }}");
-                </script>
-            @endif
+                      <div class="col-md-12 py-3 captcha_set" style="text-align: left;">
+                          {!! NoCaptcha::renderJs() !!}
+                          {!! NoCaptcha::display() !!}
+            
+                          @if ($errors->has('g-recaptcha-response'))
+                              <span class="help-block">
+                                  <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
+                              </span>
+                          @endif
+                      </div>
+                      <div class="d-flex justify-content-center">
+                          <button type="submit" id="submitButton" class="btn formSubmit" ><span
+                                  class="eduact-btn__curve"></span>Submit<i class="icon-arrow"></i></button>
+                      </div>
+                  
+              </div>
+            </form>
+            @if(Session::has('success_message'))
+                  <script>
+                      alert("{{ Session::get('success_message') }}");
+                  </script>
+              @endif
+            <div class="result"></div>
+             
                 </div>
               </div>
             </div>
@@ -240,7 +232,6 @@
           </div>
         </div>
       </section>
-  
       <!-- ------------------------------------------------------------------------------------>
       <!-- Unit Section Ends Here -->
       <!-- ------------------------------------------------------------------------------------>

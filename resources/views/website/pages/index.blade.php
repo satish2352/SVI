@@ -8,34 +8,38 @@
       <!-- ------------------------------------------------------------------------------------>
       <section class="HomeAboutSection pb-4">
         <div class="container">
-          <h4 class="text-center HomeAbout heading">About Us</h4>
+          <h1 class="text-center HomeAbout heading">About Us</h1>
           <div class="row justify-content-center">
+            @if (empty($data_output_aboutus))
+            <div class="container">
+                <div class="row">
+                    <h3 class="d-flex justify-content-center" style="color: #fff">No Data Found Courses Offered</h3>
+                </div>
+            </div>
+        @else
+            @foreach ($data_output_aboutus as $aboutus)
             <div class="col-lg-5 HomeAboutRow aboutVideoMain">
               <div class="">
                 <div class="aboutVideo">
-                  <video class="videoSize" autoplay loop muted playsinline class="videoBanner">
+                  <video width="300" height="250" controls>
+                    <source src="{{ Config::get('DocumentConstant.ABOUTUS_VIEW') }}{{ $aboutus['video_link'] }}" type="video/mp4">
+                </video>
+                  {{-- <video class="videoSize" autoplay loop muted playsinline class="videoBanner">
                     <source src="{{ asset('website/assets/images/home/aboutVideo.mp4') }}" type="video/mp4" />
                     Your browser does not support the video tag.
-                  </video>
+                  </video> --}}
                 </div>
               </div>
             </div>
-            <div class="col-lg-7 d-flex align-items-center bg-white">
+            <div class="col-lg-7 d-flex align-items-center bg-white shadow-lg">
               <p class="pText ms-md-5 pt-md-4 py-md-1 pe-md-3">
-                SVI Carbon Private Limited (SVICPL) is an ISO 9001:2015 certified
-                company, engaged in designing (both process and mechanical) and
-                manufacturing Impervious Graphite Heat and Mass Transfer
-                Equipments. SVICPL product portfolio comprises Graphite Heat
-                Exchangers (Condensers, Re-boilers, Coolers, Heaters,
-                Evaporators), Graphite Columns, Graphite Scrubbers, Graphite
-                Bursting/Rupture Discs, Graphite Thermowells and Customized
-                Graphite Products and Spares as per the client’s requirement.
-                These are manufactured using superior quality of Graphite, Resin
-                and Steel, due to which, these products are acknowledged.
+                {{ strip_tags($aboutus['description']) }}
               </p>
             </div>
+            @endforeach
+            @endif
             <div class="HomeAboutButton1 text-md-end mt-md-3 ">
-                <a href="{{ asset('website/assets/images/home/about.html')}}" type="button" class="text-decoration-none HomeAboutButton text-white">View More </a>
+                <a href="{{ route('aboutus') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View More </a>
             </div>
           </div>
         </div>
@@ -51,10 +55,18 @@
       <section class="bg-white py-3">
         <div class="container">
           <div class="row justify-content-center">
+            @if (empty($data_output_product))
+            <div class="container">
+                <div class="row">
+                    <h3 class="d-flex justify-content-center" style="color: #fff">No Data Found Courses Offered</h3>
+                </div>
+            </div>
+        @else
+            @foreach ($data_output_product as $product)
             <div class="col-lg-5 text-center text-sm-center text-md-end">
               <div class="productImg">
                 <img
-                  src="{{ asset('website/assets/images/product/ghmte.png') }}"
+                  src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}"
                   class=""
                   alt="Graphite Heat & Mass Transfer Equipment"
                 />
@@ -62,30 +74,26 @@
             </div>
             <div class="col-lg-7 d-flex align-items-center">
               <div class="productCard">
-                <h4
-                  class="heading text-md-start text-sm-center"
-                  style="color: #1e4f9c; font-weight: bold"
+                <h1
+                  class="heading text-md-start text-sm-center productH1"
                 >
                   Product
-                </h4>
-                <div class="card p-3 w-100 cardContent shadow-lg">
+                </h1>
+                <div class="card px-5 py-4 w-100 cardContent shadow-lg">
                   <h5 class="cardContent_text">
-                    Graphite Heat & Mass Transfer Equipment
+                    {{ strip_tags($product['title']) }} 
                   </h5>
                   <p>
-                    Isothermal falling film absorbers designed and manufactured by
-                    SVI Carbon make have very good mass transfer efficiency.
-                    Hydrochloric acid obtained at the end of the falling film
-                    absorbers have concentration about 33%. Falling film absorbers
-                    can be designed to obtain higher product concentrations. SVI
-                    carbon make falling film absorbers are designed for duty
-                    conditions prevailing in plant. Therefore Falling film
-                    absorbers of SVICPL make can have turned down ratio as high as
-                    5.
+                    {{ strip_tags($product['description']) }}
                   </p>
                 </div>
+                <div class="HomeAboutButton1 text-md-end mt-md-3 ">
+                  <a href="{{ route('product') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View all </a>
+              </div>
               </div>
             </div>
+            @endforeach
+            @endif
           </div>
         </div>
       </section>
@@ -110,7 +118,7 @@
       <!-- ------------------------------------------------------------------------------------>
       <section class="my-md-5 my-3">
         <div class="container">
-          <h4 class="heading">SVICPL’s Core Competencies</h4>
+          <h2 class="heading svpilHeading">SVICPL’s Core Competencies</h2>
           <div class="row justify-content-center">
             <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
@@ -133,7 +141,7 @@
                 />
                 <div class="card-body cardBodyCoreComp text-center">
                   <h6 class="card-title">
-                    Manufacturing Excellence In High Volumes (Three Units)
+                    Manufacturing Excellence In High Volumes
                   </h6>
                 </div>
               </div>

@@ -23,17 +23,43 @@
                                 id="regForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row  d-flex justify-content-center">
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                    {{-- <div class="col-lg-8 col-md-8 col-sm-8">
                                         <div class="form-group">
                                             <label for="name">Video Link</label>&nbsp<span class="red-text">*</span>
                                             <input class="form-control mb-2" name="video_link" id="name"
                                                 placeholder="Enter the Name"
                                                 value="@if (old('video_link')) {{ old('video_link') }}@else{{ $editData->video_link }} @endif">
                                             @if ($errors->has('name'))
+                                                <span class="red-text"><?php //echo $errors->first('video_link', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div> --}}
+
+
+
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
+                                        <div class="form-group">
+                                            <label for="video_link">video</label>
+                                            <input type="file" name="video_link" class="form-control mb-2"
+                                                id="video_link" accept="video/*" placeholder="video upload">
+                                            @if ($errors->has('video_link'))
                                                 <span class="red-text"><?php echo $errors->first('video_link', ':message'); ?></span>
                                             @endif
                                         </div>
+                                        {{-- <img id="english"
+                                            src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $editData->video_link }}"
+                                            class="img-fluid img-thumbnail" width="150" style="background-color: aliceblue;"> --}}
+
+                                            <video width="200" height="160" controls>
+                                                <source src="{{ Config::get('DocumentConstant.ABOUTUS_VIEW') }}{{ $editData->video_link }}" type="video/mp4">
+                                            </video>
+
+                                        <img id="english_imgPreview" src="#"
+                                            alt="No Video"
+                                            class="img-fluid img-thumbnail" width="150" style="display:none">
                                     </div>
+
+
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                         <div class="form-group" id="summernote_id">
                                             <label for="english_description">Description</label>&nbsp<span
@@ -64,15 +90,34 @@
                 </div>
             </div>
         </div>
+
         <script>
             $(document).ready(function() {
                 // Function to check if all input fields are filled with valid data
                 function checkFormValidity() {
-                    const video_link = $('#video_link').val();  
-                    const description = $('#description').val();                    
+                    const description = $('#description textarea').val();
+                    const video_link = $('#video_link').val();                    
                 }
+                
+                // Custom validation method to check file extension
+                $.validator.addMethod("fileExtension", function(value, element, param) {
+                    // Get the file extension
+                    const extension = value.split('.').pop().toLowerCase();
+                    return $.inArray(extension, param) !== -1;
+                }, "Invalid file extension.");
+
+                // Custom validation method to check file size
+                // $.validator.addMethod("fileSize", function(value, element, param) {
+                //     // Convert bytes to KB
+                //     const fileSizeKB = element.files[0].size / 1024;
+                //     return fileSizeKB >= param[0] && fileSizeKB <= param[1];
+                // }, "File size must be between {0} KB and {1} KB.");
+
+                // Update the accept attribute to validate based on file extension
+                // $('#image').attr('accept', 'image/jpeg, image/png');
+
                 // Call the checkFormValidity function on input change
-                $('input').on('input change', checkFormValidity);
+                $('input, textarea, #video_link').on('input change', checkFormValidity);
                 $.validator.addMethod("spcenotallow", function(value, element) {
                     if ("select" === element.nodeName.toLowerCase()) {
                         var e = $(element).val();
@@ -81,29 +126,34 @@
                     return this.checkable(element) ? this.getLength(value, element) > 0 : value.trim().length >
                         0;
                 }, "Enter Some Text");
+
                 // Initialize the form validation
                 $("#regForm").validate({
                     rules: {
-                        video_link: {
-                            required: true,
-                            spcenotallow: true,
-                        },
                         description: {
                             required: true,
-                            spcenotallow: true,
+                        },
+                        video_link: {
+                            required: true,
+                            // fileExtension: ["jpg", "jpeg", "png"],
+                            // fileSize: [50, 1048], // Min 10KB and Max 2MB (2 * 1024 KB)
+                            // imageDimensions: [300, 1000, 1000, 2000], // Min width x height and Max width x height
                         },
                     },
                     messages: {
-                        video_link: {
-                            required: "Please Enter the video link",
-                            spcenotallow: "Enter Some Text",
-                        },
                         description: {
-                            required: "Please Enter the description",
-                            spcenotallow: "Enter Some Text",
+                            required: "Please Enter the Description",
+                        },
+                        video_link: {
+                            required: "Please upload an Video.",
+                           
                         },
                     },
                 });
             });
         </script>
+
+
+
+
     @endsection
