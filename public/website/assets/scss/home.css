@@ -4,7 +4,7 @@
     transform: translate(0px, 0px);
     background: linear-gradient(
         180deg,
-        #332ba2 0%,
+        #23569E 0%,
         rgba(160, 238, 255, 0.99) 100%
     );
 }
@@ -20,7 +20,7 @@
     transform: translate(30px, 40px);
 }
 .HomeAbout {
-    color: #224677;
+    color: #23569E;
     padding-left: 4.5rem;
 }
 .HomeAboutSection {
@@ -39,7 +39,7 @@
     color: #525252;
 }
 .HomeAboutButton {
-    background: #332ba2;
+    background: #23569E;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 0.4rem;
@@ -60,7 +60,7 @@
     height: 5rem;
 }
 .coreCompCards:hover {
-    background: #332ba2;
+    background: #23569E;
     color: white;
     transform: scale(1.03);
 }
@@ -95,11 +95,11 @@
 @media only screen and (max-width: 576px) {
     .aboutVideoMain {
         height: 200px;
-        width: 300px;
+        width: 320px;
         transform: translate(0px, 0px) !important;
         background: linear-gradient(
             180deg,
-            #332ba2 0%,
+            #23569E 0%,
             rgba(160, 238, 255, 0.99) 100%
         );
     }
@@ -108,7 +108,11 @@
         width: 300px;
     }
     .HomeAboutRow {
-        height: 300px !important;
+        height: 260px !important;
+    }
+    .HomeAbout {
+        color: #23569E;
+        padding-left: 0rem;
     }
     .productCard .cardContent {
         transform: translate(0px);

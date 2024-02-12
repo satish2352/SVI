@@ -3,25 +3,33 @@
   height: 610px;
   background: linear-gradient(
     90deg,
-    #23569e 30%,
+    #23569E 30%,
     #edfeff 30%,
     #edfeff 70%,
-    #23569e 70%
+    #23569E 70%
   );
 }
 .formSubmit {
-  background: #23569e;
+  background: #23569E;
   color: white;
 }
 .unitCard {
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  border-bottom: 5px solid #23569e;
+  border-bottom: 5px solid #23569E;
 }
 .unitCard h5 {
-  color: #23569e;
+  color: #23569E;
 }
 .cardContactUnit {
   height: 10rem;
+}
+.contactCard{
+  border-radius: 50px;
+}
+@media only screen and (max-width: 576px) {
+  .contactSection {
+    height: 1360px;
+  }
 }

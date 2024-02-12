@@ -1,9 +1,12 @@
 .mediaCard {
     border-radius: 5%;
+    background: #F2FFFD
+    ;
 }
 .mediaVideo {
     height: 450px !important;
     width: 100%;
+    object-fit: contain;
 }
 @media only screen and (max-width: 576px) {
     .mediaVideo {
@@ -11,5 +14,6 @@
     }
     .mediaCard {
         border-radius: 0%;
+        background: #F2FFFD
     }
 }

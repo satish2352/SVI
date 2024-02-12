@@ -1,9 +1,9 @@
 @extends('website.layout.master')
 
 @section('content')
-     <!-- ------------------------------------------------------------------------------------>
-    <!-- Contact Section Ends Here -->
-    <!-- ------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------>
+<!-- Contact Section Ends Here -->
+<!-- ------------------------------------------------------------------------------------>
 
     <section class="contactSection d-flex align-items-center">
         <div class="container">
@@ -190,44 +190,43 @@
       <section class="py-5">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 col-md-4 col-12 my-2">
-              <div class="card unitCard mx-auto" style="width: 90%">
-                <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
-                <div class="card-body cardContactUnit">
-                  <h5 class="card-title text-center">UNIT 1</h5>
-                  <p class="text-center fw-bold m-0 p-0">PLOT B-224</p>
-                  <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
-                    Graphite Processing & Laboratory Set-up Malegaon MIDC Area,
-                    Taluka - Sinnar, Nashik - 422113 Maharashtra, India.
-                  </p>
-                </div>
+            <h4 class="text-center heading">CONTACT US</h4>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name here" />
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-12 my-2">
-              <div class="card unitCard mx-auto" style="width: 90%">
-                <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
-                <div class="card-body cardContactUnit">
-                  <h5 class="card-title text-center">UNIT 2</h5>
-                  <p class="text-center fw-bold m-0 p-0">PLOT B-226</p>
-                  <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
-                    Impregnation & Assembly Malegaon MIDC Area, Taluka - Sinnar,
-                    Nashik - 422113 Maharashtra, India.
-                  </p>
-                </div>
+            <div class="col-lg-5 col-md-5 col-12">
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Email</label>
+                <input type="email" class="form-control" id="formGroupExampleInput"
+                  placeholder="Enter your email here" />
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-12 my-2">
-              <div class="card unitCard mx-auto" style="width: 90%">
-                <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
-                <div class="card-body cardContactUnit">
-                  <h5 class="card-title text-center">UNIT 3</h5>
-                  <p class="text-center fw-bold m-0 p-0">PLOT B-257</p>
-                  <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
-                    Steel Fabrication Shop & Warehouse Malegaon MIDC Area, Taluka
-                    - Sinnar, Nashik - 422113 Maharashtra, India.
-                  </p>
-                </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Phone</label>
+                <input type="number" class="form-control" id="formGroupExampleInput"
+                  placeholder="Enter your phone here" />
               </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="formGroupExampleInput"
+                  placeholder="Enter your subject here" />
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="mb-3">
+                <label for="formGroupExampleInput">Comments</label>
+                <textarea class="form-control" aria-label="With textarea" id="formGroupExampleInput"
+                  placeholder="Leave a comment here"></textarea>
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn formSubmit">Submit</button>
             </div>
           </div>
         </div>
@@ -237,7 +236,66 @@
       <!-- ------------------------------------------------------------------------------------>
   
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- ------------------------------------------------------------------------------------>
+<!-- Contact Section Ends Here -->
+<!-- ------------------------------------------------------------------------------------>
+
+<!-- ------------------------------------------------------------------------------------>
+<!-- Unit Section Starts Here -->
+<!-- ------------------------------------------------------------------------------------>
+
+<section class="bg-white pt-md-4 pb-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
+        <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
+          <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
+          <div class="card-body cardContactUnit">
+            <h5 class="card-title text-center">UNIT 1</h5>
+            <p class="text-center fw-bold m-0 p-0">PLOT B-224</p>
+            <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
+              Graphite Processing & Laboratory Set-up Malegaon MIDC Area,
+              Taluka - Sinnar, Nashik - 422113 Maharashtra, India.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
+        <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
+          <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
+          <div class="card-body cardContactUnit">
+            <h5 class="card-title text-center">UNIT 2</h5>
+            <p class="text-center fw-bold m-0 p-0">PLOT B-226</p>
+            <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
+              Impregnation & Assembly Malegaon MIDC Area, Taluka - Sinnar,
+              Nashik - 422113 Maharashtra, India.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
+        <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
+          <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
+          <div class="card-body cardContactUnit">
+            <h5 class="card-title text-center">UNIT 3</h5>
+            <p class="text-center fw-bold m-0 p-0">PLOT B-257</p>
+            <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
+              Steel Fabrication Shop & Warehouse Malegaon MIDC Area, Taluka
+              - Sinnar, Nashik - 422113 Maharashtra, India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------------------------------------------------------------------------>
+<!-- Unit Section Ends Here -->
+<!-- ------------------------------------------------------------------------------------>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
 <script>
   $(document).ready(function() {

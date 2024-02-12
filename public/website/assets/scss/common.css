@@ -18,7 +18,7 @@ body {
 .heading {
     font-family: "Poppins", sans-serif;
     text-align: center;
-    color: #224677;
+    color: #23569E;
     font-weight: bold;
 }
 
@@ -26,17 +26,23 @@ body {
 /* Header */
 /* ------------------------------------------------------------ */
 .headerBtn {
-    background: #5349cc;
+    background: #23569E;
     width: 100%;
     text-align: center;
     border-radius: 3px;
+}
+.navbar {
+    z-index: 1;
+}
+.navBarBrand {
+    display: contents;
 }
 .nav-item a {
     color: black;
     font-weight: 500;
 }
 .nav-item a:hover {
-    color: #224677;
+    color: #23569E;
     font-weight: 500;
 }
 .navbarView {
@@ -63,9 +69,12 @@ body {
     bottom: 50px;
 }
 .videoCard_card {
-    background: #5349cc;
+    background: #23569E;
     color: white;
     text-align: center;
+}
+.bannerCardHeading {
+    font-size: 1rem;
 }
 /* ------------------------------------------------------------ */
 /* Banner */
@@ -76,7 +85,7 @@ body {
 /* ------------------------------------------------------------ */
 
 .footerLine {
-    background: #5349cc;
+    background: #23569E;
     height: 8px;
 }
 .footerLineIcon {
@@ -92,16 +101,25 @@ body {
     height: 40px;
 }
 .footerSocialIcons:hover {
-    background: #5349cc;
+    background: #23569E;
     color: white;
 }
 .footerBack {
     background-image: url("../../../website/assets/images/footerBack.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 300px;
+    height: 310px;
     border-radius: 10%;
 }
 .red-text{
     color: red;
+}
+@media only screen and (max-width: 576px) {
+    .bannerCardHeading {
+        font-size: 0.8rem;
+    }
+    .videoCard {
+        position: relative;
+        bottom: 65px;
+    }
 }
