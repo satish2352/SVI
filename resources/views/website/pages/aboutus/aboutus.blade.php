@@ -4,9 +4,9 @@
     <!-- ------------------------------------------------------------------------------------>
     <!-- About Us Section starts Here -->
     <!-- ------------------------------------------------------------------------------------>
-    <section class="HomeAboutSection pb-4">
+    <section class="HomeAboutSection pt-5 pb-4">
         <div class="container">
-          <h1 class="text-center HomeAbout heading">About Us</h1>
+          <h2 class="text-center HomeAbout HomeAbout1 heading">About Us</h2>
           <div class="row justify-content-center">
             @if (empty($data_output_aboutus))
             <div class="container">
