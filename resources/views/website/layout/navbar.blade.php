@@ -27,9 +27,19 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
         <li class="nav-item">
           <a class="nav-link px-md-3" href="{{ route('aboutus') }}">About Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-md-3" href="{{ route('product') }}">Product & Services</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Product & Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ route('product') }}">Product</a></li>
+            <li class="px-3"><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ route('services') }}">Services</a></li>
+          </ul>
         </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link px-md-3" href="{{ route('product') }}">Product & Services</a>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link px-md-3" href="{{ route('media') }}">Media</a>
         </li>
@@ -108,7 +118,8 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
     @endif
   </div>
   <div class="onVideoBanner">
-    <img src="{{ asset('website/assets/images/home/onVideoBanner.png')}}" class="w-75 float-end" alt="onVideoBanner.png">
+    <img src="{{ asset('website/assets/images/home/onVideoBanner.png')}}" class=" float-end d-none d-md-block" alt="onVideoBanner.png">
+    <img src="{{ asset('website/assets/images/home/onVideoMobBannerText.png')}}" class=" float-end d-block d-md-none" alt="onVideoBanner.png">
   </div>
 </section>
 

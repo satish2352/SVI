@@ -1,7 +1,7 @@
 @extends('website.layout.master')
 
 @section('content')
-<div class="main-product">
+<div class="main-product bg-white">
     <section class="main-product">
      <div class="container-fluid">
        <h4 class="product-name py-4">Product</h4>

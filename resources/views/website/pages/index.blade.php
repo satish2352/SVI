@@ -6,9 +6,9 @@
       <!-- ------------------------------------------------------------------------------------>
       <!-- About Us Section starts Here -->
       <!-- ------------------------------------------------------------------------------------>
-      <section class="HomeAboutSection pb-4">
+      <section class="HomeAboutSection py-5">
         <div class="container">
-          <h1 class="text-center HomeAbout heading">About Us</h1>
+          <h2 class="text-center HomeAbout heading">About us</h2>
           <div class="row justify-content-center">
             @if (empty($data_output_aboutus))
             <div class="container">
@@ -31,7 +31,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-7 d-flex align-items-center bg-white shadow-lg">
+            <div class="col-lg-7 d-flex align-items-center bg-white">
               <p class="pText ms-md-5 pt-md-4 py-md-1 pe-md-3">
                 {{ strip_tags($aboutus['description']) }}
               </p>
@@ -52,7 +52,7 @@
       <!-- Graphite Heat & Mass Transfer Equipment Section Starts Here -->
       <!-- ------------------------------------------------------------------------------------>
   
-      <section class="bg-white py-3">
+      <section class="bg-white">
         <div class="container">
           <div class="row justify-content-center">
             @if (empty($data_output_product))
@@ -64,7 +64,7 @@
         @else
             @foreach ($data_output_product as $product)
             <div class="col-lg-5 text-center text-sm-center text-md-end">
-              <div class="productImg">
+              <div class="productImg my-2">
                 <img
                   src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}"
                   class=""
@@ -72,13 +72,13 @@
                 />
               </div>
             </div>
-            <div class="col-lg-7 d-flex align-items-center">
+            <div class="col-lg-7 col-xl-6 d-flex align-items-center">
               <div class="productCard">
-                <h1
+                <h2
                   class="heading text-md-start text-sm-center productH1"
                 >
                   Product
-                </h1>
+                </h2>
                 <div class="card px-5 py-4 w-100 cardContent shadow-lg">
                   <h5 class="cardContent_text">
                     {{ strip_tags($product['title']) }} 
@@ -87,7 +87,7 @@
                     {{ strip_tags($product['description']) }}
                   </p>
                 </div>
-                <div class="HomeAboutButton1 text-md-end mt-md-3 ">
+                <div class="HomeAboutButton1 text-md-end mt-md-3 me-xl-4 ">
                   <a href="{{ route('product') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View all </a>
               </div>
               </div>
@@ -120,10 +120,10 @@
         <div class="container">
           <h2 class="heading svpilHeading">SVICPL’s Core Competencies</h2>
           <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
-                  class="w-50 mx-auto"
+                  class="w-75 mx-auto"
                   src="{{ asset('website/assets/images/home/home1.png') }}"
                   alt="Card image cap"
                 />
@@ -132,10 +132,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
-                  class="w-50 mx-auto"
+                  class="w-75 mx-auto"
                   src="{{ asset('website/assets/images/home/home2.png') }}"
                   alt="Card image cap"
                 />
@@ -146,10 +146,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
-                  class="w-50 mx-auto"
+                  class="w-75 mx-auto"
                   src="{{ asset('website/assets/images/home/home3.png') }}"
                   alt="Card image cap"
                 />
@@ -160,10 +160,10 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
-                  class="w-50 mx-auto"
+                  class="w-75 mx-auto"
                   src="{{ asset('website/assets/images/home/home4.png') }}"
                   alt="Card image cap"
                 />
@@ -172,10 +172,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
-                  class="w-50 mx-auto"
+                  class="w-75 mx-auto"
                   src="{{ asset('website/assets/images/home/home5.png') }}"
                   alt="Card image cap"
                 />
@@ -184,10 +184,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
-                  class="w-50 mx-auto"
+                  class="w-75 mx-auto"
                   src="{{ asset('website/assets/images/home/home6.png') }}"
                   alt="Card image cap"
                 />

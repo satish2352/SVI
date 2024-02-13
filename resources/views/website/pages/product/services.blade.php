@@ -2,25 +2,27 @@
 
 @section('content')
     <section class="main-services">
-        <div class="container-fluid">
+        <div class="container">
             <h4 class="services-main-title">Our services</h4>
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-4 col-8">
+                
                     @if (empty($data_output))
-                        <div class="container">
-                            <div class="row">
+                        <div class="container px-5">
+                            <div class="row px-5">
                                 <h3 class="d-flex justify-content-center" style="color: #00000">No Data Found For Services</h3>
                             </div>
                         </div>
                     @else
                         @foreach ($data_output as $services)
+                        <div class="col-lg-4 col-md-4 col-8" style="padding: 20px; text-align:center;">
                             <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $services['image'] }}" alt="Home_Banner"
                                 class="img-fluid" />
-                                <div class="service-heading"><span class="service-number">01 </span><span
+                                <div class="service-heading"><span class="service-number"> </span><span
                                   class="service-title">{{ strip_tags($services['title']) }}</span></div>
-                        @endforeach
+                                </div>
+                                  @endforeach
                     @endif
-                </div>
+                
 
                 {{-- <div class="col-lg-4 col-md-4 col-8">
 

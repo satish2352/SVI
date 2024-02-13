@@ -6,11 +6,11 @@
       class="d-flex justify-content-center align-items-center justify-content-lg-between footerLine"
     ></section>
     <section>
-      <footer class="sviFooter p-md-5 p-3">
-        <div class="container-fluid">
+      <footer class="sviFooter py-md-5">
+        <div class="container px-0">
           <div class="row text-white justify-content-center">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-              <div class="footerBack text-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+              <div class="footerBack text-center mx-auto">
                 <img
                   src="{{ asset('website/assets/images/logo1.png')}}"
                   class="mt-3 mx-auto"
@@ -27,7 +27,7 @@
                   <span
                     ><a
                       href="tel:+918605770042"
-                      style="font-size: 17px"
+                      style="font-size: 14px"
                       class="text-decoration-none text-white"
                       >+91 8605770042</a
                     ></span
@@ -35,29 +35,29 @@
                   <span
                     ><a
                       href="tel:+919850762935"
-                      style="font-size: 17px"
+                      style="font-size: 14px"
                       class="text-decoration-none text-white"
                       >+91 9850762935</a
                     ></span
                   >
                 </p>
-                <p class="p-0 m-0">
+                <p class="p-0 m-0" style="font-size:14px;">
                   LANDLINE:
                   <span
                     ><a
                       href="tel:+912536698006"
-                      style="font-size: 17px"
+                      style="font-size: 14px"
                       class="text-decoration-none text-white"
                       >+91 253 6698006
                     </a></span
                   >
                 </p>
-                <p class="p-0 m-0">
+                <p class="p-0 m-0" style="font-size:14px;">
                   FAX:
                   <span
                     ><a
                       href="fax:+912532326872"
-                      style="font-size: 17px"
+                      style="font-size: 14px"
                       class="text-decoration-none text-white"
                       >+91 253 2326872</a
                     ></span
@@ -65,27 +65,37 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 mt-3">
-              <h6>QUICK LINKS</h6>
+            <div class="col-lg-2 col-md-2 col-sm-12 mt-5 quickLinksFooter">
+              <h6 class="mb-3">QUICK LINKS</h6>
               <p>
-                <a class="text-decoration-none text-white" href="/about.html"
+                <a class="text-decoration-none" href="{{ route('aboutus') }}"
                   >About</a
                 >
               </p>
               <p>
-                <a class="text-decoration-none text-white" href="/product.html"
-                  >Product & Services</a
+                <a class="text-decoration-none" href="{{ route('product') }}"
+                  >Product</a
                 >
               </p>
               <p>
-                <a class="text-decoration-none text-white" href="/media.html"
+                <a class="text-decoration-none" href="{{ route('services') }}"
+                  >Services</a
+                >
+              </p>
+              <p>
+                <a class="text-decoration-none" href="{{ route('contactus') }}"
+                  >Contact us</a
+                >
+              </p>
+              <p>
+                <a class="text-decoration-none" href="{{ route('media') }}"
                   >Media</a
                 >
               </p>
             </div>
 
-            <div class="col-lg-5 col-md-5 col-sm-12 mt-3">
-              <h6>CONTACT US</h6>
+            <div class="col-lg-4 col-md-4 col-sm-12 mt-5 contactUsFooter">
+              <h6 class="mb-3">CONTACT US</h6>
               <p>
                 Shri Venkatesh Bungalow, behind Vandana Park, near Shri
                 Vrindavan Society, Wadala-Pathardi shivar, Indira Nagar, Nashik.
@@ -95,12 +105,12 @@
                 Nashik. Maharashtra, India.
               </p>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 mt-3">
-              <h6>FOLLOW US</h6>
+            <div class="col-lg-2 col-md-2 col-sm-12 mt-5">
+              <h6 class="mb-3">FOLLOW US</h6>
 
               <a href=""
                 ><i
-                  class="fa fa-facebook-official footerSocialIcons mx-1"
+                  class="fa fa-facebook footerSocialIcons mx-1"
                   aria-hidden="true"
                 ></i
               ></a>
@@ -112,7 +122,7 @@
               ></a>
               <a href=""
                 ><i
-                  class="fa fa-envelope footerSocialIcons mx-1"
+                  class="fa fa-envelope-o footerSocialIcons mx-1"
                   aria-hidden="true"
                 ></i
               ></a>
