@@ -187,50 +187,7 @@
       <!-- Unit Section Starts Here -->
       <!-- ------------------------------------------------------------------------------------>
   
-      <section class="py-5">
-        <div class="container">
-          <div class="row">
-            <h4 class="text-center heading">CONTACT US</h4>
-            <div class="col-lg-6 col-md-6 col-12">
-              <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name here" />
-              </div>
-            </div>
-            <div class="col-lg-5 col-md-5 col-12">
-              <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Email</label>
-                <input type="email" class="form-control" id="formGroupExampleInput"
-                  placeholder="Enter your email here" />
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-              <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Phone</label>
-                <input type="number" class="form-control" id="formGroupExampleInput"
-                  placeholder="Enter your phone here" />
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-12">
-              <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="formGroupExampleInput"
-                  placeholder="Enter your subject here" />
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-12">
-              <div class="mb-3">
-                <label for="formGroupExampleInput">Comments</label>
-                <textarea class="form-control" aria-label="With textarea" id="formGroupExampleInput"
-                  placeholder="Leave a comment here"></textarea>
-              </div>
-            </div>
-            <div class="text-center">
-              <button type="button" class="btn formSubmit">Submit</button>
-            </div>
-          </div>
-        </div>
-      </section>
+    
       <!-- ------------------------------------------------------------------------------------>
       <!-- Unit Section Ends Here -->
       <!-- ------------------------------------------------------------------------------------>
