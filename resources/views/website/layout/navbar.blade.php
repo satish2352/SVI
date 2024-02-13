@@ -12,7 +12,7 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
     <a class="navbar-brand navBarBrand d-md-none d-lg-none" href="#"><img class="navbarLogo"
               src="{{ asset('website/assets/images/home/mobLogo.png')}}" class="logo" alt="logo" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      aria="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -61,9 +61,9 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
 <!-- ------------------------------------------------------------------------------------>
 <!-- Banner Section Starts Here -->
 {{-- <section>
-  <div class="container-fluid p-0 bg-white">
+  <div class="container-fluid bg-white p-0">
     @foreach ($common_data['website_banner_data'] as $item)
-      <video autoplay loop muted playsinline class="videoBanner" controls>
+      <video autoplay loop muted playsinline class="videoBanner">
         <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
       </video>
     @endforeach
@@ -77,27 +77,27 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
   <div class="container-fluid p-0 bg-white">
     @foreach ($common_data['website_banner_data'] as $item)
       @if ($item['name'] == 'Home')
-        <video autoplay loop muted playsinline class="videoBanner" controls>
+        <video autoplay loop muted playsinline class="videoBanner">
           <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
         </video>
       @elseif ($item['name'] == 'About')
-        <video autoplay loop muted playsinline class="videoBanner" controls>
+        <video autoplay loop muted playsinline class="videoBanner">
           <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
         </video>
       @elseif ($item['name'] == 'Product' )
-        <video autoplay loop muted playsinline class="videoBanner" controls>
+        <video autoplay loop muted playsinline class="videoBanner">
           <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
         </video>
       @elseif ($item['name'] == 'Services' )
-        <video autoplay loop muted playsinline class="videoBanner" controls>
+        <video autoplay loop muted playsinline class="videoBanner">
           <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
         </video>
       @elseif ($item['name'] == 'Media')
-        <video autoplay loop muted playsinline class="videoBanner" controls>
+        <video autoplay loop muted playsinline class="videoBanner">
           <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
         </video>
       @elseif ($item['name'] == 'Contact')
-        <video autoplay loop muted playsinline class="videoBanner" controls>
+        <video autoplay loop muted playsinline class="videoBanner">
           <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
         </video>
       @endif
@@ -108,10 +108,10 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
   </div>
 </section> --}}
 <section>
-  <div class="container-fluid p-0 bg-white">
+  <div class="container-fluid p-0 bg-white mainVideoContainer">
     @if (!empty($common_data['website_banner_data']))
       @foreach ($common_data['website_banner_data'] as $item)
-        <video autoplay loop muted playsinline class="videoBanner" controls>
+        <video autoplay loop muted playsinline class="videoBanner">
           <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
         </video>
       @endforeach
@@ -131,17 +131,17 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
   <div class="card videoCard_card border-0 pt-3 pb-1">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6 class="px-md-5 bannerCardHeading">
+        <h6 class="px-md-5 py-lg-2 bannerCardHeading">
           ISO 9000 CERTIFIED COMPANY
         </h6>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6 class="px-md-5 bannerCardHeading">
+        <h6 class="px-md-5 py-lg-2 bannerCardHeading">
           PROFESSIONAL AND TIMELY SERVICE
         </h6>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6 class="px-md-5 bannerCardHeading">
+        <h6 class="px-md-5 py-lg-2 bannerCardHeading">
           WE MAKE DURABLE GRAPHITE PRODUCTS
         </h6>
       </div>

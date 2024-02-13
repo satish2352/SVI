@@ -33,7 +33,9 @@ body {
     text-align: center;
     border-radius: 3px;
 }
-
+.mainVideoContainer{
+    line-height: 0 !important;
+}
 .navbar {
     z-index: 1;
 }
