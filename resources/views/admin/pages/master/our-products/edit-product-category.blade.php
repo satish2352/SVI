@@ -25,12 +25,37 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="form-group">
-                                            <label for="name">Name</label>&nbsp<span class="red-text">*</span>
+                                            <label for="name">Category Name</label>&nbsp<span class="red-text">*</span>
                                             <input class="form-control mb-2" name="product_name" id="name"
-                                                placeholder="Enter the Name"
+                                                placeholder="Enter the Category Name"
                                                 value="@if (old('product_name')) {{ old('product_name') }}@else{{ $incidenttype_data->product_name }} @endif">
                                             @if ($errors->has('name'))
                                                 <span class="red-text"><?php echo $errors->first('product_name', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="product_title">Name</label>&nbsp<span class="red-text">*</span>
+                                            <input class="form-control mb-2" name="product_title" id="name"
+                                                placeholder="Enter the Name"
+                                                value="@if (old('product_title')) {{ old('product_title') }}@else{{ $incidenttype_data->product_title }} @endif">
+                                            @if ($errors->has('name'))
+                                                <span class="red-text"><?php echo $errors->first('product_title', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-group" id="summernote_id">
+                                            <label for="product_description">Description</label>&nbsp<span
+                                                class="red-text">*</span>
+                                            <span class="summernote1">
+                                                <textarea class="form-control" name="product_description" id="description" placeholder="Enter the Description">
+                                                @if (old('product_description')){{ old('product_description') }}@else{{ $incidenttype_data->product_description }}@endif
+                                        </textarea>
+                                            </span>
+                                            @if ($errors->has('product_description'))
+                                                <span class="red-text"><?php echo $errors->first('product_description', ':message'); ?></span>
                                             @endif
                                         </div>
                                     </div>
@@ -52,14 +77,14 @@
         </div>
         <script>
             $(document).ready(function() {
+                // Function to check if all input fields are filled with valid data
                 function checkFormValidity() {
-                    const name = $('#name').val();
+                    const product_name = $('#product_name').val();
+                    const product_title = $('#product_title').val();
+                    const description = $('#description textarea').val();
                 }
-                // Call the checkFormValidity function on file input change
-                $('input').on('change', function() {
-                    checkFormValidity();
-                    validator.element(this); // Revalidate the file input
-                });
+                // Call the checkFormValidity function on input change
+                $('input').on('input change', checkFormValidity);
                 $.validator.addMethod("spcenotallow", function(value, element) {
                     if ("select" === element.nodeName.toLowerCase()) {
                         var e = $(element).val();
@@ -69,30 +94,33 @@
                         0;
                 }, "Enter Some Text");
                 // Initialize the form validation
-                var form = $("#regForm");
-                var validator = form.validate({
+                $("#regForm").validate({
                     rules: {
-                        name: {
+                        product_name: {
                             required: true,
                             spcenotallow: true,
                         },
-                    },
-                    messages: {
-                        name: {
-                            required: "Please Enter the Name",
-                            spcenotallow: "Enter Some Text",
+                        product_title: {
+                            required: true,
+                            spcenotallow: true,
+                        },
+                        description: {
+                            required: true,
                         },
                     },
-                    submitHandler: function(form) {
-                        form.submit();
-                    }
-                });
-                // Submit the form when the "Update" button is clicked
-                $("#submitButton").click(function() {
-                    // Validate the form
-                    if (form.valid()) {
-                        form.submit();
-                    }
+                    messages: {
+                        product_name: {
+                            required: "Please Enter the Category Name",
+                            spcenotallow: "Enter Some Text",
+                        },
+                        product_title: {
+                            required: "Please enter the Title.",
+                            spcenotallow: "Enter Some Title",
+                        },
+                        description: {
+                            required: "Please Enter the Description",
+                        },
+                    },
                 });
             });
         </script>

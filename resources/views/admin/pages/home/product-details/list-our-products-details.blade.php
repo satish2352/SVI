@@ -35,7 +35,6 @@
 
                         <th>Product Category</th>
                         <th>Title </th>
-                        <th>Short Description </th>
                         <th>Image </th>
                         <th>Status</th>
                         <th>Action</th>
@@ -46,9 +45,8 @@
                       <tr>
                         <td>{{ $loop->iteration }}</td>
 
-                        <td>{{ strip_tags($item->service_name) }}</td>
+                        <td>{{ strip_tags($item->product_name) }}</td>
                         <td>{{ strip_tags($item->title) }}</td>
-                        <td>{{ strip_tags($item->short_description) }}</td>
                         <td> <img class="img-size"
                             src="{{ Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW') }}{{ $item->image }}"
                             alt=" {{ strip_tags($item['title']) }} Image" />

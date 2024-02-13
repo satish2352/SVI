@@ -46,7 +46,6 @@ class OurProductDetailsController extends Controller
 
         $rules = [
     'title' => 'required|min:7|max:150',
-    'short_description' => 'required|min:7|max:150',
     'product_id' => 'required',
     'image' => 'required|image|mimes:jpeg,png,jpg|max:10240|min:5',//|dimensions:min_width=100,min_height=100,max_width=5000,max_height=5000',
 ];
@@ -55,9 +54,6 @@ $messages = [
     'title.required' => 'Please enter title.',
     'title.min' => 'Please enter a minimum of 7 characters.',
     'title.max' => 'Please enter a maximum of 150 characters.',
-    'short_description.required' => 'Please enter a description.',
-    'short_description.min' => 'Please enter a minimum of 7 characters.',
-    'short_description.max' => 'Please enter a maximum of 150 characters.',
     'image.required' => 'The image is required.',
     'product_id.required' => 'Select at least one option',
     'image.image' => 'The image must be a valid image file.',
@@ -116,7 +112,6 @@ $messages = [
     public function update(Request $request){
         $rules = [
             'title' => 'required|min:7|max:150',
-            'short_description' => 'required|min:7|max:150',
             'product_id' => 'required',
         ];
 
@@ -130,9 +125,6 @@ $messages = [
             'title.required'=>'Please enter title.',
             'title.min'=>'Please enter minimum 7 character.',
             'title.max'=>'Please enter maximum character upto 150.',
-            'short_description.required' => 'Please  enter description.',
-            'short_description.min'=>'Please enter minimum 7 character.',
-            'short_description.max'=>'Please enter maximum character upto 150.',
             'image.required' => 'The image is required.',
             'product_id.required' => 'Select the at least one option',
             'image.image' => 'The image must be a valid image file.',

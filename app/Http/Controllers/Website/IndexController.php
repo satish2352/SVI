@@ -9,7 +9,7 @@ use App\Http\Services\Website\IndexServices;
 use Session;
 use Validator;
 use App\Models\ {
-    LocationAddress,
+    AnimatedVideo,
     
 
 };
@@ -36,7 +36,69 @@ class IndexController extends Controller
         }
     }
 
-  
+    // static function getCommonBanner() {
+    //     try {
+    //         $retun_data = [];
+    //         $date_now = date("Y-m-d");            
+    //         $website_banner_data =  AnimatedVideo::where('is_active', '=',true)
+    //         ->select( 
+    //             'animated_video.name',
+    //             'animated_video.video_upload'
+    //         )
+    //         ->get()
+    //         ->toArray();
+    //         $retun_data['website_banner_data']  = $website_banner_data;
+    //         return $retun_data ;
+    //     } catch (\Exception $e) {
+    //          info("Satish");
+    //          info($e->getMessage());
+    //     }
+                   
+    // }
+
+    static function getCommonBanner($pageName) {
+        try {
+            $return_data = [];
+            $date_now = date("Y-m-d");            
+            $website_banner_data = AnimatedVideo::where('is_active', '=', true)
+                ->where('name', '=', $pageName) // Filter by the current page
+                ->select(
+                    'animated_video.name',
+                    'animated_video.video_upload'
+                )
+                ->get()
+                ->toArray();
+            $return_data['website_banner_data']  = $website_banner_data;
+            
+            return $return_data;
+        } catch (\Exception $e) {
+             info("Satish");
+             info($e->getMessage());
+        }
+    }
+    
+    // public function getCommonBanner(Request $request) {
+    //     $pageName = $request->input('pageName');
+    //     try {
+    //         $return_data = [];
+    //         $date_now = date("Y-m-d");            
+    //         $website_banner_data = AnimatedVideo::where('is_active', '=', true)
+    //             ->where('name', '=', $pageName) // Filter by the current page
+    //             ->select(
+    //                 'animated_video.name',
+    //                 'animated_video.video_upload'
+    //             )
+    //             ->get()
+    //             ->toArray();
+    //         $return_data['website_banner_data']  = $website_banner_data;
+            
+    //         return view('banner_section', compact('return_data'));
+    //     } catch (\Exception $e) {
+    //          info("Satish");
+    //          info($e->getMessage());
+    //     }
+    // }
+    
     // static function getCommonFormData() {
     //     try {
     //         $retun_data = [];

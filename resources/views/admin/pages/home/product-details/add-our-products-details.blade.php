@@ -65,18 +65,14 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="form-group" id="summernote_id">
-                        <label for="description">Short Description <span class="red-text">*</span></label>
-                        <textarea class="form-control" name="short_description" id="description"
-                            placeholder="Enter Short Content">{{ old('short_description') }}</textarea>
-                        @if ($errors->has('short_description'))
-                        <span class="red-text">{{ $errors->first('short_description') }}</span>
-                        @endif
-                    </div>
-                </div>
+                  {{-- ================= --}}
+
+              
+
+
+                {{-- ================== --}}
                 <div class="col-md-12 col-sm-12 text-center">
-                    <button type="submit" class="btn btn-sm btn-success" id="submitButton">
+                    <button type="submit" class="btn btn-sm btn-success" id="submit">
                         Save &amp; Submit
                     </button>
                     {{-- <button type="reset" class="btn btn-sm btn-danger">Cancel</button> --}}
@@ -136,9 +132,6 @@
                     required: true,
                     spcenotallow: true,
                 },
-                short_description: {
-                    required: true,
-                },
                 image: {
                     required: true,
                     fileExtension: ["jpg", "jpeg", "png"],
@@ -150,9 +143,6 @@
                 title: {
                     required: "Please enter the Title.",
                     spcenotallow: "Enter Some Title",
-                },
-                short_description: {
-                    required: "Please Enter the Description",
                 },
                 image: {
                     required: "Please upload an Image (jpg, jpeg, png).",
@@ -176,5 +166,56 @@
         });
     });
 </script>
+
+
+{{-- <script>
+    $(document).ready(function(){
+   
+   var i = 1;
+     var length;
+     //var addamount = 0;
+    var addamount = 700;
+ 
+   $("#add").click(function(){
+     
+     
+      
+      addamount += 700;
+      console.log('amount: ' + addamount);
+    i++;
+       $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list"/></td><td><input type="text" name="email[]" placeholder="Enter your Email" class="form-control name_email"/></td>	<td><input type="text" name="amount[]" value="700" placeholder="Enter your Money" class="form-control total_amount"/></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+     });
+ 
+   $(document).on('click', '.btn_remove', function(){  
+     addamount -= 700;
+     console.log('amount: ' + addamount);
+     
+    
+       var button_id = $(this).attr("id");     
+       $('#row'+button_id+'').remove();  
+     });
+     
+ 
+ 
+     $("#submit").on('click',function(event){
+     var formdata = $("#add_name").serialize();
+       console.log(formdata);
+       
+       event.preventDefault()
+       
+       $.ajax({
+         url   :"action.php",
+         type  :"POST",
+         data  :formdata,
+         cache :false,
+         success:function(result){
+           alert(result);
+           $("#add_name")[0].reset();
+         }
+       });
+       
+     });
+   });
+    </script> --}}
 
 @endsection

@@ -69,19 +69,6 @@
                   <img id="english_imgPreview" src="#" alt=" {{ strip_tags($editData['title']) }} Image"
                     class="img-fluid img-thumbnail" width="150" style="display:none">
                 </div>
-
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                  <div class="form-group" id="summernote_id">
-                    <label for="short_description">Short Description</label>&nbsp<span class="red-text">*</span>
-                    <span class="summernote1">
-                      <textarea class="form-control" name="short_description" id="description"
-                        placeholder="Enter the Description">@if (old('short_description')){{ old('short_description') }}@else{{ $editData->short_description }}@endif</textarea>
-                    </span>
-                    @if ($errors->has('short_description'))
-                    <span class="red-text"><?php echo $errors->first('short_description', ':message'); ?></span>
-                    @endif
-                  </div>
-                </div>
                 <div class="col-md-12 col-sm-12 text-center">
                   <button type="submit" class="btn btn-sm btn-success" id="submitButton">
                     Save &amp; Update

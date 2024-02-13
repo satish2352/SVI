@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-start align-items-center">
             <h3 class="page-title">
-              Our Services
+              Our Product
             </h3>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-end align-items-center">
@@ -30,14 +30,6 @@
                   </div>
                   <div class="col-lg-8 col-md-8 col-sm-8">
                     <label>{{ strip_tags($showData->title) }}</label>
-                  </div>
-                </div>
-                <div class="row ">
-                  <div class="col-lg-3 col-md-3 col-sm-3">
-                    <label>Short Description :</label>
-                  </div>
-                  <div class="col-lg-8 col-md-8 col-sm-8">
-                    <label>{{ strip_tags($showData->short_description) }}</label>
                   </div>
                 </div>
                 <div class="row ">

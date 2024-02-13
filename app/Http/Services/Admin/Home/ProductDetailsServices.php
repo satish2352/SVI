@@ -27,7 +27,7 @@ class ProductDetailsServices
             $path = Config::get('DocumentConstant.PRODUCT_DETAILS_ADD');
             $ImageName = $last_id['ImageName'];
             uploadImage($request, 'image', $path, $ImageName);
-           
+       
             if ($last_id) {
                 return ['status' => 'success', 'msg' => 'Services Added Successfully.'];
             } else {

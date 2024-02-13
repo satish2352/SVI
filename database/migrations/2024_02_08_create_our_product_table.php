@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('our_product', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('product_name');
+            $table->string('product_name');
+            $table->string('product_title');
+            $table->string('product_description');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 

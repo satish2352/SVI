@@ -28,28 +28,28 @@
                                                 class="red-text">*</span>
                                             <select class="form-control" id="name" name="name">
                                                 <option value="">Select</option>
-                                                <option value="1"
-                                                    @if (old('name') == '1') {{ 'selected' }} @endif>
+                                                <option value="Home"
+                                                    @if (old('name') == 'Home') {{ 'selected' }} @endif>
                                                     Home
                                                 </option>
-                                                <option value="2"
-                                                    @if (old('name') == '2') {{ 'selected' }} @endif>
+                                                <option value="About"
+                                                    @if (old('name') == 'About') {{ 'selected' }} @endif>
                                                    About Us
                                                 </option>
-                                                <option value="3"
-                                                    @if (old('name') == '3') {{ 'selected' }} @endif>
+                                                <option value="Product"
+                                                    @if (old('name') == 'Product') {{ 'selected' }} @endif>
                                                   Product
                                                 </option>
-                                                <option value="4"
-                                                    @if (old('name') == '4') {{ 'selected' }} @endif>
+                                                <option value="Services"
+                                                    @if (old('name') == 'Services') {{ 'selected' }} @endif>
                                                     Services
                                                 </option>
-                                                <option value="5"
-                                                    @if (old('name') == '5') {{ 'selected' }} @endif>
+                                                <option value="Media"
+                                                    @if (old('name') == 'Media') {{ 'selected' }} @endif>
                                                     Media
                                                 </option>
-                                                <option value="6"
-                                                @if (old('name') == '6') {{ 'selected' }} @endif>
+                                                <option value="Contact"
+                                                @if (old('name') == 'Contact') {{ 'selected' }} @endif>
                                                 Contact
                                             </option>
                                             </select>
@@ -93,46 +93,52 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function() {
-                // Function to check if all input fields are filled with valid data
-                function checkFormValidity() {
-                    const video_link = $('#video_link').val();  
-                    const name = $('#name').val();                    
-                }
-                // Call the checkFormValidity function on input change
-                $('input').on('input change', checkFormValidity);
-                $.validator.addMethod("spcenotallow", function(value, element) {
-                    if ("select" === element.nodeName.toLowerCase()) {
-                        var e = $(element).val();
-                        return e && e.length > 0;
-                    }
-                    return this.checkable(element) ? this.getLength(value, element) > 0 : value.trim().length >
-                        0;
-                }, "Enter Some Text");
-                // Initialize the form validation
-                $("#regForm").validate({
-                    rules: {
-                        video_link: {
-                            required: true,
-                            spcenotallow: true,
-                        },
-                        name: {
-                            required: true,
-                         
-                        },
-                    },
-                    messages: {
-                        video_link: {
-                            required: "Please Enter the video link",
-                            spcenotallow: "Enter Some Text",
-                        },
-                        name: {
-                            required: "Please select the menu name",
-                           
-                        },
-                    },
-                });
+
+       
+    <script>
+        $(document).ready(function() {
+            $('#name').on('change', function() {
+                $('#regForm').submit();
             });
-        </script>
+
+            // Function to check if all input fields are filled with valid data
+            function checkFormValidity() {
+                const video_upload = $('#video_upload').val();
+                const name = $('#name').val();
+
+                // You can add further validation checks here if needed
+            }
+
+            // Call the checkFormValidity function on input change
+            $('input').on('input change', checkFormValidity);
+
+            $.validator.addMethod("spcenotallow", function(value, element) {
+                if ("select" === element.nodeName.toLowerCase()) {
+                    var e = $(element).val();
+                    return e && e.length > 0;
+                }
+                return this.checkable(element) ? this.getLength(value, element) > 0 : value.trim().length > 0;
+            }, "Enter Some Text");
+
+            // Initialize the form validation
+            $("#regForm").validate({
+                rules: {
+                    video_upload: {
+                        required: true,
+                    },
+                    name: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    video_upload: {
+                        required: "Please select a video to upload",
+                    },
+                    name: {
+                        required: "Please select the menu name",
+                    },
+                },
+            });
+        });
+    </script>
     @endsection

@@ -28,7 +28,9 @@
                                             <thead>
                                                 <tr>
                                                     <th>Sr. No.</th>
-                                                    <th>Name</th>
+                                                    <th>Category Name</th>
+                                                    <th>Title</th>
+                                                    <th>Description</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
@@ -38,6 +40,8 @@
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td>{{ strip_tags($item->product_name) }}</td>
+                                                        <td>{{ strip_tags($item->product_title) }}</td>
+                                                        <td>{{ strip_tags($item->product_description) }}</td>
                                                         <td>
                                                             <label class="switch">
                                                                 <input data-id="{{ $item->id }}" type="checkbox"

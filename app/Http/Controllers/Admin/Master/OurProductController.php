@@ -33,13 +33,15 @@ class OurProductController extends Controller
 
         $rules = [
             'product_name' => 'required|unique:our_product|max:255',
-            // |unique:product_name|regex:/^[a-zA-Z\s]+$/u|max:255',
+            'product_title' => 'required|max:255',
+            'product_description' => 'required|max:255',
          ];
         $messages = [   
-            'product_name.required'       =>  'Please enter title.',
+            'product_name.required'       =>  'Please enter category name.',
             'product_name.unique' => 'Title already exist.',
-            // 'product_name.regex' => 'Please  enter text only.',
-            // 'product_name.unique' => 'Title already exist.',
+            'product_title.required'       =>  'Please enter title.',
+            'product_description.required'       =>  'Please enter description.',
+       
         ];
 
         try {
@@ -86,6 +88,8 @@ class OurProductController extends Controller
     $id = $request->input('id'); // Assuming the 'id' value is present in the request
     $rules = [
         'product_name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('our_product', 'product_name')->ignore($id, 'id')],
+        'product_title' => 'required|max:255',
+        'product_description' => 'required|max:255',
     ];
 
     $messages = [
@@ -93,6 +97,8 @@ class OurProductController extends Controller
         'product_name.regex' => 'Please  enter text only.',
         'product_name.max' => 'Please enter an  title with a maximum of 255 characters.',
         'product_name.unique' => 'The title already exists.',
+        'product_title.required'       =>  'Please enter title.',
+        'product_description.required'       =>  'Please enter description.',
     ];
 
     try {

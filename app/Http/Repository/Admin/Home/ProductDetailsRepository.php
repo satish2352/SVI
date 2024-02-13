@@ -24,7 +24,6 @@ class ProductDetailsRepository  {
             $data =array();
             $dataOutput = new ProductDetails();
             $dataOutput->title = $request['title'];
-            $dataOutput->short_description = $request['short_description'];
             $dataOutput->product_id = $request['product_id'];
             $dataOutput->image = 'null';
         
@@ -79,7 +78,6 @@ class ProductDetailsRepository  {
 
             // Update the fields from the request
             $dataOutput->title = $request['title'];
-            $dataOutput->short_description = $request['short_description'];
             $dataOutput->product_id = $request['product_id'];
             
             $dataOutput->save();

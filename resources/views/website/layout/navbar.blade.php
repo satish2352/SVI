@@ -1,6 +1,12 @@
 <!-- ------------------------------------------------------------------------------------>
 <!-- Header Section Starts Here -->
 <!-- ------------------------------------------------------------------------------------>
+<?php
+$pageName = 'Home'; // Replace 'Home' with the desired menu name
+// $pageName = 'About'; // Replace 'Home' with the desired menu name
+// $pageName = 'Project'; // Replace 'Home' with the desired menu name
+$common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pageName);
+?>
 <nav class="navbar navbar-expand-lg bg-white">
   <div class="container-fluid">
     <a class="navbar-brand navBarBrand d-md-none d-lg-none" href="#"><img class="navbarLogo"
@@ -43,19 +49,72 @@
 <!-- ------------------------------------------------------------------------------------>
 <!-- Banner Section Starts Here -->
 <!-- ------------------------------------------------------------------------------------>
+<!-- Banner Section Starts Here -->
+{{-- <section>
+  <div class="container-fluid p-0 bg-white">
+    @foreach ($common_data['website_banner_data'] as $item)
+      <video autoplay loop muted playsinline class="videoBanner" controls>
+        <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+      </video>
+    @endforeach
+  </div>
+  <div class="onVideoBanner">
+    <img src="{{ asset('website/assets/images/home/onVideoBanner.png')}}" class="w-75 float-end" alt="onVideoBanner.png">
+  </div>
+</section> --}}
 
+{{-- <section>
+  <div class="container-fluid p-0 bg-white">
+    @foreach ($common_data['website_banner_data'] as $item)
+      @if ($item['name'] == 'Home')
+        <video autoplay loop muted playsinline class="videoBanner" controls>
+          <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+        </video>
+      @elseif ($item['name'] == 'About')
+        <video autoplay loop muted playsinline class="videoBanner" controls>
+          <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+        </video>
+      @elseif ($item['name'] == 'Product' )
+        <video autoplay loop muted playsinline class="videoBanner" controls>
+          <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+        </video>
+      @elseif ($item['name'] == 'Services' )
+        <video autoplay loop muted playsinline class="videoBanner" controls>
+          <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+        </video>
+      @elseif ($item['name'] == 'Media')
+        <video autoplay loop muted playsinline class="videoBanner" controls>
+          <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+        </video>
+      @elseif ($item['name'] == 'Contact')
+        <video autoplay loop muted playsinline class="videoBanner" controls>
+          <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+        </video>
+      @endif
+    @endforeach
+  </div>
+  <div class="onVideoBanner">
+    <img src="{{ asset('website/assets/images/home/onVideoBanner.png')}}" class="w-75 float-end" alt="onVideoBanner.png">
+  </div>
+</section> --}}
 <section>
   <div class="container-fluid p-0 bg-white">
-    <video autoplay loop muted playsinline class="videoBanner">
-      <source src="{{ asset('website/assets/images/home/sampleVideo.mp4')}}" type="video/mp4">
-      <!-- Add additional source elements for different formats if needed -->
-      Your browser does not support the video tag.
-    </video>
+    @if (!empty($common_data['website_banner_data']))
+      @foreach ($common_data['website_banner_data'] as $item)
+        <video autoplay loop muted playsinline class="videoBanner" controls>
+          <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item['video_upload'] }}" type="video/mp4">
+        </video>
+      @endforeach
+    @endif
   </div>
   <div class="onVideoBanner">
     <img src="{{ asset('website/assets/images/home/onVideoBanner.png')}}" class="w-75 float-end" alt="onVideoBanner.png">
   </div>
 </section>
+
+<!-- Banner Section Ends Here -->
+
+
 
 <section class="container videoCard ">
   <div class="card videoCard_card border-0 pt-3 pb-1">

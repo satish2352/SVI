@@ -24,6 +24,8 @@ class OurProductRepository{
         try {
             $incidenttype_data = new OurProductModel();
             $incidenttype_data->product_name  = $request['product_name'];
+            $incidenttype_data->product_title  = $request['product_title'];
+            $incidenttype_data->product_description  = $request['product_description'];
           
             $incidenttype_data->save();       
                 
@@ -64,6 +66,8 @@ class OurProductRepository{
             }
         // Store the previous image names
             $incidenttype_data->product_name = $request['product_name'];
+            $incidenttype_data->product_title  = $request['product_title'];
+            $incidenttype_data->product_description  = $request['product_description'];
             // $incidenttype_data->url = $request['url'];
             $incidenttype_data->save();        
         

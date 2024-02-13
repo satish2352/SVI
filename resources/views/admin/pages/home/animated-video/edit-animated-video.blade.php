@@ -25,7 +25,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
-                                            <label for="name">Select Academic Year </label>&nbsp<span
+                                            <label for="name">Select Menu</label>&nbsp<span
                                                 class="red-text">*</span>
                                             <select class="form-control" id="name" name="name">
                                                 <option value="">Select</option>

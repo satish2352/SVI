@@ -17,7 +17,6 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('product_id');
             $table->text('title');
-            $table->text('short_description');
             $table->text('image')->default(NULL);
             $table->boolean('is_active')->default(true);
             $table->timestamps();
