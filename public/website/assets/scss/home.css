@@ -1,43 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@400&display=swap');
+
 .aboutVideoMain {
     height: 240px;
     width: 300px;
     transform: translate(0px, 0px);
-    background: linear-gradient(
-        180deg,
-        #23569E 0%,
-        rgba(160, 238, 255, 0.99) 100%
-    );
+    background: linear-gradient(180deg,
+            #23569E 0%,
+            rgba(160, 238, 255, 0.99) 100%);
 }
+
 .videoSize {
     height: 260px;
     width: 390px;
     object-fit: cover;
 }
+
 .HomeAboutRow {
     height: 315px;
 }
+
 .aboutVideo {
     transform: translate(30px, 40px);
 }
+
 .HomeAbout {
     color: #23569E;
     padding-left: 4.5rem;
 }
+
 .HomeAboutSection {
     background: #f4f4f4;
 }
+
 .HomeAboutCol1 {
-    background: linear-gradient(
-        90deg,
-        #f4f4f4 0%,
-        rgba(255, 255, 255, 0.99) 100%
-    );
+    background: linear-gradient(90deg,
+            #f4f4f4 0%,
+            rgba(255, 255, 255, 0.99) 100%);
 }
+
 .pText {
     text-align: justify;
     font-size: 0.8rem;
     color: #525252;
 }
+
 .HomeAboutButton {
     background: #23569E;
     padding-left: 2rem;
@@ -47,49 +53,59 @@
     border-radius: 16px;
     margin-right: 30px;
 }
+
 .cardContent {
     background: #ecfffe;
 }
+
 .cardContent p {
     font-weight: 500;
     font-family: "Poppins";
     color: #778088;
     font-size: 16px;
 }
+
 .cardBodyCoreComp {
     height: 5rem;
 }
+
 .coreCompCards:hover {
     background: #23569E;
     color: white;
     transform: scale(1.03);
 }
+
 .productH1 {
-    color: #1e4f9c;
+    color: #1e4f9c !important;
     font-weight: bold;
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
 }
+
 .productCard .cardContent {
     text-align: justify;
     font-size: 0.5rem;
     transform: translate(-30px);
     border: 0;
 }
+
 .productCard .cardContent .cardContent_text {
     color: #1c2b38;
     text-align: start;
-    font-weight: 700;
+    font-weight: bolder;
     letter-spacing: 3px;
     font-size: 25px;
     line-height: 1.4;
     font-family: "Poppins";
 }
+
 .productImg img {
     width: 65%;
 }
+
 .svpilHeading {
     font-size: 2.3rem;
 }
+
 /* media query */
 
 @media only screen and (max-width: 576px) {
@@ -97,24 +113,82 @@
         height: 200px;
         width: 320px;
         transform: translate(0px, 0px) !important;
-        background: linear-gradient(
-            180deg,
-            #23569E 0%,
-            rgba(160, 238, 255, 0.99) 100%
-        );
+        background: linear-gradient(180deg,
+                #23569E 0%,
+                rgba(160, 238, 255, 0.99) 100%);
     }
+
     .videoSize {
         height: 250px;
         width: 300px;
     }
+
     .HomeAboutRow {
         height: 260px !important;
     }
+
     .HomeAbout {
         color: #23569E;
         padding-left: 0rem;
     }
+
     .productCard .cardContent {
         transform: translate(0px);
+    }
+
+    .onVideoBanner {
+        position: absolute;
+        right: 0;
+        top: 18% !important;
+    }
+    .onVideoBanner img {
+        width: 40% !important;
+    }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+    .HomeAbout {
+        color: #23569E;
+        padding-left: 10.5rem;
+    }
+
+    .aboutVideoMain {
+        height: 230px;
+        width: 450px !important;
+        transform: translate(0px, 0px);
+        background: linear-gradient(180deg, #23569e 0%, rgba(160, 238, 255, 0.99) 100%);
+    }
+
+    .aboutVideo {
+        transform: translate(15px, 35px);
+    }
+
+    .videoSize {
+        height: 250px;
+        width: 500px;
+        object-fit: cover;
+    }
+
+    .pText {
+        text-align: justify;
+        font-size: 0.75rem;
+        padding-left: 5rem;
+    }
+
+    .productCard .cardContent {
+        text-align: justify;
+        font-size: 0.5rem;
+        transform: translate(-61px);
+        border: 0;
+    }
+
+    .productCard .cardContent .cardContent_text {
+        color: #1c2b38;
+        text-align: start;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 25px;
+        line-height: 1.4;
+        font-family: Volkhov;
     }
 }
