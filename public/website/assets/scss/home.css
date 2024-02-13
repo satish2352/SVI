@@ -51,7 +51,7 @@
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
     border-radius: 16px;
-    margin-right: 30px;
+    margin-right: 38px;
 }
 
 .cardContent {
@@ -99,7 +99,7 @@
 }
 
 .productImg img {
-    width: 65%;
+    width: 85%;
 }
 
 .svpilHeading {
@@ -178,7 +178,7 @@
     .productCard .cardContent {
         text-align: justify;
         font-size: 0.5rem;
-        transform: translate(-61px);
+        transform: translate(-71px);
         border: 0;
     }
 

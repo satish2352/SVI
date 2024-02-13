@@ -46,14 +46,17 @@
     text-align: justify;
     font-weight: 500;
     font-size: 14px;
+    color: #525252;
 }
 .visionHeading {
     text-align: left;
     padding-left: 12rem;
+    color: #154891;
 }
 .missionHeading {
     text-align: right;
     padding-right: 12rem;
+    color: #154891;
 }
 @media only screen and (max-width: 576px) {
     .aboutVideoMain {
@@ -69,10 +72,12 @@
     .missionHeading {
         text-align: center;
         padding-right: 0rem;
+        color: #154891;
     }
     .visionHeading {
       text-align: center;
       padding-left: 1rem;
+      color: #154891;
   }
     .certificateSection {
         transform: translate(0px, 0px);
@@ -81,5 +86,11 @@
     }
     .certificate {
         width: 100%;
+    }
+}
+@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+    .HomeAbout1 {
+        color: #23569E;
+        padding-left: 9.5rem !important;
     }
 }
