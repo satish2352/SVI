@@ -172,12 +172,12 @@
 <!-- ------------------------------------------------------------------------------------>
 <!-- Company Section Starts Here -->
 <!-- ------------------------------------------------------------------------------------>
-<section class="text-center d-none d-md-block d-lg-block">
+{{-- <section class="text-center d-none d-md-block d-lg-block">
 <h1 class="text-center HomeAbout heading pt-4 pb-3 m-0 bg-white">Company</h1>
   <div class="container">
     <img src="{{ asset('website/assets/images/aboutus/aboutPageImg.png')}}" class="img-fluid w-75" alt="" />
   </div>
-</section>
+</section> --}}
 <!-- mobile view -->
 <section class="d-block d-md-none d-lg-none text-center">
   <h4 class="text-center bg-white p-0 m-0 pt-3 pb-2 HomeAbout heading">
