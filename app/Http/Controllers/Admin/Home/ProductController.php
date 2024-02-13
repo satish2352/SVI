@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin\Home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Services\Admin\Home\productServices;
+use App\Http\Services\Admin\Home\ProductServices;
 use Session;
 use Validator;
 use Config;
@@ -12,7 +12,7 @@ use Config;
 class ProductController extends Controller
 {
     public function __construct(){
-        $this->service = new productServices();
+        $this->service = new ProductServices();
         }
         public function index(){
             try {
