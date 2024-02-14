@@ -74,7 +74,7 @@
                 // Function to check if all input fields are filled with valid data
                 function checkFormValidity() {
                     const title = $('#title').val();
-                    const image = $('#image').val();                    
+                    // const image = $('#image').val();                    
                 }
                 
                 // Custom validation method to check file extension
@@ -112,24 +112,24 @@
                             required: true,
                             spcenotallow: true,
                         },
-                        image: {
-                            required: true,
-                            fileExtension: ["jpg", "jpeg", "png"],
-                            fileSize: [50, 1048], // Min 10KB and Max 2MB (2 * 1024 KB)
-                            imageDimensions: [200, 200, 1000, 1000], // Min width x height and Max width x height
-                        },
+                        // image: {
+                        //     required: true,
+                        //     fileExtension: ["jpg", "jpeg", "png"],
+                        //     fileSize: [50, 1048], // Min 10KB and Max 2MB (2 * 1024 KB)
+                        //     imageDimensions: [200, 200, 1000, 1000], // Min width x height and Max width x height
+                        // },
                     },
                     messages: {
                         title: {
                             required: "Please enter the Title.",
                             spcenotallow: "Enter Some Title",
                         },
-                        image: {
-                            required: "Please upload an Image (jpg, jpeg, png).",
-                            fileExtension: "Only JPG, JPEG, and PNG images are allowed.",
-                            fileSize: "File size must be between 50 KB and 1048 KB.",
-                            imageDimensions: "Image dimensions must be between 200x200 and 1000x1000 pixels.",
-                        },
+                        // image: {
+                        //     required: "Please upload an Image (jpg, jpeg, png).",
+                        //     fileExtension: "Only JPG, JPEG, and PNG images are allowed.",
+                        //     fileSize: "File size must be between 50 KB and 1048 KB.",
+                        //     imageDimensions: "Image dimensions must be between 200x200 and 1000x1000 pixels.",
+                        // },
                     },
                 });
             });

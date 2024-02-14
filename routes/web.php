@@ -175,9 +175,10 @@ Route::group(['middleware' => ['admin']], function () {
  
     //Start Application========
     Route::get('/media', ['as' => 'media', 'uses' => 'App\Http\Controllers\Website\Media\MediaController@getAllMedia']);
-    Route::get('/product', ['as' => 'product', 'uses' => 'App\Http\Controllers\Website\Product\ProductController@index']);
+    // Route::get('/product', ['as' => 'product', 'uses' => 'App\Http\Controllers\Website\Product\ProductController@index']);
     Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\ProductServices\ProductServicesController@index']);
-
+    Route::get('/product', ['as' => 'product', 'uses' => 'App\Http\Controllers\Website\Product\ProductController@services']);
+    Route::post('/list-our-services-ajax', ['as' => 'list-our-services-ajax', 'uses' => 'App\Http\Controllers\Website\Product\ProductController@listServicesAjax']);
     
 
     

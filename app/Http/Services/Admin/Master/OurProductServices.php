@@ -29,9 +29,9 @@ class OurProductServices{
         try {
             $add_Incidenttype = $this->repo->addAll($request);
             if ($add_Incidenttype) {
-                return ['status' => 'success', 'msg' => 'Services Added Successfully.'];
+                return ['status' => 'success', 'msg' => 'Product Category Added Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Services Not Added.'];
+                return ['status' => 'error', 'msg' => 'Product Category Not Added.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
@@ -50,9 +50,9 @@ class OurProductServices{
             $update_Incidenttype = $this->repo->updateAll($request);
             // dd($update_Incidenttype);
             if ($update_Incidenttype) {
-                return ['status' => 'success', 'msg' => 'Services Updated Successfully.'];
+                return ['status' => 'success', 'msg' => 'Product Category Updated Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Services Not Updated.'];
+                return ['status' => 'error', 'msg' => 'Product Category Not Updated.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];

@@ -6,8 +6,8 @@
             <div class="page-header">
                 <h3 class="page-title">
                     Vision Mission List
-                    <a href="{{ route('add-vision-mission') }}" class="btn btn-sm btn-primary ml-3">+
-                        Add</a>
+                    {{-- <a href="{{ route('add-vision-mission') }}" class="btn btn-sm btn-primary ml-3">+
+                        Add</a> --}}
 
                 </h3>
                 <nav aria-label="breadcrumb">

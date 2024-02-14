@@ -63,3 +63,121 @@
     justify-content: center;
     align-items: center;
 }
+
+
+/* =============== */
+
+.article_card_container .card-body{
+    background-color: #23569E;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+#gallary_data .card{
+    border: none !important;
+}
+.article_tab {
+    /* position: relative; */
+    border-radius: 0px 50px 0px;
+    background: #6246E5;
+    padding: 0.5rem;
+    width: 100%;
+    /* height: 2%; */
+    box-sizing: border-box;
+    justify-content: space-around;
+  }
+  
+  .article_tab_link {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    border-left: 1px solid #080707;
+  }
+  
+  .article_tab .article_tab_link.active {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: inherit !important;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-bottom: 2px solid;
+    text-align: start;
+    padding: 10px;
+    width: 90%;
+  }
+  
+  .article_tab .article_tab_link {
+    border-bottom: 2px solid;
+    margin-top: 10px;
+    text-align: start;
+    padding: 10px;
+    font-size: 18px;
+    width: 90%;
+  }
+  
+  .article_tab_link:hover {
+    border-color: transparent !important;
+    isolation: isolate;
+    color: #fff;
+  }
+  
+  .article_tab_link {
+    color: #fff;
+    /* font-family: serif !important; */
+  }
+  
+  .article_tab_link:hover {
+    color: #000;
+    /* font-family: inherit !important; */
+  }
+  .article_nav{
+    padding: 48px;
+  }
+  
+  /* Media query for mobile devices */
+@media (max-width: 767px) {
+    .article_nav{
+        padding: 2px;
+      }
+      .article_tab {
+        /* position: relative; */
+        border-radius: 0px;
+        background: #6246E5;
+        padding: 0.5rem;
+        width: 100%;
+        /* height: 2%; */
+        box-sizing: border-box;
+        justify-content: space-around;
+      }
+
+      .nav .nav-link {
+        color: #fff !important;
+        border-right: 1px solid #fff;
+        border-radius: 0px;
+    }
+     
+  .article_tab .article_tab_link {
+    border-bottom:none;
+    margin-top: 10px;
+    text-align: start;
+    padding: 10px;
+    font-size: 18px;
+    width: 90%;
+  }
+      
+    .article_nav .nav-tabs {
+        flex-wrap: nowrap; /* Prevent tabs from wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+    }
+
+    .article_nav .nav-link {
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+    .card-body h5 {
+        font-size: 15px;
+    }
+}
+

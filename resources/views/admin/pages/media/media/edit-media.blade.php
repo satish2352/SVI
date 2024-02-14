@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <script>
+        {{-- <script>
             $(document).ready(function() {
                 // Function to check if all input fields are filled with valid data
                 function checkFormValidity() {
@@ -109,5 +109,5 @@
                     },
                 });
             });
-        </script>       
+        </script>        --}}
     @endsection

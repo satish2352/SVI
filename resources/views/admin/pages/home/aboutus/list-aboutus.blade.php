@@ -7,8 +7,8 @@
                 <h3 class="page-title">
                     About Us
                   
-                        <a href="{{ route('add-aboutus') }}" class="btn btn-sm btn-primary ml-3">+
-                            Add</a>
+                        {{-- <a href="{{ route('add-aboutus') }}" class="btn btn-sm btn-primary ml-3">+
+                            Add</a> --}}
                 
 
                 </h3>
