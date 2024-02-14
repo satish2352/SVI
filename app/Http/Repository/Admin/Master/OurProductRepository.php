@@ -56,6 +56,7 @@ class OurProductRepository{
     }
     public function updateAll($request){
         try {
+          
             $incidenttype_data = OurProductModel::find($request->id);
             
             if (!$incidenttype_data) {
@@ -69,16 +70,17 @@ class OurProductRepository{
             $incidenttype_data->product_title  = $request['product_title'];
             $incidenttype_data->product_description  = $request['product_description'];
             // $incidenttype_data->url = $request['url'];
+          
             $incidenttype_data->save();        
-        
+           
             return [
-                'msg' => 'Solution Type data updated successfully.',
+                'msg' => 'Product Category updated successfully.',
                 'status' => 'success'
             ];
         } catch (\Exception $e) {
             return $e;
             return [
-                'msg' => 'Failed to update Solution Type data.',
+                'msg' => 'Failed to update Product Category.',
                 'status' => 'error'
             ];
         }
