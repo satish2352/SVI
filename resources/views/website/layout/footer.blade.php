@@ -7,14 +7,14 @@
     ></section>
     <section>
       <footer class="sviFooter py-md-5">
-        <div class="container px-0">
+        <div class="container ">
           <div class="row text-white justify-content-center">
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
               <div class="footerBack text-center mx-auto">
                 <img
                   src="{{ asset('website/assets/images/logo1.png')}}"
                   class="mt-3 mx-auto"
-                  style="width: 15%"
+                  style="width: 20%"
                   alt="logo"
                 /><br />
                 <img
@@ -65,8 +65,8 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 mt-5 quickLinksFooter">
-              <h6 class="mb-3">QUICK LINKS</h6>
+            <div class="col-lg-2 col-md-2 col-sm-12 mt-4 quickLinksFooter">
+              <h6 class="mb-3 mt-2">QUICK LINKS</h6>
               <p>
                 <a class="text-decoration-none" href="{{ route('aboutus') }}"
                   >About</a
@@ -94,8 +94,8 @@
               </p>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-12 mt-5 contactUsFooter">
-              <h6 class="mb-3">CONTACT US</h6>
+            <div class="col-lg-4 col-md-4 col-sm-12 mt-4 contactUsFooter">
+              <h6 class="mb-3 mt-2">CONTACT US</h6>
               <p>
                 Shri Venkatesh Bungalow, behind Vandana Park, near Shri
                 Vrindavan Society, Wadala-Pathardi shivar, Indira Nagar, Nashik.
@@ -105,8 +105,8 @@
                 Nashik. Maharashtra, India.
               </p>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 mt-5">
-              <h6 class="mb-3">FOLLOW US</h6>
+            <div class="col-lg-2 col-md-2 col-sm-12 mt-4">
+              <h6 class="mb-3 mt-2 ms-xl-1">FOLLOW US</h6>
 
               <a href=""
                 ><i

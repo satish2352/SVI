@@ -46,16 +46,21 @@
 
 .HomeAboutButton {
     background: #23569E;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
     border-radius: 16px;
     margin-right: 38px;
 }
 
 .cardContent {
     background: #ecfffe;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    line-height: 1.3;
 }
 
 .cardContent p {
@@ -106,6 +111,10 @@
     font-size: 2.3rem;
 }
 
+.svicplSection {
+    background: #ecfdff;
+}
+
 /* media query */
 
 @media only screen and (max-width: 576px) {
@@ -141,6 +150,7 @@
         right: 0;
         top: 18% !important;
     }
+
     .onVideoBanner img {
         width: 40% !important;
     }
@@ -190,5 +200,9 @@
         font-size: 25px;
         line-height: 1.4;
         font-family: Volkhov;
+    }
+
+    .productH1 {
+        margin-left: -12px;
     }
 }

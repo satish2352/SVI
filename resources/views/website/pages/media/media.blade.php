@@ -26,7 +26,7 @@
 {{-- <section class="bg-white">
   <div class="container py-5">
     <div class="card border-0 py-3 px-3 mediaCard shadow-lg">
-      <h4 class="heading text-start mx-md-4 mt-3">Media</h4>
+      <h3 class="heading text-start mx-md-4 mt-3">Media</h3>
       <div class="row justify-content-center">
         <div class="col-lg-3 col-md-3 col-sm-10">
           <img src="{{ asset('website/assets/images/media/media1.png')}}" class="w-100" alt="media1" />

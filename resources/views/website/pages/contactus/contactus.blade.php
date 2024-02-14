@@ -6,30 +6,32 @@
 <!-- ------------------------------------------------------------------------------------>
 
     <section class="contactSection d-flex align-items-center">
-        <div class="container">
+        <div class="container py-5">
           <div class="row justify-content-center">
             <div
               class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center"
             >
-              <div class="card border-0 shadow p-3">
+              <div class="card border-0 contactPageCard shadow p-4 px-5">
                 <div class="row">
-                  <h4 class="text-center heading">CONTACT US</h4>
+                  <h2 class="text-start heading">CONTACT US</h2>
                   <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
                   enctype="multipart/form-data">
               @csrf
-              <div class="row">
-                  <div class="col-md-6 py-3">
+              <div class="row py-2">
+                  <div class="col-md-6 pt-md-0 pt-3">
                       <div class="">
-                          <input type="text" placeholder="Your Full Name" name="full_name"
-                              value="{{ old('full_name') }}" class="form-control">
+                        <label for="full_name"><strong style="color:#323232"> Name </strong></label>
+                          <input type="text"  placeholder="Your Full Name" name="full_name"
+                              value="{{ old('full_name') }}" class="form-control full_nameField">
                           <span id="number-validate" class="red-text"></span>
                           @if ($errors->has('full_name'))
                               <span class="red-text"><?php echo $errors->first('full_name', ':message'); ?></span>
                           @endif
                       </div>
                   </div>
-                  <div class="col-md-6 py-3">
+                  <div class="col-md-6 pt-md-0 pt-3">
                       <div class="">
+                      <label for="email"><strong style="color:#323232"> Email </strong></label>
                           <input type="email" placeholder="Email Address" name="email"
                               value="{{ old('email') }}" class="form-control">
                           <span id="number-validate" class="red-text"></span>
@@ -38,9 +40,10 @@
                           @endif
                       </div>
                   </div>
-                  <div class="col-md-6 py-3">
+                  <div class="col-md-6 pt-3">
                       <div class="">
-                          <input type="text" placeholder="Mobile Number" name="mobile_number"
+                      <label for="mobile_number"><strong style="color:#323232"> Mobile Number </strong></label>
+                          <input type="number" placeholder="Mobile Number" name="mobile_number"
                               value="{{ old('mobile_number') }}" class="form-control">
                           <span id="number-validate" class="red-text"></span>
                           @if ($errors->has('mobile_number'))
@@ -49,8 +52,9 @@
             
                       </div>
                   </div>
-                  <div class="col-md-6 py-3">
+                  <div class="col-md-6 pt-3">
                       <div class="">
+                      <label for="subject"><strong style="color:#323232"> Subject </strong></label>
                           <input type="text" placeholder="Subject" name="subject"  value="{{ old('subject') }}" class="form-control">
                           <span id="number-validate" class="red-text"></span>
                           @if ($errors->has('subject'))
@@ -58,9 +62,10 @@
                           @endif
                       </div>
                   </div>
-                  <div class="col-md-12 py-3">
+                  <div class="col-md-12 pt-3">
                       <div class=" text-message-box">
-                          <textarea name="message" id="message" placeholder="Write a Message" class="form-control">{{ old('message') }}</textarea>
+                      <label for="message"><strong style="color:#323232"> Message </strong></label>
+                          <textarea name="message" id="message" placeholder="Write a Message" class="form-control ">{{ old('message') }}</textarea>
                           <span id="number-validate" class="red-text"></span>
                           @if ($errors->has('message'))
                               <span class="red-text"><?php echo $errors->first('message', ':message'); ?></span>
@@ -78,8 +83,8 @@
                           @endif
                       </div>
                       <div class="d-flex justify-content-center">
-                          <button type="submit" id="submitButton" class="btn formSubmit" ><span
-                                  class="eduact-btn__curve"></span>Submit<i class="icon-arrow"></i></button>
+                          <button type="submit" id="submitButton" class="btn formSubmit eduact-btn__curve_button" ><span
+                                  class="eduact-btn__curve"></span>Send Message<i class="icon-arrow"></i></button>
                       </div>
                   
               </div>
@@ -94,18 +99,18 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 d-none d-sm-none d-md-block d-lg-block">
-              <div class="card text-center border-0 p-2">
+            <div class="col-lg-3 col-md-3 d-none d-sm-none d-md-block d-lg-block">
+              <div class="card text-center border-0 p-4">
                 <div>
                   <img src="{{ asset('website/assets/images/contact/phoneIcon.png')}}" alt="phoneIcon" />
-                  <h5>Phone no.</h5>
+                  <h5 class="mb-3">Phone no.</h5>
                 </div>
-                <div class="text-start">
+                <div class="text-start contactText">
                   <p class="p-0 m-0">
                     <span
                       ><a
                         href="tel:+918605770042"
-                        style="font-size: 17px"
+                        style="font-size: 14px"
                         class="text-decoration-none text-dark"
                         >+91 8605770042</a
                       ></span
@@ -113,29 +118,29 @@
                     <span
                       ><a
                         href="tel:+919850762935"
-                        style="font-size: 17px"
+                        style="font-size: 14px"
                         class="text-decoration-none text-dark"
                         >+91 9850762935</a
                       ></span
                     >
                   </p>
-                  <p class="p-0 m-0">
+                  <p class="p-0 m-0" style="font-size:16px">
                     LANDLINE:
                     <span
                       ><a
                         href="tel:+912536698006"
-                        style="font-size: 17px"
+                        style="font-size: 14px"
                         class="text-decoration-none text-dark"
                         >+91 253 6698006
                       </a></span
                     >
                   </p>
-                  <p class="p-0 m-0">
+                  <p class="p-0 m-0" style="font-size:16px">
                     FAX:
                     <span
                       ><a
                         href="fax:+912532326872"
-                        style="font-size: 17px"
+                        style="font-size: 14px"
                         class="text-decoration-none text-dark"
                         >+91 253 2326872</a
                       ></span
@@ -146,7 +151,7 @@
                     <span
                       ><a
                         href="svicpl@gmail.com"
-                        style="font-size: 17px"
+                        style="font-size: 14px"
                         class="text-decoration-none text-dark"
                         >svicpl@gmail.com</a
                       ></span
@@ -157,7 +162,7 @@
                     <span
                       ><a
                         href="svic12@rediffmail.com"
-                        style="font-size: 17px"
+                        style="font-size: 14px"
                         class="text-decoration-none text-dark"
                         >svic12@rediffmail.com</a
                       ></span
@@ -165,13 +170,13 @@
                   </p>
                 </div>
               </div>
-              <div class="card text-center border-0 p-2 mt-2">
+              <div class="card text-center border-0 p-4 mt-2">
                 <div>
                   <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" />
                   <h5>Scan</h5>
                 </div>
                 <div class="text-center">
-                  <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-50" alt="scanner" />
+                  <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-75" alt="scanner" />
                 </div>
               </div>
             </div>
@@ -201,16 +206,16 @@
 <!-- Unit Section Starts Here -->
 <!-- ------------------------------------------------------------------------------------>
 
-<section class="bg-white pt-md-4 pb-md-5">
+<section class="bg-white py-md-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
           <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
-          <div class="card-body cardContactUnit">
+          <div class="card-body cardContactUnit text-center">
             <h5 class="card-title text-center">UNIT 1</h5>
             <p class="text-center fw-bold m-0 p-0">PLOT B-224</p>
-            <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
+            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0">
               Graphite Processing & Laboratory Set-up Malegaon MIDC Area,
               Taluka - Sinnar, Nashik - 422113 Maharashtra, India.
             </p>
@@ -220,10 +225,10 @@
       <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
           <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
-          <div class="card-body cardContactUnit">
+          <div class="card-body cardContactUnit text-center">
             <h5 class="card-title text-center">UNIT 2</h5>
             <p class="text-center fw-bold m-0 p-0">PLOT B-226</p>
-            <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
+            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0">
               Impregnation & Assembly Malegaon MIDC Area, Taluka - Sinnar,
               Nashik - 422113 Maharashtra, India.
             </p>
@@ -233,10 +238,10 @@
       <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
           <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
-          <div class="card-body cardContactUnit">
+          <div class="card-body cardContactUnit text-center">
             <h5 class="card-title text-center">UNIT 3</h5>
             <p class="text-center fw-bold m-0 p-0">PLOT B-257</p>
-            <p style="font-weight: 400; font-size: 0.8rem" class="m-0 p-0">
+            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0">
               Steel Fabrication Shop & Warehouse Malegaon MIDC Area, Taluka
               - Sinnar, Nashik - 422113 Maharashtra, India.
             </p>

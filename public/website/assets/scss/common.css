@@ -10,7 +10,8 @@
 }
 
 body {
-    background: #f4f4f4;
+    /* background: #f4f4f4; */
+    background: #ffffff;
 }
 
 /* ------------------------------------------------------------ */
@@ -33,9 +34,11 @@ body {
     text-align: center;
     border-radius: 3px;
 }
-.mainVideoContainer{
+
+.mainVideoContainer {
     line-height: 0 !important;
 }
+
 .navbar {
     z-index: 1;
 }
@@ -113,13 +116,14 @@ body {
 .quickLinksFooter p {
     margin-bottom: 0.3rem;
 }
-.quickLinksFooter p a{
+
+.quickLinksFooter p a {
     color: #D8D8D8 !important;
 }
 
 .footerLine {
     background: #23569E;
-    height: 8px;
+    height: 15px;
 }
 
 .footerLineIcon {
@@ -147,14 +151,39 @@ body {
     background-image: url("../../../website/assets/images/footerBack.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 310px;
+    height: 290px;
     border-radius: 10%;
-    width: 70%;
+    width: 65%;
+}
+
+.footerBack p {
+    line-height: 1.1;
 }
 
 .fa-facebook:before {
     padding-left: 3px;
     padding-right: 3px;
+    color: #383838;
+}
+
+.fa-instagram:before {
+    color: #383838;
+}
+
+.fa-envelope-o:before {
+    color: #383838;
+}
+
+.fa-facebook:hover:before {
+    color: #ffff;
+}
+
+.fa-instagram:hover:before {
+    color: #ffff;
+}
+
+.fa-envelope-o:hover:before {
+    color: #ffff;
 }
 
 .contactUsFooter p {
@@ -169,7 +198,7 @@ body {
 
 @media only screen and (max-width: 576px) {
     .bannerCardHeading {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     .videoCard {
@@ -193,7 +222,7 @@ body {
         background-image: url("../../../website/assets/images/footerBack.png");
         background-repeat: no-repeat;
         background-position: bottom;
-        height: 300px;
+        height: 290px;
         border-radius: 10%;
     }
 }
