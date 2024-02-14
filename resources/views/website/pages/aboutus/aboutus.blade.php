@@ -146,15 +146,15 @@
         </h4>
         <div class="container">
             <div class="row justify-content-center my-3">
-                <div class="col-10">
+                <div class="col-9">
                     <img src="{{ asset('website/assets/images/aboutus/companyMob1.png') }}" class="w-100" alt="" />
                     <h6>B-226 PLOT</h6>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                     <img src="{{ asset('website/assets/images/aboutus/companyMob2.png') }}" class="w-100" alt="" />
                     <h6>B-257 PLOT</h6>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                     <img src="{{ asset('website/assets/images/aboutus/companyMob3.png') }}" class="w-100" alt="" />
                     <h6>B-224 PLOT</h6>
                 </div>
@@ -172,14 +172,14 @@
 <!-- ------------------------------------------------------------------------------------>
 <!-- Company Section Starts Here -->
 <!-- ------------------------------------------------------------------------------------>
-{{-- <section class="text-center d-none d-md-block d-lg-block">
+<!-- {{-- <section class="text-center d-none d-md-block d-lg-block">
 <h1 class="text-center HomeAbout heading pt-4 pb-3 m-0 bg-white">Company</h1>
   <div class="container">
     <img src="{{ asset('website/assets/images/aboutus/aboutPageImg.png')}}" class="img-fluid w-75" alt="" />
   </div>
-</section> --}}
+</section> --}} -->
 <!-- mobile view -->
-<section class="d-block d-md-none d-lg-none text-center">
+<!-- <section class="d-block d-md-none d-lg-none text-center">
   <h4 class="text-center bg-white p-0 m-0 pt-3 pb-2 HomeAbout heading">
     Company
   </h4>
@@ -199,7 +199,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- ------------------------------------------------------------------------------------>
 <!-- Company Section Ends Here -->
 <!-- ------------------------------------------------------------------------------------>
