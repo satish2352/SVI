@@ -7,7 +7,7 @@
       <!-- About Us Section starts Here -->
       <!-- ------------------------------------------------------------------------------------>
       <section class="HomeAboutSection py-5">
-        <div class="container">
+        <div class="container py-4">
           <h2 class="text-center HomeAbout heading">About us</h2>
           <div class="row justify-content-center">
             @if (empty($data_output_aboutus))
@@ -31,7 +31,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-7 d-flex align-items-center bg-white">
+            <div class="col-lg-7 d-flex align-items-center bg-white shadow-lg">
               <p class="pText ms-md-5 pt-md-4 py-md-1 pe-md-3">
                 {{ strip_tags($aboutus['description']) }}
               </p>
@@ -116,7 +116,7 @@
       <!-- ------------------------------------------------------------------------------------>
       <!-- Home Cards Section Starts Here -->
       <!-- ------------------------------------------------------------------------------------>
-      <section class="my-md-5 my-3">
+      <section class="py-md-5 py-3 svicplSection">
         <div class="container">
           <h2 class="heading svpilHeading">SVICPL’s Core Competencies</h2>
           <div class="row justify-content-center">
@@ -206,7 +206,7 @@
       <!-- ------------------------------------------------------------------------------------>
       <!-- Round Banner Section Starts Here -->
       <!-- ------------------------------------------------------------------------------------>
-      <section class="my-md-5 my-3">
+      <section class="pb-md-5 py-2 svicplSection">
         <div class="container">
           <img src="{{ asset('website/assets/images/home/HomeBanner3.png') }}" alt="" class="img-fluid d-none d-md-block d-lg-block" />
           <img src="{{ asset('website/assets/images/home/MOBILEHome BANNER3.png') }}" alt="" class="img-fluid d-block d-md-none d-lg-none" />

@@ -80,18 +80,18 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
 <!-- Banner Section Ends Here -->
 <section class="container videoCard ">
   <div class="card videoCard_card border-0 pt-3 pb-1">
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-12">
+    <div class="row bannerCardMainRow align-items-center">
+      <div class="col-lg-4 col-md-4 col-4">
         <h6 class="px-md-5 py-lg-2 bannerCardHeading">
           ISO 9000 CERTIFIED COMPANY
         </h6>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-4">
         <h6 class="px-md-5 py-lg-2 bannerCardHeading">
           PROFESSIONAL AND TIMELY SERVICE
         </h6>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-4">
         <h6 class="px-md-5 py-lg-2 bannerCardHeading">
           WE MAKE DURABLE GRAPHITE PRODUCTS
         </h6>

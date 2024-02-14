@@ -73,12 +73,16 @@
                                                 <span class="red-text"><?php echo $errors->first('video_upload', ':message'); ?></span>
                                             @endif
                                         </div>
-                                        <img id="english"
+                                        {{-- <img id="english"
                                             src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $editData->video_upload }}"
-                                            class="img-fluid img-thumbnail" width="150" style="background-color: aliceblue;">
-                                        <img id="english_imgPreview" src="#"
-                                            alt=" {{ strip_tags($editData['title']) }} Image"
-                                            class="img-fluid img-thumbnail" width="150" style="display:none">
+                                            class="img-fluid img-thumbnail" width="150" style="background-color: aliceblue;"> --}}
+                                      
+                                            <video width="200" height="160" controls id="videoPreview">
+                                                <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $editData->video_upload }}" type="video/mp4">
+                                            </video>
+                                            
+                                            <img id="videoThumbnail" src="#" alt="Video Thumbnail" class="img-fluid img-thumbnail" width="150" style="display:none">
+                                            
                                     </div>
 
 
@@ -110,6 +114,28 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('videoPreview');
+                const thumbnailImg = document.getElementById('videoThumbnail');
+        
+                // Function to generate thumbnail from video
+                function generateThumbnail() {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                    return canvas.toDataURL('image/png');
+                }
+        
+                // Show thumbnail when the video metadata is loaded
+                video.addEventListener('loadedmetadata', function() {
+                    thumbnailImg.src = generateThumbnail();
+                    thumbnailImg.style.display = 'block';
+                });
+            });
+        </script>
+        
         <script>
             $(document).ready(function() {
                 // Function to check if all input fields are filled with valid data

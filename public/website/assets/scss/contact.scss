@@ -1,33 +1,96 @@
 .contactSection {
   transform: translate(0px, 0px);
-  height: 610px;
-  background: linear-gradient(
-    90deg,
-    #23569E 30%,
-    #edfeff 30%,
-    #edfeff 70%,
-    #23569E 70%
-  );
+  height: 700px;
+  background: linear-gradient(90deg,
+      #23569E 30%,
+      #edfeff 30%,
+      #edfeff 70%,
+      #23569E 70%);
 }
+
 .formSubmit {
   background: #23569E;
   color: white;
 }
+
 .unitCard {
   border-left: 0;
   border-right: 0;
   border-top: 0;
   border-bottom: 5px solid #23569E;
 }
+
 .unitCard h5 {
-  color: #23569E;
+  color: #23559c;
+  font-family: 'Poppins';
+  font-weight: 800;
 }
+
 .cardContactUnit {
   height: 10rem;
 }
-.contactCard{
+
+.contactPageCard {
+  border-radius: 2rem;
+}
+.contactText p{
+  font-family: 'Poppins';
+  color: #000;
+  font-weight: 400;
+}
+.contactCard {
   border-radius: 50px;
 }
+.eduact-btn__curve_button{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.contactPageCard .form-control {
+  background-color: #eefffd;
+  padding: 0.5rem;
+}
+
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../../../website/assets/images/contact/name.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding-left: 60px !important;
+}
+input[type=email] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../../../website/assets/images/contact/mail.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding-left: 44px !important;
+}
+input[type=number] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('../../../website/assets/images/contact/phone.png');
+  background-position: 6px 6px; 
+  background-repeat: no-repeat;
+  padding-left: 44px !important;
+}
+
 @media only screen and (max-width: 576px) {
   .contactSection {
     height: 1360px;
