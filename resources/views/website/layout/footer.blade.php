@@ -6,7 +6,7 @@
       class="d-flex justify-content-center align-items-center justify-content-lg-between footerLine"
     ></section>
     <section>
-      <footer class="sviFooter py-md-5">
+      <footer class="sviFooter py-3 py-md-5">
         <div class="container">
           <div class="row text-white justify-content-center">
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">

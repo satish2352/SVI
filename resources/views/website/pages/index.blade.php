@@ -6,7 +6,7 @@
       <!-- ------------------------------------------------------------------------------------>
       <!-- About Us Section starts Here -->
       <!-- ------------------------------------------------------------------------------------>
-      <section class="HomeAboutSection py-5">
+      <section class="HomeAboutSection py-2 py-md-5">
         <div class="container py-4">
           <h2 class="text-center HomeAbout heading">About us</h2>
           <div class="row justify-content-center">
@@ -18,7 +18,7 @@
             </div>
         @else
             @foreach ($data_output_aboutus as $aboutus)
-            <div class="col-lg-5 HomeAboutRow aboutVideoMain">
+            <div class="col-lg-5 mb-5 mb-md-0 HomeAboutRow aboutVideoMain">
               <div class="">
                 <div class="aboutVideo">
                   <video class="videoSize shadow-lg" autoplay loop muted playsinline class="videoBanner">
@@ -32,13 +32,13 @@
               </div>
             </div>
             <div class="col-lg-7 d-flex align-items-center bg-white shadow-lg">
-              <p class="pText ms-md-5 pt-md-4 py-md-1 pe-md-3">
+              <p class="pText pt-5 ms-md-5 pt-md-4 py-md-1 pe-md-3">
                 {{ strip_tags($aboutus['description']) }}
               </p>
             </div>
             @endforeach
             @endif
-            <div class="HomeAboutButton1 text-md-end mt-md-3 ">
+            <div class="HomeAboutButton1 text-md-end text-center mt-3">
                 <a href="{{ route('aboutus') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View More </a>
             </div>
           </div>
@@ -87,7 +87,7 @@
                     {{ strip_tags($product['description']) }}
                   </p>
                 </div>
-                <div class="HomeAboutButton1 text-md-end mt-md-3 me-xl-4 ">
+                <div class="HomeAboutButton1 text-md-end text-center my-3 mt-md-3 me-xl-4 ">
                   <a href="{{ route('product') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View all </a>
               </div>
               </div>
