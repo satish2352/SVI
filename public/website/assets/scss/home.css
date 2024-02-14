@@ -155,6 +155,19 @@
     .onVideoBanner img {
         width: 40% !important;
     }
+
+    .HomeAboutButton {
+        background: #23569E;
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        border-radius: 16px;
+        margin-right: 0px;
+    }
+    .svpilHeading {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (min-width: 1367px) and (max-width: 1920px) {

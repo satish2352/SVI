@@ -225,12 +225,12 @@ body {
 
 @media only screen and (max-width: 576px) {
     .bannerCardHeading {
-        font-size: 0.6rem;
+        font-size: 0.52rem;
     }
 
     .videoCard {
         position: relative;
-        bottom: 65px;
+        bottom: 35px;
     }
 }
 

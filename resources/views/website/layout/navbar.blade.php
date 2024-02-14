@@ -79,9 +79,9 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
 </section>
 <!-- Banner Section Ends Here -->
 <section class="container videoCard ">
-  <div class="card videoCard_card border-0 pt-3 pb-1">
+  <div class="card videoCard_card border-0 pt-md-3 pt-4 pb-2 pb-md-1">
     <div class="row bannerCardMainRow align-items-center">
-      <div class="col-lg-4 col-md-4 col-4">
+      <div class="col-lg-4 col-md-4 col-4 ">
         <h6 class="px-md-5 py-lg-2 bannerCardHeading">
           ISO 9000 CERTIFIED COMPANY
         </h6>
