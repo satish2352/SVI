@@ -1,0 +1,80 @@
+.main-services {
+    background: linear-gradient(to bottom, #fff 50%, #E6FCFF 50%);
+    padding: 30px 0px;
+}
+
+.main-services .services-main-title {
+    color: #23569E;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.main-services .row {
+    position: relative;
+    z-index: 1; /* Ensures content remains above the pseudo-element */
+}
+
+.main-services .row::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #E6FCFF;
+    z-index: -1;
+}
+
+.main-services .service-heading {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.main-services .service-number {
+    color: #23569E;
+}
+
+.main-services .service-title {
+    color: #000000;
+}
+.service-spacing{
+    padding: 20px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .main-services {
+        background:#fff;
+        padding: 0px 0px;
+    }
+    .main-services .row::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: #fff;
+        z-index: -1;
+    }
+    .main-services .services-main-title {
+        color: #23569E;
+        font-size: 32px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 0px;
+    }
+    .service-spacing{
+        padding: 0px;
+        text-align: center;
+    }
+}

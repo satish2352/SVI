@@ -16,7 +16,7 @@
   <link href="{{ asset('website/assets/scss/contact.scss') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/media.scss') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/product.css') }}" rel="stylesheet">
-  <link href="{{ asset('website/assets/scss/services.scss') }}" rel="stylesheet">
+  <link href="{{ asset('website/assets/scss/services.css') }}" rel="stylesheet">
 
   <title>SVI - Home</title>
 </head>

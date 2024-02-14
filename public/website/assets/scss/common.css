@@ -10,7 +10,7 @@
 }
 
 body {
-    background: #f4f4f4;
+    /* background: #f4f4f4; */
 }
 
 /* ------------------------------------------------------------ */
@@ -102,6 +102,12 @@ body {
     font-size: 1rem;
 }
 
+.navbar-nav .nav-link.active {
+    background-color: #23569E; 
+    color: #fff; 
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 /* ------------------------------------------------------------ */
 /* Banner */
 /* ------------------------------------------------------------ */
@@ -163,6 +169,27 @@ body {
     background-color: #383838;
 }
 
+/*-- Copyright --*/
+.copyright {
+    position: relative;
+    background-color: #23569E;
+    padding: 20px 0 20px;
+   
+  }
+  
+  .copyright__text {
+    color: #fff;
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .copyright__text a {
+    color: inherit;
+  }
+  
+  /* .copyright__text a:hover {
+    color: red;
+  } */
 .red-text {
     color: red;
 }

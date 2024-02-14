@@ -49,11 +49,16 @@ class OurProductServices{
 // dd($request);
             $update_Incidenttype = $this->repo->updateAll($request);
             // dd($update_Incidenttype);
+
+          
+
             if ($update_Incidenttype) {
                 return ['status' => 'success', 'msg' => 'Product Category Updated Successfully.'];
             } else {
                 return ['status' => 'error', 'msg' => 'Product Category Not Updated.'];
-            }  
+            } 
+            
+          
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
         }      

@@ -44,20 +44,21 @@
             </div>
            </section>
            
-        <section class="main-product">
+        <section class="main-product-sub">
             <div class="container-fluid">
                 <h4 class="product-name py-4">Our Product</h4>
                 <div class="row">
                 </div>
             </div>
-    </div>
-    </section>
+   
     {{-- ============================= --}}
+    
+      
     <div class="container-fluid contaback bg-white">
         <div class="">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-3 mt-5">
+                    <div class="col-md-3">
                         <nav class="article_nav">
                             <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
                                 @forelse($all_services as $key=>$categories_data)
@@ -84,6 +85,8 @@
                                     <h4 class="card-title fw-7">{{ $item['product_title'] }}</h4>
                                     <h4 class="card-title fw-7">{{ $item['product_description'] }}</h4>
                                 </div> --}}
+
+                              
                                     @forelse ($all_services_details as $key=>$item)
                                         {{-- <h4 class="card-title fw-7">{{ $item['service_details'] }}</h4> --}}
 
@@ -118,7 +121,78 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
     <script>
+
+$(document).ready(function() {
+    // Show data for the first category by default
+    var firstCategoryId = '{{ $all_services->first()->id }}';
+    getServices(firstCategoryId);
+});
+
+var currentCategoryData = {}; // Variable to store current category data
+
+function getServices(our_services_master_id) {
+    console.log("Clicked tab with ID: " + our_services_master_id);
+    $("#gallary_data").empty();
+
+    // Check if the category data is already loaded
+    if (currentCategoryData.hasOwnProperty(our_services_master_id)) {
+        displayCategoryData(currentCategoryData[our_services_master_id]);
+    } else {
+        $.ajax({
+            url: "{{ route('list-our-services-ajax') }}",
+            method: "POST",
+            data: {
+                "our_services_master_id": our_services_master_id
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(data) {
+                currentCategoryData[our_services_master_id] = data; // Store category data
+
+                displayCategoryData(data); // Display category data
+            },
+            error: function(data) {
+                console.error('Error fetching data');
+            }
+        });
+    }
+}
+
+function displayCategoryData(categoryData) {
+    var path = '<?php echo Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW'); ?>';
+    $("#gallary_data").empty();
+
+    // Append product title and description
+    $("#gallary_data").append(`
+    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-3">
+        <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis">
+            <h4 class="card-title fw-7">${categoryData[0].product_title}</h4>
+            <h4 class="card-title fw-7">${categoryData[0].product_description}</h4>
+        </div>
+        </div>
+    `);
+
+    // Append images
+    $.each(categoryData, function(i, item) {
+        $("#gallary_data").append(`
+            <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
+                <div class="card article_card_container shadow-sm">
+                    <img src="${path}${item.image}"
+                        class="card-img-top" alt="${item.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.title}</h5>
+                    </div>
+                </div>
+            </div>
+        `);
+    });
+}
+
+    </script>
+    {{-- <script>
         $(document).ready(function() {
             // Show data for the first category by default
             var firstCategoryId = '{{ $all_services->first()->id }}';
@@ -163,6 +237,6 @@
                 error: function(data) {}
             });
         }
-    </script>
+    </script> --}}
     </div>
 @endsection

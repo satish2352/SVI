@@ -130,6 +130,23 @@
           </div>
         </div>
       </footer>
+
+
+      <section class="copyright text-center">
+        <div class="container wow fadeInUp" data-wow-delay="400ms">
+            <p class="copyright__text">Copyright <span class="dynamic-year"></span><!-- /.dynamic-year --> 
+                | Shri Venkatesh Industry Designed by 
+                <a href="https://www.sumagoinfotech.com/index1.php" target="_blank">
+                    <img src="{{ asset('website/assets/images/red-heart.png')}}" className="img-fluid" style="width:20px " alt="" />
+                  </a>
+                  From Nashik 
+                  {{-- <a to="https://sumagoinfotech.com/" class="cursor" target="_blank">
+                <img src="{{ asset('website/assets/images/logo_sm.png')}}" className="img-fluid " alt="" style="width:18px" >
+              </a> --}}
+            </p>
+           
+        </div><!-- /.container -->
+    </section><!-- /.copyright -->
     </section>
 
     <!-- ------------------------------------------------------------------------------------>
