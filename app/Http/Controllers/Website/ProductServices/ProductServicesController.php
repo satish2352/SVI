@@ -24,6 +24,9 @@ class ProductServicesController extends Controller
             return $e;
         }
         return view('website.pages.product.services',compact('data_output'));
-    } 
+    }
+    
+    
+    
 }
 

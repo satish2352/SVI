@@ -1,82 +1,168 @@
 @extends('website.layout.master')
 
 @section('content')
-<div class="main-product bg-white">
-    <section class="main-product">
-     <div class="container-fluid">
-       <h4 class="product-name py-4">Product</h4>
-       <div class="row">
+    <div class="main-product bg-white">
 
 
-           {{-- <div class="col-lg-4 col-md-4 col-sm-4">
-             <div class="card">
-             <img src="{{ asset('website/assets/images/product/1.png')}}" alt="Home_Banner" class="img-fluid" />
-               <div class="card-body shadow-sm card-title" >Largest Heat Exchanger </div>
-             </div>
-           </div> --}}           
-            @if (empty($data_output))
-            <div class="container">
+        <section class="main-product">
+            <div class="container-fluid">
+              <h4 class="product-name py-4">Product</h4>
+              <div class="row">
+       
+       
+                  {{-- <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card">
+                    <img src="{{ asset('website/assets/images/product/1.png')}}" alt="Home_Banner" class="img-fluid" />
+                      <div class="card-body shadow-sm card-title" >Largest Heat Exchanger </div>
+                    </div>
+                  </div> --}}           
+                   @if (empty($data_output_all_product))
+                   <div class="container">
+                       <div class="row">
+                           <h3 class="d-flex justify-content-center" style="color: #00000">No Data Found For Services</h3>
+                       </div>
+                   </div>
+               @else
+                   @foreach ($data_output_all_product as $product)
+                   <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card">
+                    <img src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}" alt="{{ strip_tags($product['title']) }}" class="img-fluid" />
+                    <div class="card-body shadow-sm card-title" >{{ strip_tags($product['title']) }}</div>
+                  </div>
+                 </div>
+                  @endforeach
+                  @endif
+                  
+        
+                  {{-- <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="card">
+                    <img src="{{ asset('website/assets/images/product/3.png')}}" alt="Home_Banner" class="img-fluid" />
+                    <div class="card-body shadow-sm card-title" >Pickling Heat Exchanger</div>
+                  </div> --}}
+                  </div>
+              </div>
+            </div>
+           </section>
+           
+        <section class="main-product">
+            <div class="container-fluid">
+                <h4 class="product-name py-4">Product</h4>
                 <div class="row">
-                    <h3 class="d-flex justify-content-center" style="color: #00000">No Data Found For Services</h3>
                 </div>
             </div>
-        @else
-            @foreach ($data_output as $product)
-            <div class="col-lg-4 col-md-4 col-sm-4">
-             <div class="card">
-             <img src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}" alt="{{ strip_tags($product['title']) }}" class="img-fluid" />
-             <div class="card-body shadow-sm card-title" >{{ strip_tags($product['title']) }}</div>
-           </div>
-          </div>
-           @endforeach
-           @endif
-           
- 
-           {{-- <div class="col-lg-4 col-md-4 col-sm-4">
-             <div class="card">
-             <img src="{{ asset('website/assets/images/product/3.png')}}" alt="Home_Banner" class="img-fluid" />
-             <div class="card-body shadow-sm card-title" >Pickling Heat Exchanger</div>
-           </div> --}}
-           </div>
-       </div>
-     </div>
+    </div>
     </section>
-    <section class="our-product">
-     <div class="container-fluid">
-       <div class="row d-flex justify-content-center">
-         <div class="col-lg-11 col-md-11 col-sm-11 px-0">
-     <div class="d-flex align-items-start">
-       <div class="col-lg-3 col-md-3 col-sm-3">
-       <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-         <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">BLOCK TYPE HEAT EXCHANGERS</button>
-         <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Heat Exchangers </button>
-         <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">DualUtility Condense</button>
-         <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Smallest& Largest Heat Exchangers</button>
-         <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Graphite Falling Film Absorbers,Evaporator and Graphite Packed Bed Scrubber</button>
-         <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">VACUUM JET EJECTOR SYSTEM</button>
-         <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">GraphiteThermowell</button>
-         <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">DRY HCL GAS REGENERATION UNIT</button>
-       </div>
-     </div>
-     <div class="col-lg-9 col-md-9 col-sm-9">
-       <div class="tab-content" id="v-pills-tabContent">
-         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-           <div class="cardContent">
-             <h3 class="">Heat Exchangers 
-               (Condensers, Reboilers, Coolers) for Hostile Applications</h3>
-               <p>SVI CarbonPvt Ltd. has established its own sound technological and infrastructural baseto manufacture Graphite Heat Exchanger with various kinds of impregnation. OurHeat Exchangers work have provided satisfactory service for critical andhostile applications like Caustic solution, Sulfuric acid, Hydrochloric acid,Metal salts, Chlorobenzenes, etc.</p>
-           </div>
-         </div>
-         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">savita</div>
-         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">test</div>
-         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-       </div>
-       </div>
- 
-     </div>
-   </div>
-   </div>
- </div>
-    </section>
-   </div>
-      @endsection
+    {{-- ============================= --}}
+    <div class="container-fluid contaback bg-white">
+        <div class="">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3 mt-5">
+                        <nav class="article_nav">
+                            <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
+                                @forelse($all_services as $key=>$categories_data)
+                                    <button class="nav-link article_tab_link {{ $loop->first ? 'active' : '' }}"
+                                        id="id_{{ $categories_data['id'] }}" data-bs-toggle="tab"
+                                        data-bs-target="#data_id_{{ $categories_data['id'] }}"
+                                        onclick="getServices('{{ $categories_data['id'] }}')" type="button" role="tab"
+                                        aria-controls="nav-profile"
+                                        aria-selected="false">{{ $categories_data['product_name'] }}</button>
+                                @empty
+                                    <div class="alert alert-primary" role="alert">
+                                        No Data Found
+                                    </div>
+                                @endforelse
+                            </div>
+                        </nav>
+
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content p-3" id="nav-tabContent">
+                            <div class="row d-flex gallery" id="gallary_data">
+                                <div class="row row-cols-1 row-cols-md-4 g-3">
+                                    {{-- <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <h4 class="card-title fw-7">{{ $item['product_title'] }}</h4>
+                                    <h4 class="card-title fw-7">{{ $item['product_description'] }}</h4>
+                                </div> --}}
+                                    @forelse ($all_services_details as $key=>$item)
+                                        {{-- <h4 class="card-title fw-7">{{ $item['service_details'] }}</h4> --}}
+
+                                        <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
+                                            <div class="card article_card_container shadow-sm">
+                                                <img src="{{ Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW') }}{{ $item['image'] }}"
+                                                    class="card-img-top" alt="{{ $item['title'] }}">
+                                                <div class="card-body">
+                                                    <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
+                                                    {{-- <p class="text-align-justify">{{
+                                                  $item['short_description'] }}</p> --}}
+                                                </div>
+                                                <div class="card-footer article_card_footer">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <div class="alert alert-primary" role="alert">
+                                            No Data Found
+                                        </div>
+                                    @endforelse
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Show data for the first category by default
+            var firstCategoryId = '{{ $all_services->first()->id }}';
+            getServices(firstCategoryId);
+        });
+
+        function getServices(our_services_master_id) {
+            console.log("Clicked tab with ID: " + our_services_master_id); // Check if this line gets printed
+            $("#gallary_data").empty();
+            $.ajax({
+                url: "{{ route('list-our-services-ajax') }}",
+                method: "POST",
+                data: {
+                    "our_services_master_id": our_services_master_id
+                },
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function(data) {
+                    var path = '<?php echo Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW'); ?>';
+                    $("#gallary_data").empty();
+                    $.each(data, function(i, item, ) {
+                        $("#gallary_data").append(` 
+
+                  
+                
+                                         
+
+                                  <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
+                                      <div class="card article_card_container shadow-sm">
+                                          <img src="` + path + item.image + `"
+                                              class="card-img-top" alt="` + item.title + `">
+                                          <div class="card-body">
+                                              <h5 class="card-title">` + item.title + `</h5>
+                                          </div>
+                                         
+                                      </div>
+                                  </div>
+                           `);
+                    });
+                },
+                error: function(data) {}
+            });
+        }
+    </script>
+    </div>
+@endsection

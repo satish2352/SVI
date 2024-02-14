@@ -7,7 +7,7 @@
     ></section>
     <section>
       <footer class="sviFooter py-md-5">
-        <div class="container px-0">
+        <div class="container">
           <div class="row text-white justify-content-center">
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
               <div class="footerBack text-center mx-auto">
