@@ -7,17 +7,15 @@ use App\Http\Controllers\Controller;
 // use App\Http\Services\DashboardServices;
 use App\Models\ {
     User,
-    Slider,
-    CoursesOffered,
-   Gallery,
+    OurProductModel,
+    ProductDetails,
+    Product,
     Testimonial,
-    GalleryCategory,
-    GalleryMain,
-    UpcomingCourses,
-    ApplicationForm,
-    FessPaymentForm,
-    Scolarship,
-    ContactUs
+    ProductServices,
+    AnimatedVideo,
+    Media,
+    ContactUs,
+   
 };
 use Validator;
 
@@ -32,23 +30,17 @@ class DashboardController extends Controller {
 
     public function index()
     {
+        $return_data = array();
+        $return_data['our_product_category'] = count(OurProductModel::where('is_active',true)->orderBy('updated_at', 'desc')->get());
+        $return_data['product_details'] = count(ProductDetails::where('is_active',true)->orderBy('updated_at', 'desc')->get());
+        $return_data['product'] = count(Product::where('is_active',true)->orderBy('updated_at', 'desc')->get());
+        $return_data['product_services'] = count(ProductServices::where('is_active',true)->orderBy('updated_at', 'desc')->get());
+        $return_data['animated_video'] = count(AnimatedVideo::where('is_active',true)->orderBy('updated_at', 'desc')->get());
+        $return_data['media'] = count(Media::where('is_active',true)->orderBy('updated_at', 'desc')->get());
+        $return_data['contact_us'] = count(ContactUs::where('is_active',true)->orderBy('updated_at', 'desc')->get());
+      
 
-        return view('admin.pages.dashboard_new');
-        // $return_data = array();
-        // $return_data['slider'] = count(Slider::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['coursesOffered'] = count(CoursesOffered::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // // $return_data['courses'] = count(Courses::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['gallary'] = count(Gallery::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['galleryCategory'] = count(GalleryCategory::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['galleryMain'] = count(GalleryMain::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['testimonial'] = count(Testimonial::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['upcomingCourses'] = count(UpcomingCourses::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['applicationForm'] = count(ApplicationForm::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['fessPaymentForm'] = count(FessPaymentForm::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['scolarship'] = count(Scolarship::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-        // $return_data['contactUs'] = count(ContactUs::where('is_active',true)->orderBy('updated_at', 'desc')->get());
-
-        // return view('admin.pages.dashboard',compact('return_data'));
+        return view('admin.pages.dashboard',compact('return_data'));
     }
 
 

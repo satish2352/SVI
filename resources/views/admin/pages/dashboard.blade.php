@@ -186,7 +186,7 @@
                                         <div class="grey-bg container-fluid">
                                             <section id="minimal-statistics">
                                                 <div class="row justify-content-center">
-                                                    <div class="col-xl-3 col-sm-6 col-12">
+                                                    <div class="col-xl-4 col-sm-6 col-12">
                                                         <div class="card">
                                                             <div class="card-content dashboard_Card1">
                                                                 <div class="card-body">
@@ -195,33 +195,15 @@
                                                                             <i class="homeIcon1 fas fa-address-card primary font-large-2 float-left"></i>
                                                                         </div>
                                                                         <div class="media-body text-right">
-                                                                            <h3>{{$return_data['slider']}}</h3>
-                                                                            <span>Slider</span>
+                                                                            <h3>{{$return_data['our_product_category']}}</h3>
+                                                                            <span>Our Product Category</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
-                                                        <div class="card">
-                                                            <div class="card-content dashboard_Card2">
-                                                                <div class="card-body">
-                                                                    <div class="media d-flex">
-                                                                        <div class="align-self-center icon_color">
-                                                                            <i class="homeIcon2 fas fa-newspaper primary font-large-2 float-left"></i>
-                                                                        </div>
-                                                                        <div class="media-body text-right">
-                                                                            <h3>{{$return_data['coursesOffered']}}</h3>
-                                                                            <span>Courses Offered</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                   
-                                                    <div class="col-xl-3 col-sm-6 col-12">
+                                                    <div class="col-xl-4 col-sm-6 col-12">
                                                         <div class="card">
                                                             <div class="card-content dashboard_Card3">
                                                                 <div class="card-body">
@@ -230,32 +212,32 @@
                                                                             <i class="homeIcon3 fas fa-address-card primary font-large-2 float-left"></i>
                                                                         </div>
                                                                         <div class="media-body text-right">
-                                                                            <h3>{{$return_data['gallary']}}</h3>
-                                                                            <span>Gallary</span>
+                                                                            <h3>{{$return_data['product_details']}}</h3>
+                                                                            <span>Our Product</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
+                                                    <div class="col-xl-4 col-sm-6 col-12">
                                                         <div class="card">
-                                                            <div class="card-content dashboard_Card4">
+                                                            <div class="card-content dashboard_Card2">
                                                                 <div class="card-body">
                                                                     <div class="media d-flex">
                                                                         <div class="align-self-center icon_color">
-                                                                            <i class="homeIcon4 fa fa-bars primary font-large-2 float-left"></i>
+                                                                            <i class="homeIcon2 fas fa-newspaper primary font-large-2 float-left"></i>
                                                                         </div>
                                                                         <div class="media-body text-right">
-                                                                            <h3>{{$return_data['galleryCategory']}}</h3>
-                                                                            <span>Our Result Category</span>
+                                                                            <h3>{{$return_data['product']}}</h3>
+                                                                            <span>Product</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
+                                                    </div>                                                   
+                                                    <div class="col-xl-4 col-sm-6 col-12">
                                                         <div class="card">
                                                             <div class="card-content dashboard_Card5">
                                                                 <div class="card-body">
@@ -264,15 +246,15 @@
                                                                             <i class="homeIcon5 fa fa-bars primary font-large-2 float-left"></i>
                                                                         </div>
                                                                         <div class="media-body text-right">
-                                                                            <h3>{{$return_data['galleryMain']}}</h3>
-                                                                            <span>Our Result </span>
+                                                                            <h3>{{$return_data['animated_video']}}</h3>
+                                                                            <span>Animated Video </span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
+                                                    <div class="col-xl-4 col-sm-6 col-12">
                                                         <div class="card">
                                                             <div class="card-content dashboard_Card6">
                                                                 <div class="card-body">
@@ -281,15 +263,15 @@
                                                                             <i class="homeIcon6 fas fa-newspaper primary font-large-2 float-left"></i>
                                                                         </div>
                                                                         <div class="media-body text-right">
-                                                                            <h3>{{$return_data['upcomingCourses']}}</h3>
-                                                                            <span>Upcoming Courses</span>
+                                                                            <h3>{{$return_data['product_services']}}</h3>
+                                                                            <span>Product Services</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
+                                                    <div class="col-xl-4 col-sm-6 col-12">
                                                         <div class="card">
                                                             <div class="card-content dashboard_Card7">
                                                                 <div class="card-body">
@@ -298,8 +280,8 @@
                                                                             <i class="homeIcon7 fas fa-address-card primary font-large-2 float-left"></i>
                                                                         </div>
                                                                         <div class="media-body text-right">
-                                                                            <h3>{{$return_data['testimonial']}}</h3>
-                                                                            <span>Testimonial</span>
+                                                                            <h3>{{$return_data['media']}}</h3>
+                                                                            <span>Media</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -307,7 +289,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-xl-3 col-sm-6 col-12">
+                                                    <div class="col-xl-4 col-sm-6 col-12">
                                                         <div class="card">
                                                             <div class="card-content dashboard_Card8">
                                                                 <div class="card-body">
@@ -316,58 +298,7 @@
                                                                             <i class="homeIcon8 fa fa-bars primary font-large-2 float-left"></i>
                                                                         </div>
                                                                         <div class="media-body text-right">
-                                                                            <h3>{{$return_data['applicationForm']}}</h3>
-                                                                            <span>Application</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
-                                                        <div class="card">
-                                                            <div class="card-content dashboard_Card9">
-                                                                <div class="card-body">
-                                                                    <div class="media d-flex">
-                                                                        <div class="align-self-center icon_color">
-                                                                            <i class="homeIcon9 fas fa-newspaper primary font-large-2 float-left"></i>
-                                                                        </div>
-                                                                        <div class="media-body text-right">
-                                                                            <h3>{{$return_data['fessPaymentForm']}}</h3>
-                                                                            <span>Fess Payment</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
-                                                        <div class="card">
-                                                            <div class="card-content dashboard_Card10">
-                                                                <div class="card-body">
-                                                                    <div class="media d-flex">
-                                                                        <div class="align-self-center icon_color">
-                                                                            <i class="homeIcon10 fa fa-file-alt primary font-large-2 float-left"></i>
-                                                                        </div>
-                                                                        <div class="media-body text-right">
-                                                                            <h3>{{$return_data['scolarship']}}</h3>
-                                                                            <span>Scolarship</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-3 col-sm-6 col-12">
-                                                        <div class="card">
-                                                            <div class="card-content dashboard_Card11">
-                                                                <div class="card-body">
-                                                                    <div class="media d-flex">
-                                                                        <div class="align-self-center icon_color">
-                                                                            <i class="homeIcon11 fa fa-window-restore primary font-large-2 float-left"></i>
-                                                                        </div>
-                                                                        <div class="media-body text-right">
-                                                                            <h3>{{$return_data['contactUs']}}</h3>
+                                                                            <h3>{{$return_data['contact_us']}}</h3>
                                                                             <span>Contact Us</span>
                                                                         </div>
                                                                     </div>
@@ -375,6 +306,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                  
                                     </div>
                                 </div>
 
