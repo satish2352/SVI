@@ -13,8 +13,8 @@
   <link href="{{ asset('website/assets/scss/home.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/common.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/about.css') }}" rel="stylesheet">
-  <link href="{{ asset('website/assets/scss/contact.scss') }}" rel="stylesheet">
-  <link href="{{ asset('website/assets/scss/media.scss') }}" rel="stylesheet">
+  <link href="{{ asset('website/assets/scss/contact.css') }}" rel="stylesheet">
+  <link href="{{ asset('website/assets/scss/media.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/product.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/services.css') }}" rel="stylesheet">
 
