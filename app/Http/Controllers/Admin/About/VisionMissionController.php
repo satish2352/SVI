@@ -131,6 +131,7 @@ class VisionMissionController extends Controller
                         ->withErrors($validation);
                 } else {
                     $update_data = $this->service->updateAll($request);
+                    
                     if ($update_data) {
                         $msg = $update_data['msg'];
                         $status = $update_data['status'];

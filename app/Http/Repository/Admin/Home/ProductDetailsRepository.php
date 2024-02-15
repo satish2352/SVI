@@ -5,7 +5,8 @@ use DB;
 use Illuminate\Support\Carbon;
 // use Session;
 use App\Models\ {
-    ProductDetails
+    ProductDetails,
+    OurProductModel
 };
 use Config;
 
@@ -46,22 +47,30 @@ class ProductDetailsRepository  {
             ];
         }
     }
+    
     public function getById($id){
         try {
-            $dataOutputByid = ProductDetails::find($id);
-            if ($dataOutputByid) {
-                return $dataOutputByid;
+
+            // $citizenvolunteer = CitizenVolunteerModal::find($id);
+            
+            $citizenvolunteer = ProductDetails::join('our_product', 'our_product.id','=', 'product_details.product_id')
+            ->select('product_details.*', 'our_product.product_name')
+            ->find($id);
+
+            if ($citizenvolunteer) {
+                return $citizenvolunteer;
             } else {
                 return null;
             }
         } catch (\Exception $e) {
             return $e;
             return [
-                'msg' => 'Failed to get by id Data.',
+                'msg' => 'Failed to get by id Citizen Volunteer.',
                 'status' => 'error'
             ];
         }
     }
+
     public function updateAll($request){
         try {
             $return_data = array();

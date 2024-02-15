@@ -53,7 +53,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label for="vision_image">Vision Image</label>
-                                            <input type="file" name="image" class="form-control mb-2"
+                                            <input type="file" name="vision_image" class="form-control mb-2"
                                                 id="english_image" accept="image/*" placeholder="image">
                                             @if ($errors->has('vision_image'))
                                                 <span class="red-text"><?php echo $errors->first('vision_image', ':message'); ?></span>
@@ -63,13 +63,13 @@
                                             src="{{ Config::get('DocumentConstant.VISION_MISSION_VIEW') }}{{ $editData->vision_image }}"
                                             class="img-fluid img-thumbnail" width="150" style="background-color: aliceblue;">
                                         <img id="english_imgPreview" src="#"
-                                            alt=" {{ strip_tags($editData['title']) }} Image"
+                                            alt="Vision Image"
                                             class="img-fluid img-thumbnail" width="150" style="display:none">
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label for="mission_image">Mission Image</label>
-                                            <input type="file" name="image" class="form-control mb-2"
+                                            <input type="file" name="mission_image" class="form-control mb-2"
                                                 id="english_image_new" accept="image/*" placeholder="image">
                                             @if ($errors->has('mission_image'))
                                                 <span class="red-text"><?php echo $errors->first('mission_image', ':message'); ?></span>
@@ -79,7 +79,7 @@
                                             src="{{ Config::get('DocumentConstant.VISION_MISSION_VIEW') }}{{ $editData->mission_image }}"
                                             class="img-fluid img-thumbnail" width="150" style="background-color: aliceblue;">
                                         <img id="english_imgPreview1" src="#"
-                                            alt=" {{ strip_tags($editData['title']) }} Image"
+                                            alt="Mission Image"
                                             class="img-fluid img-thumbnail" width="150" style="display:none">
                                     </div>
                                   

@@ -26,7 +26,7 @@ class MediaController extends Controller
     }
     public function store(Request $request){
         $rules = [
-            'image' => 'image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.MEDIA_IMAGE_MAX_SIZE").'|dimensions:min_width=200,min_height=200,max_width=1000,max_height=1000|min:'.Config::get("AllFileValidation.MEDIA_IMAGE_MIN_SIZE").'',
+            'image' => 'image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.MEDIA_IMAGE_MAX_SIZE").'|dimensions:min_width=200,min_height=300,max_width=1200,max_height=1600|min:'.Config::get("AllFileValidation.MEDIA_IMAGE_MIN_SIZE").'',
            
         ];
         $messages = [    
@@ -35,7 +35,7 @@ class MediaController extends Controller
             'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
             'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.MEDIA_IMAGE_MAX_SIZE").'KB .',
             'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.MEDIA_IMAGE_MIN_SIZE").'KB .',
-            'image.dimensions' => 'The image dimensions must be between 200X200 and 1000X1000 pixels.',
+            'image.dimensions' => 'The image dimensions must be between 200X300 and 1200X1600 pixels.',
         ];
 
         try {
@@ -81,7 +81,7 @@ class MediaController extends Controller
         ];
 
         if($request->has('image')) {
-            $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.MEDIA_IMAGE_MAX_SIZE").'|dimensions:min_width=200,min_height=200,max_width=1000,max_height=1000|min:'.Config::get("AllFileValidation.MEDIA_IMAGE_MIN_SIZE");
+            $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.MEDIA_IMAGE_MAX_SIZE").'|dimensions:min_width=200,min_height=300,max_width=1200,max_height=1600|min:'.Config::get("AllFileValidation.MEDIA_IMAGE_MIN_SIZE");
         }
        
         $messages = [   
@@ -90,7 +90,7 @@ class MediaController extends Controller
             'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
             'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.MEDIA_IMAGE_MAX_SIZE").'KB .',
             'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.MEDIA_IMAGE_MIN_SIZE").'KB .',
-            'image.dimensions' => 'The image dimensions must be between 200X200 and 1000X1000 pixels.',
+            'image.dimensions' => 'The image dimensions must be between 200X300 and 1200X1600 pixels.',
            
         ];
 
