@@ -23,7 +23,7 @@
                                 id="regForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                    {{-- <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label for="name">Select Menu</label>&nbsp<span
                                                 class="red-text">*</span>
@@ -58,6 +58,18 @@
 
 
                                             </select>
+                                            @if ($errors->has('name'))
+                                                <span class="red-text"><?php echo $errors->first('name', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div> --}}
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="name">Selected Menu </label>&nbsp<span class="red-text">*</span>
+                                            <input class="form-control" name="name" id="name"
+                                                placeholder="Enter the name" disabled
+                                                value="@if (old('name')) {{ old('name') }}@else{{ $editData->name }} @endif">
+                                            <label class="error py-2" for="name" id="name_error"></label>
                                             @if ($errors->has('name'))
                                                 <span class="red-text"><?php echo $errors->first('name', ':message'); ?></span>
                                             @endif
