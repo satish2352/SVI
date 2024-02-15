@@ -61,6 +61,7 @@
                     <div class="col-md-3">
                         <nav class="article_nav">
                             <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
+                                
                                 @forelse($all_services as $key=>$categories_data)
                                     <button class="nav-link article_tab_link {{ $loop->first ? 'active' : '' }}"
                                         id="id_{{ $categories_data['id'] }}" data-bs-toggle="tab"
@@ -170,7 +171,7 @@ function displayCategoryData(categoryData) {
     <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-3">
         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis">
             <h4 class="card-title fw-7">${categoryData[0].product_title}</h4>
-            <h4 class="card-title fw-7">${categoryData[0].product_description}</h4>
+            <h4 class="card-title fw-7 dis-ellipse">${categoryData[0].product_description}</h4>
         </div>
         </div>
     `);

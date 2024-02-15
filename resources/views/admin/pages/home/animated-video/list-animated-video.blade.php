@@ -7,8 +7,8 @@
                 <h3 class="page-title">
                     Animated Video
                   
-                        <a href="{{ route('add-animated-video') }}" class="btn btn-sm btn-primary ml-3">+
-                            Add</a>
+                        {{-- <a href="{{ route('add-animated-video') }}" class="btn btn-sm btn-primary ml-3">+
+                            Add</a> --}}
                 
 
                 </h3>
