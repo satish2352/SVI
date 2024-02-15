@@ -42,7 +42,7 @@
       <!-- ------------------------------------------------------------------------------------>
   
       <section class="bg-white">
-        <div class="container py-5">
+        <div class="container py-md-5 py-4">
           <div class="card border-0 py-3 px-3 mediaCard shadow-lg">
             <h4 class="heading text-start mx-md-4 mt-3">Media</h4>
             <div class="row justify-content-center">
@@ -55,55 +55,55 @@
           @else
               @foreach ($data_output as $media)
 
-              <div class="col-lg-3 col-md-3 col-sm-10">
+              <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ Config::get('DocumentConstant.MEDIA_VIEW') }}{{ $media['image'] }}" class="w-100" alt="media1" />
               </div>
               @endforeach
               @endif
-              {{-- <div class="col-lg-3 col-md-3 col-sm-10">
+              {{-- <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media2.png')}}" class="w-100" alt="media2" />
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-10">
+              <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media3.png')}}" class="w-100" alt="media3" />
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-10">
+              <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media4.png')}}" class="w-100" alt="media4" />
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-lg-3 col-md-3 col-sm-10">
+              <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media5.png')}}" class="w-100" alt="media5" />
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-10">
+              <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media6.png')}}" class="w-100" alt="media6" />
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-10">
+              <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media7.png')}}" class="w-100" alt="media7" />
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-10">
+              <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media8.png')}}" class="w-100" alt="media8" />
               </div> --}}
             </div>
           </div>
         </div>
-        {{-- <div class="col-lg-3 col-md-3 col-sm-10">
+        {{-- <div class="col-lg-3 col-md-3 col-sm-8">
           <img src="{{ asset('website/assets/images/media/media3.png')}}" class="w-100" alt="media3" />
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-10">
+        <div class="col-lg-3 col-md-3 col-sm-8">
           <img src="{{ asset('website/assets/images/media/media4.png')}}" class="w-100" alt="media4" />
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-lg-3 col-md-3 col-sm-10">
+        <div class="col-lg-3 col-md-3 col-sm-8">
           <img src="{{ asset('website/assets/images/media/media5.png')}}" class="w-100" alt="media5" />
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-10">
+        <div class="col-lg-3 col-md-3 col-sm-8">
           <img src="{{ asset('website/assets/images/media/media6.png')}}" class="w-100" alt="media6" />
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-10">
+        <div class="col-lg-3 col-md-3 col-sm-8">
           <img src="{{ asset('website/assets/images/media/media7.png')}}" class="w-100" alt="media7" />
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-10">
+        <div class="col-lg-3 col-md-3 col-sm-8">
           <img src="{{ asset('website/assets/images/media/media8.png')}}" class="w-100" alt="media8" />
         </div> --}}
       </div>

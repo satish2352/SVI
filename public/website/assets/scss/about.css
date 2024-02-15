@@ -2,28 +2,33 @@
     height: 240px;
     width: 380px;
     transform: translate(0px, 0px);
-    background: linear-gradient(
-        180deg,
-        #23569e 0%,
-        rgba(160, 238, 255, 0.99) 100%
-    );
+    background: linear-gradient(180deg,
+            #23569e 0%,
+            rgba(160, 238, 255, 0.99) 100%);
 }
+
 .aboutVideo {
     transform: translate(30px, 40px);
 }
+
 .HomeAbout {
     color: #23569e;
+    font-size: 1.8rem;
 }
+
 .HomeAboutSection {
     background: #f4f4f4;
 }
+
 .pText {
     text-align: justify;
     font-size: 0.75rem;
 }
+
 .pTextAbout {
     font-weight: 600;
 }
+
 .HomeAboutBtn {
     background: #23569e;
     float: right;
@@ -31,66 +36,80 @@
     color: white;
     text-align: end;
 }
+
 .certificate {
     width: 100%;
 }
+
 .certificateSection {
     transform: translate(0px, 0px);
     height: 1040px;
     background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
 }
+
 .visionMissionSection {
     background: #ecfdff;
 }
+
 .visionText {
     text-align: justify;
     font-weight: 500;
     font-size: 14px;
     color: #525252;
 }
+
 .visionHeading {
     text-align: left;
     padding-left: 12rem;
     color: #154891;
 }
+
 .missionHeading {
     text-align: right;
     padding-right: 12rem;
     color: #154891;
 }
+
 @media only screen and (max-width: 576px) {
     .aboutVideoMain {
         height: 200px;
         width: 320px;
         transform: translate(0px, 0px) !important;
-        background: linear-gradient(
-            180deg,
-            #23569e 0%,
-            rgba(160, 238, 255, 0.99) 100%
-        );
+        background: linear-gradient(180deg,
+                #23569e 0%,
+                rgba(160, 238, 255, 0.99) 100%);
     }
+
     .missionHeading {
         text-align: center;
         padding-right: 0rem;
         color: #154891;
     }
+
     .visionHeading {
-      text-align: center;
-      padding-left: 1rem;
-      color: #154891;
-  }
+        text-align: center;
+        padding-left: 1rem;
+        color: #154891;
+    }
+
     .certificateSection {
         transform: translate(0px, 0px);
         height: max-content;
         background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
     }
+
     .certificate {
         width: 100%;
     }
 }
+
 @media only screen and (min-width: 1367px) and (max-width: 1920px) {
     .HomeAbout1 {
         color: #23569E;
         padding-left: 9.5rem !important;
+    }
+
+    .pTextAbout {
+        padding-left: 3rem !important;
     }
 }

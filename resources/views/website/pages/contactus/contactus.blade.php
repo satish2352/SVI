@@ -6,7 +6,7 @@
 <!-- ------------------------------------------------------------------------------------>
 
     <section class="contactSection d-flex align-items-center">
-        <div class="container py-5">
+        <div class="container py-md-5">
           <div class="row justify-content-center">
             <div
               class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center"
@@ -17,8 +17,8 @@
                   <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
                   enctype="multipart/form-data">
               @csrf
-              <div class="row py-2">
-                  <div class="col-md-6 pt-md-0 pt-3">
+              <div class="row py-md-2">
+                  <div class="col-md-6 pt-md-0 pt-md-3">
                       <div class="">
                         <label for="full_name"><strong style="color:#323232"> Name </strong></label>
                           <input type="text"  placeholder="Your Full Name" name="full_name"

@@ -101,7 +101,7 @@
     letter-spacing: 3px;
     font-size: 25px;
     line-height: 1.4;
-    font-family: "Poppins";
+    font-family: "Volkhov", serif;
 }
 
 .productImg img {
@@ -115,14 +115,19 @@
 .svicplSection {
     background: #ecfdff;
 }
+
 .pTexthome {
     display: -webkit-box;
     -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
+}
+
+.cardBodyCoreComp .card-title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 /* media query */
 
@@ -173,8 +178,29 @@
         border-radius: 16px;
         margin-right: 0px;
     }
+    .productCard .cardContent .cardContent_text {
+        color: #1c2b38;
+        text-align: start;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        font-size: 20px;
+        line-height: 1.2;
+        font-family: "Volkhov", serif;
+        padding-bottom: 8px;
+    }
     .svpilHeading {
         font-size: 1.5rem;
+    }
+    .productH1 {
+        color: #1e4f9c !important;
+        font-weight: bold;
+        /* padding-left: 1.5rem; */
+        font-size: 1.8rem;
+    }
+    .HomeAbout {
+        color: #23569E;
+        padding-left: 0rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -202,9 +228,10 @@
     }
 
     .pText {
-        text-align: justify;
-        font-size: 0.75rem;
-        padding-left: 5rem;
+        text-align: justify !important;
+        font-size: 0.75rem !important;
+        padding-left: 5rem !important;
+        font-weight: 600;
     }
 
     .productCard .cardContent {

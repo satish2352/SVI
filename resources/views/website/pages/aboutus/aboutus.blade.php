@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="col-lg-7 pt-5 pt-md-0 d-flex align-items-center bg-white shadow-lg">
-              <p class="pText pTextAbout ms-md-5 pt-md-5  py-md-4 pe-md-3">
+              <p class="pText pTextAbout px-3 ms-md-5 pt-md-5 py-md-4 pe-md-3">
                 {{ strip_tags($aboutus['description']) }}
               </p>
             </div>
@@ -42,7 +42,7 @@
     <!-- ------------------------------------------------------------------------------------>
     <!-- Vision Mission Section Starts Here -->
     <!-- ------------------------------------------------------------------------------------>
-    <section class="visionMissionSection">
+    <section class="visionMissionSection py-md-3">
         <div class="container">
             @if (empty($data_output_vision_mission))
             <div class="container">
@@ -208,7 +208,7 @@
 <!-- Certificate Section Ends Here -->
 <!-- ------------------------------------------------------------------------------------>
 
-<section class="certificateSection pt-5">
+<section class="certificateSection pt-md-5 pt-2">
   <div class="container">
     <!-- <h4 class="text-center bg-white p-0 m-0 HomeAbout heading">
       Certificate

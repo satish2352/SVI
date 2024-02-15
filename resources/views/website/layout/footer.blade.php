@@ -6,7 +6,7 @@
       class="d-flex justify-content-center align-items-center justify-content-lg-between footerLine"
     ></section>
     <section>
-      <footer class="sviFooter py-3 py-md-5">
+      <footer class="sviFooter text-center text-md-start py-3 py-md-5">
         <div class="container">
           <div class="row text-white justify-content-center">
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
@@ -106,7 +106,7 @@
               </p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12 mt-4">
-              <h6 class="mb-3 mt-2 ms-xl-1">FOLLOW US</h6>
+              <h6 class="mb-3 mt-2 ms-xl-2">FOLLOW US</h6>
 
               <a href=""
                 ><i
