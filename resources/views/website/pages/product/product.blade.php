@@ -81,7 +81,7 @@
                     <div class="col-md-9">
                         <div class="tab-content p-3" id="nav-tabContent">
                             <div class="row d-flex gallery" id="gallary_data">
-                                <div class="row row-cols-1 row-cols-md-4 g-3">
+                                <div class="row row-cols-1 row-cols-md-4 ">
                                     {{-- <div class="col-lg-12 col-md-12 col-sm-12">
                                     <h4 class="card-title fw-7">{{ $item['product_title'] }}</h4>
                                     <h4 class="card-title fw-7">{{ $item['product_description'] }}</h4>
@@ -91,7 +91,7 @@
                                     @forelse ($all_services_details as $key=>$item)
                                         {{-- <h4 class="card-title fw-7">{{ $item['service_details'] }}</h4> --}}
 
-                                        <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
+                                        <div class="col-md-6 col-lg-4 col-sm-12 pt-4">
                                             <div class="card article_card_container shadow-sm">
                                                 <img src="{{ Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW') }}{{ $item['image'] }}"
                                                     class="card-img-top" alt="{{ $item['title'] }}">
@@ -179,7 +179,7 @@ function displayCategoryData(categoryData) {
     // Append images
     $.each(categoryData, function(i, item) {
         $("#gallary_data").append(`
-            <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
+            <div class="col-md-6 col-lg-4 col-sm-12 pt-4">
                 <div class="card article_card_container shadow-sm">
                     <img src="${path}${item.image}"
                         class="card-img-top" alt="${item.title}">
