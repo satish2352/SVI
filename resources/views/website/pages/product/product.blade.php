@@ -54,7 +54,7 @@
     {{-- ============================= --}}
     
       
-    <div class="container-fluid contaback bg-white">
+    <div class="container-fluid contaback bg-white pb-4">
         <div class="">
             <div class="col-md-12">
                 <div class="row">
@@ -169,7 +169,7 @@ function displayCategoryData(categoryData) {
     // Append product title and description
     $("#gallary_data").append(`
     <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-3">
-        <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis">
+        <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
             <h4 class="card-title fw-7">${categoryData[0].product_title}</h4>
             <h4 class="card-title fw-7 dis-ellipse">${categoryData[0].product_description}</h4>
         </div>
@@ -179,8 +179,8 @@ function displayCategoryData(categoryData) {
     // Append images
     $.each(categoryData, function(i, item) {
         $("#gallary_data").append(`
-            <div class="col-md-6 col-lg-4 col-sm-12 pt-4">
-                <div class="card article_card_container shadow-sm">
+            <div class="col-md-6 col-lg-4 col-sm-12 card-padding">
+                <div class="card article_card_container">
                     <img src="${path}${item.image}"
                         class="card-img-top" alt="${item.title}">
                     <div class="card-body">
