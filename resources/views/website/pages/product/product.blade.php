@@ -54,13 +54,14 @@
     {{-- ============================= --}}
     
       
-    <div class="container-fluid contaback bg-white">
+    <div class="container-fluid contaback bg-white pb-4">
         <div class="">
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-3">
                         <nav class="article_nav">
                             <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
+                                
                                 @forelse($all_services as $key=>$categories_data)
                                     <button class="nav-link article_tab_link {{ $loop->first ? 'active' : '' }}"
                                         id="id_{{ $categories_data['id'] }}" data-bs-toggle="tab"
@@ -80,7 +81,7 @@
                     <div class="col-md-9">
                         <div class="tab-content p-3" id="nav-tabContent">
                             <div class="row d-flex gallery" id="gallary_data">
-                                <div class="row row-cols-1 row-cols-md-4 g-3">
+                                <div class="row row-cols-1 row-cols-md-4 ">
                                     {{-- <div class="col-lg-12 col-md-12 col-sm-12">
                                     <h4 class="card-title fw-7">{{ $item['product_title'] }}</h4>
                                     <h4 class="card-title fw-7">{{ $item['product_description'] }}</h4>
@@ -90,7 +91,7 @@
                                     @forelse ($all_services_details as $key=>$item)
                                         {{-- <h4 class="card-title fw-7">{{ $item['service_details'] }}</h4> --}}
 
-                                        <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
+                                        <div class="col-md-6 col-lg-4 col-sm-12 pt-4">
                                             <div class="card article_card_container shadow-sm">
                                                 <img src="{{ Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW') }}{{ $item['image'] }}"
                                                     class="card-img-top" alt="{{ $item['title'] }}">
@@ -168,9 +169,9 @@ function displayCategoryData(categoryData) {
     // Append product title and description
     $("#gallary_data").append(`
     <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-3">
-        <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis">
+        <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
             <h4 class="card-title fw-7">${categoryData[0].product_title}</h4>
-            <h4 class="card-title fw-7">${categoryData[0].product_description}</h4>
+            <h4 class="card-title fw-7 dis-ellipse">${categoryData[0].product_description}</h4>
         </div>
         </div>
     `);
@@ -178,8 +179,8 @@ function displayCategoryData(categoryData) {
     // Append images
     $.each(categoryData, function(i, item) {
         $("#gallary_data").append(`
-            <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
-                <div class="card article_card_container shadow-sm">
+            <div class="col-md-6 col-lg-4 col-sm-12 card-padding">
+                <div class="card article_card_container">
                     <img src="${path}${item.image}"
                         class="card-img-top" alt="${item.title}">
                     <div class="card-body">
@@ -192,51 +193,6 @@ function displayCategoryData(categoryData) {
 }
 
     </script>
-    {{-- <script>
-        $(document).ready(function() {
-            // Show data for the first category by default
-            var firstCategoryId = '{{ $all_services->first()->id }}';
-            getServices(firstCategoryId);
-        });
-
-        function getServices(our_services_master_id) {
-            console.log("Clicked tab with ID: " + our_services_master_id); // Check if this line gets printed
-            $("#gallary_data").empty();
-            $.ajax({
-                url: "{{ route('list-our-services-ajax') }}",
-                method: "POST",
-                data: {
-                    "our_services_master_id": our_services_master_id
-                },
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                success: function(data) {
-                    var path = '<?php echo Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW'); ?>';
-                    $("#gallary_data").empty();
-                    $.each(data, function(i, item, ) {
-                        $("#gallary_data").append(` 
-
-                  
-                
-                                         
-
-                                  <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
-                                      <div class="card article_card_container shadow-sm">
-                                          <img src="` + path + item.image + `"
-                                              class="card-img-top" alt="` + item.title + `">
-                                          <div class="card-body">
-                                              <h5 class="card-title">` + item.title + `</h5>
-                                          </div>
-                                         
-                                      </div>
-                                  </div>
-                           `);
-                    });
-                },
-                error: function(data) {}
-            });
-        }
-    </script> --}}
+   
     </div>
 @endsection

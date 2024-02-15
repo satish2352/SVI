@@ -81,7 +81,7 @@
                                                 <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $editData->video_upload }}" type="video/mp4">
                                             </video>
                                             
-                                            <img id="videoThumbnail" src="#" alt="Video Thumbnail" class="img-fluid img-thumbnail" width="150" style="display:none">
+                                            {{-- <img id="videoThumbnail" src="#" alt="Video Thumbnail" class="img-fluid img-thumbnail" width="150" style="display:none"> --}}
                                             
                                     </div>
 
@@ -115,26 +115,45 @@
             </div>
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const video = document.getElementById('videoPreview');
-                const thumbnailImg = document.getElementById('videoThumbnail');
-        
-                // Function to generate thumbnail from video
-                function generateThumbnail() {
+            $(document).ready(() => {
+                $("#video_upload").change(function() {
+                    $('#videoPreview').hide(); // Hide the old video preview
+                    $('#videoThumbnail').hide(); // Hide the old video thumbnail
+                    
+                    const file = this.files[0];
+                    if (file) {
+                        let reader = new FileReader();
+                        reader.onload = function(event) {
+                            $("#videoPreview").attr("src", event.target.result);
+                            $('#videoPreview').show(); // Show the new video preview
+                        };
+                        reader.readAsDataURL(file);
+                        
+                        // Generate and show thumbnail
+                        const thumbnailSrc = generateThumbnail(file);
+                        $('#videoThumbnail').attr("src", thumbnailSrc);
+                        $('#videoThumbnail').show(); // Show the new video thumbnail
+                    }
+                });
+                
+                // Function to generate thumbnail from video file
+                function generateThumbnail(videoFile) {
+                    const video = document.createElement('video');
+                    video.setAttribute('src', URL.createObjectURL(videoFile));
+                    video.load();
+                    
                     const canvas = document.createElement('canvas');
-                    canvas.width = video.videoWidth;
-                    canvas.height = video.videoHeight;
-                    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                    canvas.width = 200; // Set width as needed
+                    canvas.height = 160; // Set height as needed
+                    
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    
                     return canvas.toDataURL('image/png');
                 }
-        
-                // Show thumbnail when the video metadata is loaded
-                video.addEventListener('loadedmetadata', function() {
-                    thumbnailImg.src = generateThumbnail();
-                    thumbnailImg.style.display = 'block';
-                });
             });
         </script>
+        
         
         <script>
             $(document).ready(function() {

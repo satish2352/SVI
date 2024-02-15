@@ -41,6 +41,7 @@ body {font-family: 'Poppins', sans-serif;}
 }
 .red-text{
   color: red !important;
+  font-size: 15px;
 }
 @-o-keyframes flash {
   0% {
