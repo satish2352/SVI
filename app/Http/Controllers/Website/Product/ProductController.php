@@ -35,7 +35,8 @@ class ProductController extends Controller
     public function services() {
         $data_output_all_product = $this->service->getAllProduct();
         // $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
-        $all_services = OurProductModel::where(['is_active'=>true] )->orderBy('updated_at', 'asc')->get();
+        // $all_services = OurProductModel::where(['is_active'=>true] )->orderBy('updated_at', 'asc')->get();
+        $all_services = OurProductModel::where('is_active', true)->orderBy('updated_at', 'asc')->get();
         $all_services_details = ProductDetails::leftJoin('our_product', 'our_product.id', '=', 'product_details.product_id')
                                                         ->select('product_details.id','product_details.product_id', 'product_details.title',
                                                         'product_details.image',

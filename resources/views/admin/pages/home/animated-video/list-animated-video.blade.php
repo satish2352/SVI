@@ -7,8 +7,8 @@
                 <h3 class="page-title">
                     Animated Video
                   
-                        <a href="{{ route('add-animated-video') }}" class="btn btn-sm btn-primary ml-3">+
-                            Add</a>
+                        {{-- <a href="{{ route('add-animated-video') }}" class="btn btn-sm btn-primary ml-3">+
+                            Add</a> --}}
                 
 
                 </h3>
@@ -33,7 +33,7 @@
                                                     <th>Sr. No.</th>
                                                     <th>Menu Name</th>
                                                     <th>Video Link</th>
-                                                    <th>Status</th>
+                                                    {{-- <th>Status</th> --}}
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -48,7 +48,7 @@
                                                                 <source src="{{ Config::get('DocumentConstant.ANIMATED_VIDEO_VIEW') }}{{ $item->video_upload }}" type="video/mp4">
                                                             </video>
                                                         </td>
-                                                        <td>
+                                                        {{-- <td>
                                                             <label class="switch">
                                                                 <input data-id="{{ $item->id }}" type="checkbox"
                                                                     {{ $item->is_active ? 'checked' : '' }}
@@ -58,7 +58,7 @@
                                                                 <span class="slider round "></span>
                                                             </label>
 
-                                                        </td>
+                                                        </td> --}}
                                                         <td>
                                                             <div class="d-flex">
                                                                
@@ -72,9 +72,9 @@
                                                                     class="show-btn btn btn-sm btn-outline-primary m-1"
                                                                     title="Show"><i class="fas fa-eye"></i></a>
                                                                
-                                                                    <a data-id="{{ $item->id }}"
+                                                                    {{-- <a data-id="{{ $item->id }}"
                                                                         class="delete-btn btn btn-sm btn-outline-danger m-1"
-                                                                        title="Delete"><i class="fas fa-archive"></i></a>
+                                                                        title="Delete"><i class="fas fa-archive"></i></a> --}}
                                                               
                                                             </div>
                                                         </td>
