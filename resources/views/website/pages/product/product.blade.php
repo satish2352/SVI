@@ -126,9 +126,16 @@
     <script>
 
 $(document).ready(function() {
-    // Show data for the first category by default
-    var firstCategoryId = '{{ $all_services->first()->id }}';
-    getServices(firstCategoryId);
+    // Find the first active category
+    var firstActiveCategory = {!! json_encode($all_services->where('is_active', true)->first()) !!};
+
+    if (firstActiveCategory) {
+        var firstCategoryId = firstActiveCategory.id;
+        getServices(firstCategoryId);
+    } else {
+        // Handle case where no active categories are found
+        console.log("No active categories found.");
+    }
 });
 
 var currentCategoryData = {}; // Variable to store current category data
@@ -193,51 +200,6 @@ function displayCategoryData(categoryData) {
 }
 
     </script>
-    {{-- <script>
-        $(document).ready(function() {
-            // Show data for the first category by default
-            var firstCategoryId = '{{ $all_services->first()->id }}';
-            getServices(firstCategoryId);
-        });
-
-        function getServices(our_services_master_id) {
-            console.log("Clicked tab with ID: " + our_services_master_id); // Check if this line gets printed
-            $("#gallary_data").empty();
-            $.ajax({
-                url: "{{ route('list-our-services-ajax') }}",
-                method: "POST",
-                data: {
-                    "our_services_master_id": our_services_master_id
-                },
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                success: function(data) {
-                    var path = '<?php echo Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW'); ?>';
-                    $("#gallary_data").empty();
-                    $.each(data, function(i, item, ) {
-                        $("#gallary_data").append(` 
-
-                  
-                
-                                         
-
-                                  <div class="col-md-6 col-lg-4 col-sm-12 mb-2">
-                                      <div class="card article_card_container shadow-sm">
-                                          <img src="` + path + item.image + `"
-                                              class="card-img-top" alt="` + item.title + `">
-                                          <div class="card-body">
-                                              <h5 class="card-title">` + item.title + `</h5>
-                                          </div>
-                                         
-                                      </div>
-                                  </div>
-                           `);
-                    });
-                },
-                error: function(data) {}
-            });
-        }
-    </script> --}}
+   
     </div>
 @endsection
