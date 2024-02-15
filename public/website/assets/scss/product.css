@@ -211,8 +211,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  font-size: 17px;
-  color: #778088;
+  font-size: 17px !important;
+  color: #778088 !important;
   font-family: "Poppins", sans-serif;
   text-align: justify;
  
