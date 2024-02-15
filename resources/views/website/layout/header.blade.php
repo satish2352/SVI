@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link href="{{ asset('website/assets/scss/home.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/common.css') }}" rel="stylesheet">
-  <link href="{{ asset('website/assets/scss/about.scss') }}" rel="stylesheet">
+  <link href="{{ asset('website/assets/scss/about.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/contact.scss') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/media.scss') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/product.css') }}" rel="stylesheet">
