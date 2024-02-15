@@ -74,7 +74,8 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
     @endforeach
   </div>
   <div class="onVideoBanner">
-    <img src="{{ asset('website/assets/images/home/onVideoBanner.png')}}" class="w-75 float-end" alt="onVideoBanner.png">
+    <img src="{{ asset('website/assets/images/home/onVideoBanner.png')}}" class=" float-end d-none d-md-block" alt="onVideoBanner.png">
+    <img src="{{ asset('website/assets/images/home/onVideoMobBannerText.png')}}" class=" d-block d-md-none float-end" alt="onVideoMobBannerText.png">
   </div>
 </section>
 <!-- Banner Section Ends Here -->
@@ -102,4 +103,4 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
 
 <!-- ------------------------------------------------------------------------------------>
 <!-- Banner Section Ends Here -->
-<!-- ------------------------------------------------------------------------------------>
+<!-- ------------------------------------------------------------------------------------>   
