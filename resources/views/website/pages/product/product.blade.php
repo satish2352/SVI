@@ -126,16 +126,9 @@
     <script>
 
 $(document).ready(function() {
-    // Find the first active category
-    var firstActiveCategory = {!! json_encode($all_services->where('is_active', true)->first()) !!};
-
-    if (firstActiveCategory) {
-        var firstCategoryId = firstActiveCategory.id;
-        getServices(firstCategoryId);
-    } else {
-        // Handle case where no active categories are found
-        console.log("No active categories found.");
-    }
+    // Show data for the first category by default
+    var firstCategoryId = '{{ $all_services->first()->id }}';
+    getServices(firstCategoryId);
 });
 
 var currentCategoryData = {}; // Variable to store current category data
