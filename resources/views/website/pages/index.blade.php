@@ -32,7 +32,7 @@
               </div>
             </div>
             <div class="col-lg-7 d-flex align-items-center bg-white shadow-lg">
-              <p class="pText pt-5 ms-md-5 pt-md-4 py-md-1 pe-md-3">
+              <p class="pText pTexthome pt-5 ms-md-5 pt-md-4 py-md-1 pe-md-3">
                 {{ strip_tags($aboutus['description']) }}
               </p>
             </div>
