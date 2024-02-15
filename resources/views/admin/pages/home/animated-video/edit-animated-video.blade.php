@@ -29,28 +29,28 @@
                                                 class="red-text">*</span>
                                             <select class="form-control" id="name" name="name">
                                                 <option value="">Select</option>
-                                                <option value="1"
-                                                    @if (old('name') == '1' || $editData['name'] == '1') {{ 'selected' }} @endif>
+                                                <option value="Home"
+                                                    @if (old('name') == 'Home' || $editData['name'] == 'Home') {{ 'selected' }} @endif>
                                                     Home
                                                 </option>
-                                                <option value="2"
-                                                    @if (old('name') == '2' || $editData['name'] == '2') {{ 'selected' }} @endif>
+                                                <option value="About"
+                                                    @if (old('name') == 'About' || $editData['name'] == 'About') {{ 'selected' }} @endif>
                                                     About Us
                                                 </option>
-                                                <option value="3"
-                                                    @if (old('name') == '3' || $editData['name'] == '3') {{ 'selected' }} @endif>
+                                                <option value="Product"
+                                                    @if (old('name') == 'Product' || $editData['name'] == 'Product') {{ 'selected' }} @endif>
                                                     Product
                                                 </option>
-                                                <option value="4"
-                                                    @if (old('name') == '4' || $editData['name'] == '4') {{ 'selected' }} @endif>
+                                                <option value="Services"
+                                                    @if (old('name') == 'Services' || $editData['name'] == 'Services') {{ 'selected' }} @endif>
                                                     Services
                                                 </option>
-                                                <option value="5"
-                                                    @if (old('name') == '5' || $editData['name'] == '5') {{ 'selected' }} @endif>
+                                                <option value="Media"
+                                                    @if (old('name') == 'Media' || $editData['name'] == 'Media') {{ 'selected' }} @endif>
                                                     Media
                                                 </option>
-                                                <option value="6"
-                                                    @if (old('name') == '6' || $editData['name'] == '5') {{ 'selected' }} @endif>
+                                                <option value="Contact"
+                                                    @if (old('name') == 'Contact' || $editData['name'] == 'Contact') {{ 'selected' }} @endif>
                                                     Contact
                                                 </option>
                                                 
