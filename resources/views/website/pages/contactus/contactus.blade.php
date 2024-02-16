@@ -6,7 +6,7 @@
 <!-- ------------------------------------------------------------------------------------>
 
     <section class="contactSection d-flex align-items-center">
-        <div class="container py-md-5">
+        <div class="container">
           <div class="row justify-content-center">
             <div
               class="col-lg-8 col-md-8 col-sm-12 col-12 d-flex align-items-center"
