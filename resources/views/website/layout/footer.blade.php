@@ -138,8 +138,7 @@
                 | Shri Venkatesh Industry Designed by 
                 <a href="https://www.sumagoinfotech.com/index1.php" target="_blank">
                     <img src="{{ asset('website/assets/images/red-heart.png')}}" className="img-fluid" style="width:20px " alt="" />
-                  </a>
-                  From Nashik 
+                  </a>From Nashik 
                   {{-- <a to="https://sumagoinfotech.com/" class="cursor" target="_blank">
                 <img src="{{ asset('website/assets/images/logo_sm.png')}}" className="img-fluid " alt="" style="width:18px" >
               </a> --}}
