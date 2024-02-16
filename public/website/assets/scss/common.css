@@ -255,9 +255,41 @@ body {
     flex-direction: column;
     display: contents;
 }
+
+.headerBtn {
+    background: #23569E;
+    width: 47%;
+    text-align: center;
+    border-radius: 3px;
+    color: white !important;
 }
 
-@media only screen and (max-width: 576px) {
+.bannerCardHeading {
+    font-size: 0.49rem;
+}
+
+.videoCard {
+    position: relative;
+    bottom: 35px;
+}
+}
+
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .navbarLogo {
+    width: auto;
+    float: initial;
+    }
+    .navbarView {
+        display: grid;
+        justify-content: left;
+        align-items: center;
+    }
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: column;
+        display: contents;
+    }
+    
     .headerBtn {
         background: #23569E;
         width: 47%;
@@ -269,13 +301,9 @@ body {
     .bannerCardHeading {
         font-size: 0.49rem;
     }
+    
 
-    .videoCard {
-        position: relative;
-        bottom: 35px;
-    }
 }
-
 @media only screen and (min-width: 1367px) and (max-width: 1920px) {
     .videoBanner {
         width: 100%;

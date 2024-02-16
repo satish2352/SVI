@@ -38,12 +38,12 @@
 }
 
 .certificate {
-    width: 100%;
+    width: 80%;
 }
 
 .certificateSection {
     transform: translate(0px, 0px);
-    height: 1040px;
+    height: 775px;
     background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
 }
 

@@ -131,11 +131,11 @@
     <!-- Company Section Starts Here -->
     <!-- ------------------------------------------------------------------------------------>
     <section class="text-center d-none d-md-block d-lg-block">
-        <h4 class="text-center bg-white p-0 m-0 pt-3 pb-2 HomeAbout heading">
+        <h4 class="text-center bg-white p-0 m-0 pt-4 pb-2 HomeAbout heading">
             Company
         </h4>
-        <div class="container">
-            <img src="{{ asset('website/assets/images/aboutus/aboutPageImg.png') }}" class="img-fluid w-75"
+        <div class="">
+            <img src="{{ asset('website/assets/images/aboutus/aboutPageImg.png') }}" class="img-fluid w-100"
                 alt="" />
         </div>
     </section>
