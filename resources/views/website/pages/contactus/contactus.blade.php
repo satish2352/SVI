@@ -176,7 +176,7 @@
                   <h5 class="mt-2">Scan</h5>
                 </div>
                 <div class="text-center">
-                  <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-75" alt="scanner" />
+                  <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-50" alt="scanner" />
                 </div>
               </div>
             </div>
