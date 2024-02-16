@@ -21,7 +21,7 @@
             <div class="col-lg-5 mb-5 mb-md-0 HomeAboutRow aboutVideoMain">
               <div class="">
                 <div class="aboutVideo">
-                  <video class="videoSize shadow-lg" autoplay loop muted playsinline class="videoBanner">
+                  <video class="videoSize shadow-lg" autoplay loop muted playsinline controls class="videoBanner">
                     <source src="{{ Config::get('DocumentConstant.ABOUTUS_VIEW') }}{{ $aboutus['video_link'] }}" type="video/mp4">
                 </video>
                   {{-- <video class="videoSize" autoplay loop muted playsinline class="videoBanner">
