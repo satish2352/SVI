@@ -1,6 +1,6 @@
 .contactSection {
   transform: translate(0px, 0px);
-  height: 700px;
+  height: 710px;
   background: linear-gradient(90deg,
       #23569E 30%,
       #edfeff 30%,
@@ -53,7 +53,9 @@
   background-color: #eefffd;
   padding: 0.5rem;
 }
-
+.contactInfoCard{
+  border-radius: 25px;
+}
 input[type=text] {
   width: 100%;
   box-sizing: border-box;
@@ -87,7 +89,14 @@ input[type=number] {
   background-repeat: no-repeat;
   padding-left: 44px !important;
 }
-
+.contactPtext{
+  font-family: "Poppins";
+    font-weight: 500;
+}
+.contactInfoCard h5{
+  color: #23569E;
+  font-weight: 600;
+}
 @media only screen and (max-width: 576px) {
   .contactSection {
     height: 860px;

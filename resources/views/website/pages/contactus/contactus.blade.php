@@ -18,7 +18,7 @@
                   enctype="multipart/form-data">
               @csrf
               <div class="row py-md-2">
-                  <div class="col-md-6 pt-md-0 pt-md-3">
+                  <div class="col-md-6 pt-md-0 pt-3">
                       <div class="">
                         <label for="full_name"><strong style="color:#323232"> Name </strong></label>
                           <input type="text"  placeholder="Your Full Name" name="full_name"
@@ -100,10 +100,10 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-3 d-none d-sm-none d-md-block d-lg-block">
-              <div class="card text-center border-0 p-4">
+              <div class="card contactInfoCard text-center border-0 p-4 shadow">
                 <div>
                   <img src="{{ asset('website/assets/images/contact/phoneIcon.png')}}" alt="phoneIcon" />
-                  <h5 class="mb-3">Phone no.</h5>
+                  <h5 class="mb-2 mt-2">Phone no.</h5>
                 </div>
                 <div class="text-start contactText">
                   <p class="p-0 m-0">
@@ -111,7 +111,7 @@
                       ><a
                         href="tel:+918605770042"
                         style="font-size: 14px"
-                        class="text-decoration-none text-dark"
+                        class="text-decoration-none text-black contactPtext"
                         >+91 8605770042</a
                       ></span
                     >
@@ -119,7 +119,7 @@
                       ><a
                         href="tel:+919850762935"
                         style="font-size: 14px"
-                        class="text-decoration-none text-dark"
+                        class="text-decoration-none text-black contactPtext"
                         >+91 9850762935</a
                       ></span
                     >
@@ -130,7 +130,7 @@
                       ><a
                         href="tel:+912536698006"
                         style="font-size: 14px"
-                        class="text-decoration-none text-dark"
+                        class="text-decoration-none text-black contactPtext"
                         >+91 253 6698006
                       </a></span
                     >
@@ -141,7 +141,7 @@
                       ><a
                         href="fax:+912532326872"
                         style="font-size: 14px"
-                        class="text-decoration-none text-dark"
+                        class="text-decoration-none text-black contactPtext"
                         >+91 253 2326872</a
                       ></span
                     >
@@ -152,7 +152,7 @@
                       ><a
                         href="svicpl@gmail.com"
                         style="font-size: 14px"
-                        class="text-decoration-none text-dark"
+                        class="text-decoration-none text-black contactPtext"
                         >svicpl@gmail.com</a
                       ></span
                     >
@@ -163,17 +163,17 @@
                       ><a
                         href="svic12@rediffmail.com"
                         style="font-size: 14px"
-                        class="text-decoration-none text-dark"
+                        class="text-decoration-none text-black contactPtext"
                         >svic12@rediffmail.com</a
                       ></span
                     >
                   </p>
                 </div>
               </div>
-              <div class="card text-center border-0 p-4 mt-2">
+              <div class="card contactInfoCard text-center border-0 p-4 mt-2 shadow">
                 <div>
                   <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" />
-                  <h5>Scan</h5>
+                  <h5 class="mt-2">Scan</h5>
                 </div>
                 <div class="text-center">
                   <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-75" alt="scanner" />

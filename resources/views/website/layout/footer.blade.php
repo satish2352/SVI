@@ -105,7 +105,7 @@
                 Nashik. Maharashtra, India.
               </p>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-12 mt-4">
+            <div class="col-lg-2 col-md-2 col-sm-12 mt-4 socialIconsFooter">
               <h6 class="mb-3 mt-2 ms-xl-2">FOLLOW US</h6>
 
               <a href=""

@@ -57,7 +57,7 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
           <a class="nav-link px-md-3 <?php if($pageName === 'Media') echo 'active'; ?>" aria-current="page" href="{{ route('media') }}">Media</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link px-md-3 <?php if($pageName === 'Contact') echo 'active'; ?>" href="{{ route('contactus') }}">Contact</a>
+          <a class="nav-link px-md-3 px-1 headerBtn <?php if($pageName === 'Contact') echo 'active'; ?>" href="{{ route('contactus') }}">Contact</a>
       </li>
       </ul>
     </div>

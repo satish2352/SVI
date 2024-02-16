@@ -112,4 +112,9 @@
     .pTextAbout {
         padding-left: 3rem !important;
     }
+    .certificateSection {
+        transform: translate(0px, 0px);
+        height: 1070px;
+        background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
+    }
 }
