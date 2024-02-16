@@ -46,7 +46,7 @@
            
         <section class="main-product-sub">
             <div class="container-fluid">
-                <h4 class="product-name py-4">Our Product</h4>
+                <h4 class="product-name py-4">Our Products</h4>
                 <div class="row">
                 </div>
             </div>
