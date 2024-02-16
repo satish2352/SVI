@@ -36,10 +36,10 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
               src="{{ asset('website/assets/images/logo.png')}}" class="logo" alt="logo" /></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-md-3 <?php if($pageName === 'Home') echo 'active'; ?>" aria-current="page" href="{{url('/')}}">Home</a>
+          <a class="nav-link px-md-3 <?php //if($pageName === 'Home') echo 'active'; ?>" aria-current="page" href="{{url('/')}}">Home</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link px-md-3 <?php if($pageName === 'About') echo 'active'; ?>" href="{{ route('aboutus') }}">About Us</a>
+          <a class="nav-link px-md-3 <?php// if($pageName === 'About') echo 'active'; ?>" href="{{ route('aboutus') }}">About Us</a>
       </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,18 +47,18 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
           </a>
           <ul class="dropdown-menu">
             <li class="nav-item">
-              <a class="nav-link px-md-3 <?php if($pageName === 'Product') echo 'active'; ?>" aria-current="page" href="{{ route('product') }}">Product</a>
+              <a class="nav-link px-md-3 <?php //if($pageName === 'Product') echo 'active'; ?>" aria-current="page" href="{{ route('product') }}">Product</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link px-md-3 <?php if($pageName === 'Services') echo 'active'; ?>" href="{{ route('services') }}">Services</a>
+              <a class="nav-link px-md-3 <?php //if($pageName === 'Services') echo 'active'; ?>" href="{{ route('services') }}">Services</a>
           </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-md-3 <?php if($pageName === 'Media') echo 'active'; ?>" aria-current="page" href="{{ route('media') }}">Media</a>
+          <a class="nav-link px-md-3 <?php //if($pageName === 'Media') echo 'active'; ?>" aria-current="page" href="{{ route('media') }}">Media</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link px-md-3 px-1 headerBtn <?php if($pageName === 'Contact') echo 'active'; ?>" href="{{ route('contactus') }}">Contact</a>
+          <a class="nav-link px-md-3 px-1 headerBtn <?php //if($pageName === 'Contact') echo 'active'; ?>" href="{{ route('contactus') }}">Contact</a>
       </li>
       </ul>
     </div>
@@ -93,12 +93,25 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
           <li class="nav-item">
             <a class="nav-link <?php if($pageName === 'About') echo 'active'; ?>" href="{{ route('aboutus') }}">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link <?php if($pageName === 'Product') echo 'active'; ?>" aria-current="page" href="{{ route('product') }}">Product</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Product & Services
+            </a>
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="nav-link px-md-3 <?php if($pageName === 'Product') echo 'active'; ?>" aria-current="page" href="{{ route('product') }}">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-md-3 <?php if($pageName === 'Services') echo 'active'; ?>" href="{{ route('services') }}">Services</a>
+            </li>
+            </ul>
+          </li>
+          {{-- <li class="nav-item">
+            <a class="nav-link <?php //if($pageName === 'Product') echo 'active'; ?>" aria-current="page" href="{{ route('product') }}">Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php if($pageName === 'Services') echo 'active'; ?>" href="{{ route('services') }}">Services</a>
-          </li>
+            <a class="nav-link <?php //if($pageName === 'Services') echo 'active'; ?>" href="{{ route('services') }}">Services</a>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link <?php if($pageName === 'Media') echo 'active'; ?>" aria-current="page" href="{{ route('media') }}">Media</a>
           </li>
