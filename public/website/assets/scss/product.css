@@ -19,7 +19,7 @@
     font-weight: 700;
     display: flex;
     justify-content: center !important;
-    
+    text-align: center;
     font-family: "Volkhov", serif;
     height: 93px;
 }
