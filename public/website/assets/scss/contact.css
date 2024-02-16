@@ -58,7 +58,9 @@
   background-color: #eefffd;
   padding: 0.5rem;
 }
-
+.form-control {
+  font-size: 17px;
+}
 .contactInfoCard {
   border-radius: 25px;
 }
