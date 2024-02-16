@@ -31,8 +31,8 @@
                   </div>
                   <div class="col-md-6 pt-md-0 pt-3">
                       <div class="">
-                      <label for="email"><strong style="color:#323232"> Email Id </strong></label>
-                          <input type="email" placeholder="Email Id  Address" name="email"
+                      <label for="email"><strong style="color:#323232"> Email </strong></label>
+                          <input type="email" placeholder="Email Address" name="email"
                               value="{{ old('email') }}" class="form-control">
                           <span id="number-validate" class="red-text"></span>
                           @if ($errors->has('email'))
