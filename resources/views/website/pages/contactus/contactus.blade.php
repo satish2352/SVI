@@ -31,8 +31,8 @@
                   </div>
                   <div class="col-md-6 pt-md-0 pt-2">
                       <div class="">
-                      <label for="email"><strong style="color:#323232"> Email Id </strong></label>
-                          <input type="email" placeholder="Email Id  Address" name="email"
+                      <label for="email"><strong style="color:#323232"> Email </strong></label>
+                          <input type="email" placeholder="Email Address" name="email"
                               value="{{ old('email') }}" class="form-control">
                           <span id="number-validate" class="red-text"></span>
                           @if ($errors->has('email'))
@@ -224,7 +224,7 @@
       </div>
       <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
-          <img src="{{ asset('website/assets/images/contact/2.png')}}" alt="..." />
+          <img src="{{ asset('website/assets/images/contact/unit2.png')}}" alt="..." />
           <div class="card-body cardContactUnit text-center">
             <h5 class="card-title text-center">UNIT 2</h5>
             <p class="text-center fw-bold m-0 p-0">PLOT B-226</p>
