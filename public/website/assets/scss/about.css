@@ -13,7 +13,8 @@
 
 .HomeAbout {
     color: #23569e;
-    font-size: 1.8rem;
+    font-size: 40px;
+    padding: 20px;
 }
 
 .HomeAboutSection {
@@ -53,8 +54,9 @@
 
 .visionText {
     text-align: justify;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 600;
+    text-align: justify;
+    font-size: 0.75rem;
     color: #525252;
 }
 
@@ -114,7 +116,7 @@
     }
     .certificateSection {
         transform: translate(0px, 0px);
-        height: 1070px;
+        height: 775px;
         background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
     }
 }

@@ -10,7 +10,7 @@
 }
 
 .videoSize {
-    height: 260px;
+    height: 300px;
     width: 390px;
     object-fit: cover;
 }

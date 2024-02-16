@@ -6,7 +6,9 @@
     <!-- ------------------------------------------------------------------------------------>
     <section class="HomeAboutSection pt-5 pb-4">
         <div class="container">
-          <h2 class="text-center HomeAbout HomeAbout1 heading">About Us</h2>
+         <div class="row">
+          <div class="col-md-3 offset-md-5"> <h2 class="text-center HomeAbout HomeAbout1 heading">About Us</h2></div>
+         </div>
           <div class="row justify-content-center">
             @if (empty($data_output_aboutus))
             <div class="container">
