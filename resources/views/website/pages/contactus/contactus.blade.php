@@ -224,7 +224,7 @@
       </div>
       <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
-          <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
+          <img src="{{ asset('website/assets/images/contact/2.png')}}" alt="..." />
           <div class="card-body cardContactUnit text-center">
             <h5 class="card-title text-center">UNIT 2</h5>
             <p class="text-center fw-bold m-0 p-0">PLOT B-226</p>
@@ -237,7 +237,7 @@
       </div>
       <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
-          <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
+          <img src="{{ asset('website/assets/images/contact/unit3.png')}}" alt="..." />
           <div class="card-body cardContactUnit text-center">
             <h5 class="card-title text-center">UNIT 3</h5>
             <p class="text-center fw-bold m-0 p-0">PLOT B-257</p>
