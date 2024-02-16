@@ -241,6 +241,21 @@ body {
     display: flex;
     justify-content: center;
 }
+.footericonposition{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.footericon{
+    font-size: 16px;
+    color: #E3E3E3;
+    padding-left: 10px;
+}
+.footericonsize{
+    width: 17%;
+     padding:2px; 
+     height:20px
+}
 @media (max-width: 767px) {
     .navbarLogo {
         width: 50%;

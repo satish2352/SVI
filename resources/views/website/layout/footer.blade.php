@@ -106,34 +106,39 @@
               </p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12 mt-4 socialIconsFooter">
-              <h6 class="mb-3 mt-2 ms-xl-2">FOLLOW US</h6>
+              <h6 class="mb-3 mt-2 ms-xl-2">FOLLOW US <a href="https://www.linkedin.com/company/svi-carbon-pvt-ltd/" target="_blank"> <img
+                src="{{ asset('website/assets/images/linkedin.png')}}"
+               style="width: 15%; padding-left: 5px"
+                alt="logo"
+              /></a></h6>
               <p>
-                <a class="text-decoration-none" href="{{ route('aboutus') }}"
-                  ><i
-                  class="fa fa-envelope-o footerSocialIcons mx-1"
-                  aria-hidden="true"
-                ></i
-              >About</a
+                <a class="text-decoration-none d-flex footericonposition" href="mailto:mktdev@svicarbon.com"
+                  ><img
+                  src="{{ asset('website/assets/images/footeremail.png')}}"
+                  class="footericonsize"
+                  alt="logo"
+                /> <span class="footericon">mktdev@svicarbon.com</span></a
                 >
               </p>
               <p>
-                <a class="text-decoration-none" href="{{ route('product') }}"
-                  ><i
-                  class="fa fa-envelope-o footerSocialIcons mx-1"
-                  aria-hidden="true"
-                ></i
-              >Product</a
+                <a class="text-decoration-none d-flex footericonposition" href="mailto:purchase@svicarbon.com"
+                  ><img
+                  src="{{ asset('website/assets/images/footeremail.png')}}"
+                  class="footericonsize"
+                  alt="logo" 
+                /> <span class="footericon">purchase@svicarbon.com</span></a
                 >
               </p>
               <p>
-                <a class="text-decoration-none" href="{{ route('services') }}"
-                  ><i
-                  class="fa fa-envelope-o footerSocialIcons mx-1"
-                  aria-hidden="true"
-                ></i
-              >Services</a
+                <a class="text-decoration-none d-flex footericonposition" href="mailto:svicpl@gmail.com"
+                  ><img
+                  src="{{ asset('website/assets/images/footeremail.png')}}"
+                  class="footericonsize"
+                  alt="logo"
+                /> <span class="footericon">svicpl@gmail.com</span></a
                 >
               </p>
+              
 
               {{-- <a href=""
                 ><i
@@ -161,7 +166,7 @@
 
       <section class="copyright text-center">
         <div class="container wow fadeInUp" data-wow-delay="400ms">
-            <p class="copyright__text">Copyright <span class="dynamic-year"></span><!-- /.dynamic-year --> 
+            <p class="copyright__text">Copyright @2024 <span class="dynamic-year"></span><!-- /.dynamic-year --> 
                 | Shri Venkatesh Industry Designed by 
                 <a href="https://www.sumagoinfotech.com/index1.php" target="_blank">
                     <img src="{{ asset('website/assets/images/red-heart.png')}}" className="img-fluid" style="width:20px " alt="" />
