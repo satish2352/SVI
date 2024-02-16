@@ -47,7 +47,9 @@ body {
 .navBarBrand {
     display: contents;
 }
-
+.nav-item{
+    padding:  0px 10px;
+}
 .nav-item a {
     color: black;
     font-weight: 500;

@@ -49,8 +49,10 @@
 }
 
 .product-name {
+  padding-top: 70px;
+  padding-bottom: 30px;
     color: #23569E;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     display: flex;
     justify-content: center;
@@ -181,6 +183,9 @@
 
     
   }
+  .sub-card-padding{
+    margin-top: 60px;
+  }
   .main-card-product-dis h4{
     overflow-wrap: anywhere;
   }
@@ -194,6 +199,18 @@
     align-items: start;
     justify-content: left;
     display: flex;
+  }
+  .dis-ellipse {
+    text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+ 
   }
   .dis-ellipse p{
     text-overflow: ellipsis;
@@ -282,6 +299,7 @@
       margin-top: 20px; /* Add margin between tabs and content */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
   }
+  
 
   .card-body h5 {
       font-size: 15px;

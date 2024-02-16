@@ -46,7 +46,7 @@
            
         <section class="main-product-sub">
             <div class="container-fluid">
-                <h4 class="product-name py-4">Our Products</h4>
+                <h4 class="product-name">Our Products</h4>
                 <div class="row">
                 </div>
             </div>
@@ -92,7 +92,7 @@
                                         {{-- <h4 class="card-title fw-7">{{ $item['service_details'] }}</h4> --}}
 
                                         <div class="col-md-6 col-lg-4 col-sm-12 pt-4">
-                                            <div class="card article_card_container shadow-sm">
+                                            <div class="card article_card_container sub-card-padding shadow-sm">
                                                 <img src="{{ Config::get('DocumentConstant.PRODUCT_DETAILS_VIEW') }}{{ $item['image'] }}"
                                                     class="card-img-top" alt="{{ $item['title'] }}">
                                                 <div class="card-body">
@@ -170,7 +170,7 @@ function displayCategoryData(categoryData) {
     $("#gallary_data").append(`
     <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-3">
         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
-            <h4 class="card-title fw-7">${categoryData[0].product_title}</h4>
+            <h4 class="card-title dis-ellipse fw-7">${categoryData[0].product_title}</h4>
             <h4 class="card-title fw-7 dis-ellipse">${categoryData[0].product_description}</h4>
         </div>
         </div>
@@ -180,7 +180,7 @@ function displayCategoryData(categoryData) {
     $.each(categoryData, function(i, item) {
         $("#gallary_data").append(`
             <div class="col-md-6 col-lg-4 col-sm-12 card-padding">
-                <div class="card article_card_container">
+                <div class="card article_card_container sub-card-padding">
                     <img src="${path}${item.image}"
                         class="card-img-top" alt="${item.title}">
                     <div class="card-body">

@@ -45,7 +45,7 @@
         <div class="container py-md-5 py-4">
           <div class="card border-0 py-3 px-3 mediaCard shadow-lg">
             <h4 class="heading text-start mx-md-4 mt-3">Media</h4>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center px-3">
               @if (empty($data_output))
               <div class="container">
                   <div class="row">
