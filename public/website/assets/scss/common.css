@@ -241,6 +241,10 @@ body {
     display: flex;
     justify-content: center;
 }
+.linkedin{
+    width: 18%; 
+    padding-left: 5px
+}
 .footericonposition{
     display: flex;
     justify-content: left;
@@ -287,6 +291,25 @@ body {
 .videoCard {
     position: relative;
     bottom: 35px;
+}
+.linkedin{
+    width: 9%; 
+    padding-left: 5px
+}
+.footericonposition{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.footericon{
+    font-size: 16px;
+    color: #E3E3E3;
+    padding-left: 10px;
+}
+.footericonsize{
+    width: 9%;
+     padding:2px; 
+     height:20px
 }
 }
 

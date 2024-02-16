@@ -108,7 +108,7 @@
             <div class="col-lg-2 col-md-2 col-sm-12 mt-4 socialIconsFooter">
               <h6 class="mb-3 mt-2 ms-xl-2">FOLLOW US <a href="https://www.linkedin.com/company/svi-carbon-pvt-ltd/" target="_blank"> <img
                 src="{{ asset('website/assets/images/linkedin.png')}}"
-               style="width: 15%; padding-left: 5px"
+              class="linkedin"
                 alt="logo"
               /></a></h6>
               <p>
