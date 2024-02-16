@@ -9,7 +9,7 @@
         <div class="container py-md-5">
           <div class="row justify-content-center">
             <div
-              class="col-lg-7 col-md-7 col-sm-12 col-12 d-flex align-items-center"
+              class="col-lg-8 col-md-8 col-sm-12 col-12 d-flex align-items-center"
             >
               <div class="card border-0 contactPageCard shadow p-4 px-5">
                 <div class="row">
@@ -18,7 +18,7 @@
                   enctype="multipart/form-data">
               @csrf
               <div class="row py-md-2">
-                  <div class="col-md-6 pt-md-0 pt-3">
+                  <div class="col-md-6 pt-md-0 pt-2">
                       <div class="">
                         <label for="full_name"><strong style="color:#323232"> Name </strong></label>
                           <input type="text"  placeholder="Your Full Name" name="full_name"
@@ -29,7 +29,7 @@
                           @endif
                       </div>
                   </div>
-                  <div class="col-md-6 pt-md-0 pt-3">
+                  <div class="col-md-6 pt-md-0 pt-2">
                       <div class="">
                       <label for="email"><strong style="color:#323232"> Email Id </strong></label>
                           <input type="email" placeholder="Email Id  Address" name="email"
@@ -40,7 +40,7 @@
                           @endif
                       </div>
                   </div>
-                  <div class="col-md-6 pt-3">
+                  <div class="col-md-6 pt-2">
                       <div class="">
                       <label for="mobile_number"><strong style="color:#323232"> Mobile Number </strong></label>
                           <input type="number" placeholder="Mobile Number" name="mobile_number"
@@ -52,7 +52,7 @@
             
                       </div>
                   </div>
-                  <div class="col-md-6 pt-3">
+                  <div class="col-md-6 pt-2">
                       <div class="">
                       <label for="subject"><strong style="color:#323232"> Subject </strong></label>
                           <input type="text" placeholder="Subject" name="subject"  value="{{ old('subject') }}" class="form-control">
@@ -62,7 +62,7 @@
                           @endif
                       </div>
                   </div>
-                  <div class="col-md-12 pt-3">
+                  <div class="col-md-12 pt-2">
                       <div class=" text-message-box">
                       <label for="message"><strong style="color:#323232"> Message </strong></label>
                           <textarea name="message" id="message" placeholder="Write a Message" class="form-control ">{{ old('message') }}</textarea>
@@ -170,13 +170,13 @@
                   </p>
                 </div>
               </div>
-              <div class="card contactInfoCard text-center border-0 p-4 mt-2 shadow">
+              <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow">
                 <div>
                   <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" />
                   <h5 class="mt-2">Scan</h5>
                 </div>
                 <div class="text-center">
-                  <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-75" alt="scanner" />
+                  <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-50" alt="scanner" />
                 </div>
               </div>
             </div>
