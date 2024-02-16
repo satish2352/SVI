@@ -224,17 +224,18 @@
   
  
   /* Media query for mobile devices */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .article_nav{
         padding: 2px;
       }
+      .article_nav .nav-link{
+        padding: 10px;
+      }
       .article_tab {
-        /* position: relative; */
         border-radius: 0px;
         background: #6246E5;
         padding: 0.5rem;
         width: 100%;
-        /* height: 2%; */
         box-sizing: border-box;
         justify-content: space-around;
       }
@@ -255,13 +256,13 @@
   }
       
     .article_nav .nav-tabs {
-        flex-wrap: nowrap; /* Prevent tabs from wrapping */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
     }
 
     .article_nav .nav-link {
-        white-space: nowrap; /* Prevent text from wrapping */
+        white-space: nowrap; 
     }
     .card-body h5 {
         font-size: 15px;
@@ -274,8 +275,6 @@
     }
     .main-card-product-dis {
       position: relative;
-      /* top: 50%; */
-      /* left: 50%; */
       left: 50%;
       transform: translate(-50%, 0%);
       height: 100%;
@@ -285,11 +284,84 @@
   .sub-card-product-dis {
     position: relative !important;
     width: 100%;
-    /* height: 300px; */
     background-color: #FFFFFF;
     padding: 10px;
-    /* overflow-y: auto; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 }
+ */
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .article_nav {
+      padding: 10px 0; /* Adjust padding as needed */
+      overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  .article_tab .article_tab_link{
+    border-bottom: 0px;
+  }
 
+  .article_nav .nav-link {
+      padding: 10px; /* Adjust padding as needed */
+      color: #fff !important;
+      border-right: 1px solid #fff; /* Optional: Add border between tabs */
+      border-radius: 0; /* Remove border radius */
+      margin-right: 5px; /* Add spacing between tabs */
+      white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .article_tab {
+      background: #6246E5;
+      display: flex; /* Use flexbox for layout */
+      justify-content: flex-start; /* Align tabs to the start */
+      overflow-x: auto; /* Enable horizontal scrolling */
+      padding: 10px 0; /* Adjust padding as needed */
+      border-radius: 0px;
+  }
+
+  .nav-tabs {
+      border-bottom: none; /* Remove border bottom from tabs */
+      display: flex;
+      flex-wrap: nowrap;
+  }
+
+  .article_tab_link {
+      border-bottom: none;
+      text-align: center; /* Center align text */
+      font-size: 16px; /* Adjust font size as needed */
+      white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .main-card-product-dis {
+      background-color: #ECFFFE;
+      padding: 10px;
+      margin-top: 20px; /* Add margin between tabs and content */
+      transform: translate(-50%, -10%);
+      /* width: 300px; */
+      height: 200px;
+
+  }
+
+  .sub-card-product-dis {
+      background-color: #FFFFFF;
+      padding: 10px;
+      margin-top: 20px; /* Add margin between tabs and content */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  }
+
+  .card-body h5 {
+      font-size: 15px;
+  }
+
+  .main-card-product-dis h4 {
+      overflow-wrap: anywhere; /* Adjust text overflow */
+  }
+
+  .main-card-product-dis p {
+      overflow-wrap: anywhere; /* Adjust text overflow */
+  }
+
+  .card-img-top {
+      max-width: 100%; /* Ensure images don't overflow */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
