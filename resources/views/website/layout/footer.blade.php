@@ -167,7 +167,7 @@
       <section class="copyright text-center">
         <div class="container wow fadeInUp" data-wow-delay="400ms">
             <p class="copyright__text">Copyright @2024 <span class="dynamic-year"></span><!-- /.dynamic-year --> 
-                | Shri Venkatesh Industry Designed by 
+                | Shri Vyanktesh Industries Designed by 
                 <a href="https://www.sumagoinfotech.com/index1.php" target="_blank">
                     <img src="{{ asset('website/assets/images/red-heart.png')}}" className="img-fluid" style="width:20px " alt="" />
                   </a>From Nashik 
