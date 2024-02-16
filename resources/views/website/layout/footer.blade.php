@@ -107,25 +107,52 @@
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12 mt-4 socialIconsFooter">
               <h6 class="mb-3 mt-2 ms-xl-2">FOLLOW US</h6>
+              <p>
+                <a class="text-decoration-none" href="{{ route('aboutus') }}"
+                  ><i
+                  class="fa fa-envelope-o footerSocialIcons mx-1"
+                  aria-hidden="true"
+                ></i
+              >About</a
+                >
+              </p>
+              <p>
+                <a class="text-decoration-none" href="{{ route('product') }}"
+                  ><i
+                  class="fa fa-envelope-o footerSocialIcons mx-1"
+                  aria-hidden="true"
+                ></i
+              >Product</a
+                >
+              </p>
+              <p>
+                <a class="text-decoration-none" href="{{ route('services') }}"
+                  ><i
+                  class="fa fa-envelope-o footerSocialIcons mx-1"
+                  aria-hidden="true"
+                ></i
+              >Services</a
+                >
+              </p>
 
-              <a href=""
+              {{-- <a href=""
                 ><i
                   class="fa fa-facebook footerSocialIcons mx-1"
                   aria-hidden="true"
                 ></i
-              ></a>
-              <a href=""
+              ></a> --}}
+              {{-- <a href=""
                 ><i
                   class="fa fa-instagram footerSocialIcons mx-1"
                   aria-hidden="true"
                 ></i
-              ></a>
-              <a href=""
+              ></a> --}}
+              {{-- <a href=""
                 ><i
                   class="fa fa-envelope-o footerSocialIcons mx-1"
                   aria-hidden="true"
                 ></i
-              ></a>
+              ></a> --}}
             </div>
           </div>
         </div>

@@ -15,10 +15,11 @@
 
 .main-product .card .card-title {
     color: #1C2B38;
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 700;
     display: flex;
-    justify-content: start;
+    justify-content: center !important;
+    
     font-family: "Volkhov", serif;
     height: 93px;
 }

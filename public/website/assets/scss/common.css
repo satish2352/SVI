@@ -153,17 +153,18 @@ body {
 }
 
 .footerSocialIcons {
-    background: white;
-    padding: 11px;
-    border-radius: 20px;
-    height: 40px;
+    /* background: white; */
+    /* padding: 11px; */
+    /* border-radius: 20px; */
+    /* height: 40px; */
+    color: #fff;
 
 }
 
-.footerSocialIcons:hover {
+/* .footerSocialIcons:hover {
     background: #23569E;
     color: white;
-}
+} */
 
 .footerBack {
     background-image: url("../../../website/assets/images/footerBack.png");
