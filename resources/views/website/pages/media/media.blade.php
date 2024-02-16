@@ -55,7 +55,7 @@
           @else
               @foreach ($data_output as $media)
 
-              <div class="col-lg-3 col-md-3 col-sm-8">
+              <div class="col-lg-3 col-md-3 col-sm-8 pt-3">
                 <img src="{{ Config::get('DocumentConstant.MEDIA_VIEW') }}{{ $media['image'] }}" class="w-100" alt="media1" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" />
               </div>
               @endforeach
