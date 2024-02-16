@@ -233,8 +233,37 @@ body {
     color: red;
     font-size: 15px;
 }
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 767px) {
+    .navbarLogo {
+        width: 50%;
+        float: left;
+    }
+    
+.navbarView {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+}
+.navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    display: contents;
+}
+}
 
 @media only screen and (max-width: 576px) {
+    .headerBtn {
+        background: #23569E;
+        width: 47%;
+        text-align: center;
+        border-radius: 3px;
+        color: white !important;
+    }
+    
     .bannerCardHeading {
         font-size: 0.49rem;
     }
