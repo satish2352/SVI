@@ -10,7 +10,7 @@
 }
 
 .videoSize {
-    height: 300px;
+    height: 260px;
     width: 390px;
     object-fit: cover;
 }
@@ -124,10 +124,9 @@
     text-overflow: ellipsis;
 }
 
-.cardBodyCoreComp h6 {
+.cardBodyCoreComp .card-title {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 16px !important;
 }
 
 /* media query */
@@ -144,7 +143,7 @@
 
     .videoSize {
         height: 250px;
-        width: 250px;
+        width: 260px;
     }
 
     .HomeAboutRow {
@@ -169,7 +168,7 @@
     .onVideoBanner img {
         width: 40% !important;
     }
-   
+
     .HomeAboutButton {
         background: #23569E;
         padding-left: 2.2rem;
@@ -257,4 +256,3 @@
     }
 }
 /* ================== */
-
