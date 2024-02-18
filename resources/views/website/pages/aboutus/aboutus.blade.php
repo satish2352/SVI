@@ -28,7 +28,7 @@
               </div>
             </div>
             <div class="col-lg-7 pt-5 pt-md-0 d-flex align-items-center bg-white shadow-lg">
-              <p class="pText pTextAbout px-3 ms-md-5 pt-md-5 py-md-4 pe-md-3">
+              <p class="pText pTextAbout px-3 ms-md-5 pt-md-5 py-md-4 pe-md-3"  data-aos="zoom-in" data-aos-duration="2000">
                 {{ strip_tags($aboutus['description']) }}
               </p>
             </div>
@@ -58,13 +58,13 @@
           <div class="row justify-content-center py-3">
             <h4 class="heading d-block d-md-block visionHeading">Vision</h4>
             <div class="col-lg-4 col-md-4 p-0 col-sm-10 col-10" data-aos="fade-right"
-            data-aos-offset="300"
+            data-aos-offset="300" data-aos-duration="1000"
             data-aos-easing="ease-in-sine">
                 <img src="{{ Config::get('DocumentConstant.VISION_MISSION_VIEW') }}{{ $visionmission['vision_image'] }}" class="img-fluid"
                 alt="vision" />
             </div>
             <div class="col-lg-6 col-md-6 col-sm-10 col-10 d-flex justify-content-center align-items-center bg-white" data-aos="fade-left"
-            data-aos-offset="300"
+            data-aos-offset="300" data-aos-duration="1000"
             data-aos-easing="ease-in-sine">
               <div>
                 <p class="px-md-5 mt-3 visionText">
@@ -76,17 +76,21 @@
       
           <div class="row justify-content-center py-2">
           <h4 class="heading missionHeading mt-1 d-block d-md-none">Mission</h4>
-            <div class="col-lg-4 col-md-4 p-0 col-sm-10 col-10 d-block d-md-none">
+            <div class="col-lg-4 col-md-4 p-0 col-sm-10 col-10 d-block d-md-none" data-aos="fade-up"
+            data-aos-duration="3000">
               <img src="{{ asset('website/assets/images/aboutus/mission.png')}}" class="img-fluid" alt="vision" />
             </div>
             <div class="col-lg-6 col-md-6 col-sm-10 col-10 d-flex justify-content-center align-items-center bg-white">
               <div>
-                <p class="px-md-5 mt-3 visionText">
+                <p class="px-md-5 mt-3 visionText" data-aos="fade-up"
+                data-aos-duration="1500">
                     {{ strip_tags($visionmission['mission_description']) }}
                 </p>
               </div>
             </div>
-            <div class="col-lg-4 col-md-4 p-0 col-sm-10 col-10 d-none d-md-block">
+            <div class="col-lg-4 col-md-4 p-0 col-sm-10 col-10 d-none d-md-block" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000">
                 <img src="{{ Config::get('DocumentConstant.VISION_MISSION_VIEW') }}{{ $visionmission['mission_image'] }}" class="img-fluid"
                 alt="Mission Image" />
             </div>
@@ -140,7 +144,7 @@
         <h4 class="text-center bg-white p-0 m-0 pt-4 pb-2 HomeAbout heading">
             Company
         </h4>
-        <div class="">
+        <div class="" data-aos="zoom-in-up"  data-aos-duration="3000">
             <img src="{{ asset('website/assets/images/aboutus/aboutPageImg.png') }}" class="img-fluid w-100"
                 alt="" />
         </div>
@@ -220,7 +224,7 @@
       Certificate
     </h4> -->
     <div class="row">
-      <img src="{{ asset('website/assets/images/aboutus/certificate.png')}}"
+      <img src="{{ asset('website/assets/images/aboutus/certificate.png')}}" data-aos="zoom-in" data-aos-duration="3000"
         class="mx-auto d-none d-md-block d-lg-block certificate p-0 shadow-lg" alt="certificate" />
       <img src="{{ asset('website/assets/images/aboutus/MobCertificate.jpg')}}"
         class="mx-auto my-3 d-block d-md-none d-lg-none certificate p-0 shadow-lg" alt="certificate" />

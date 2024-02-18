@@ -14,7 +14,8 @@
                         </div>
                     @else
                         @foreach ($data_output as $services)
-                        <div class="col-lg-4 col-md-4 col-10 service-spacing">
+                        <div class="col-lg-4 col-md-4 col-10 service-spacing" data-aos="fade-up"
+                        data-aos-duration="3000">
                             <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $services['image'] }}" alt="Home_Banner"
                                 class="img-fluid" />
                                 <div class="service-heading"><span class="service-number"> </span><span

@@ -65,7 +65,8 @@
         @else
             @foreach ($data_output_product as $product)
             <div class="col-lg-5 text-center text-sm-center text-md-end">
-              <div class="productImg my-2">
+              <div class="productImg my-2" data-aos="zoom-in" data-aos-easing="linear"
+              data-aos-duration="1500">
                 <img
                   src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}"
                   class=""
@@ -81,15 +82,18 @@
                   Product
                 </h2>
                 <div class="card px-lg-5 px-3 py-4 w-100 cardContent ">
-                  <h5 class="cardContent_text" >
+                  <h5 class="cardContent_text" data-aos="fade-right" data-aos-easing="linear"
+                  data-aos-duration="1500">
                     {{ strip_tags($product['title']) }} 
                   </h5>
-                  <p>
+                  <p  data-aos="fade-left" data-aos-easing="linear"
+                  data-aos-duration="1500">
                     {{ strip_tags($product['description']) }}
                   </p>
                 </div>
-                <div class="HomeAboutButton1 text-md-end text-center my-3 mt-md-3 me-xl-4 " >
-                  <a href="{{ route('product') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View all </a>
+                <div class="HomeAboutButton1 text-md-end text-center my-3 mt-md-3 me-xl-4 " data-aos="fade-up" data-aos-anchor="#example-anchor"
+                  data-aos-offset="500" data-aos-duration="2000">
+                  <a href="{{ route('product') }}" type="button" class="text-decoration-none HomeAboutButton text-white" >View all </a>
               </div>
               </div>
             </div>
@@ -121,7 +125,8 @@
         <div class="container">
           <h2 class="heading svpilHeading">SVICPL’s Core Competencies</h2>
           <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="zoom-in-up"  data-aos-easing="linear"
+            data-aos-duration="1500">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
                   class="w-75 mx-auto"
@@ -133,7 +138,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="fade-left">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="zoom-in-up"  data-aos-easing="linear"
+            data-aos-duration="1500">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
                   class="w-75 mx-auto"
@@ -147,7 +153,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="zoom-in-up"  data-aos-easing="linear"
+            data-aos-duration="1500">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
                   class="w-75 mx-auto"
@@ -161,7 +168,8 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="zoom-in-up"  data-aos-easing="linear"
+            data-aos-duration="1500">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
                   class="w-75 mx-auto"
@@ -173,7 +181,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="zoom-in-up"  data-aos-easing="linear"
+            data-aos-duration="1500">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
                   class="w-75 mx-auto"
@@ -185,7 +194,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="zoom-in-up"  data-aos-easing="linear"
+            data-aos-duration="1500">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
                   class="w-75 mx-auto"

@@ -11,14 +11,14 @@
             <div
               class="col-lg-8 col-md-8 col-sm-12 col-12 d-flex align-items-center"
             >
-              <div class="card border-0 contactPageCard shadow p-lg-4 p-2 px-lg-5">
+              <div class="card border-0 contactPageCard shadow p-lg-4 p-2 px-lg-5" data-aos="zoom-in" data-aos-duration="3000">
                 <div class="row">
                   <h2 class="text-start heading">CONTACT US</h2>
                   <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
                   enctype="multipart/form-data">
               @csrf
               <div class="row py-md-2">
-                  <div class="col-md-6 pt-md-0 pt-2">
+                  <div class="col-md-6 pt-md-0 pt-2" >
                       <div class="">
                         <label for="full_name"><strong style="color:#323232"> Name </strong></label>
                           <input type="text"  placeholder="Your Full Name" name="full_name"
@@ -100,7 +100,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-3 d-none d-sm-none d-md-block d-lg-block">
-              <div class="card contactInfoCard text-center border-0 p-4 shadow">
+              <div class="card contactInfoCard text-center border-0 p-4 shadow" data-aos="fade-left" data-aos-duration="3000">
                 <div>
                   <img src="{{ asset('website/assets/images/contact/phoneIcon.png')}}" alt="phoneIcon" />
                   <h5 class="mb-2 mt-2">Phone no.</h5>
@@ -170,7 +170,7 @@
                   </p>
                 </div>
               </div>
-              <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow">
+              <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow" data-aos="fade-left" data-aos-duration="3000">
                 <div>
                   <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" />
                   <h5 class="mt-2">Scan</h5>
@@ -209,39 +209,42 @@
 <section class="bg-white py-md-5">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
-        <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
-          <img src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
+      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0" data-aos="zoom-in-up"  data-aos-easing="linear"
+      data-aos-duration="1500">
+        <div class="card unitCard shadow-lg mx-auto" style="width: 90%" >
+          <img data-aos="zoom-in"  data-aos-duration="3000" src="{{ asset('website/assets/images/contact/unit1.png')}}" alt="..." />
           <div class="card-body cardContactUnit text-center">
-            <h5 class="card-title text-center">UNIT 1</h5>
-            <p class="text-center fw-bold m-0 p-0">PLOT B-224</p>
-            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0">
+            <h5 class="card-title text-center"  data-aos="fade-right" data-aos-duration="3000">UNIT 1</h5>
+            <p class="text-center fw-bold m-0 p-0" data-aos="fade-left" data-aos-duration="3000">PLOT B-224</p>
+            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0" data-aos="zoom-out-up" data-aos-duration="3000">
               Graphite Processing & Laboratory Set-up Malegaon MIDC Area,
               Taluka - Sinnar, Nashik - 422113 Maharashtra, India.
             </p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
+      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0" data-aos="zoom-in-up"  data-aos-easing="linear"
+      data-aos-duration="1500">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
-          <img src="{{ asset('website/assets/images/contact/unit2.png')}}" alt="..." />
+          <img data-aos="zoom-in"  data-aos-duration="3000" src="{{ asset('website/assets/images/contact/unit2.png')}}" alt="..." />
           <div class="card-body cardContactUnit text-center">
-            <h5 class="card-title text-center">UNIT 2</h5>
-            <p class="text-center fw-bold m-0 p-0">PLOT B-226</p>
-            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0">
+            <h5 class="card-title text-center"  data-aos="fade-right" data-aos-duration="3000">UNIT 2</h5>
+            <p class="text-center fw-bold m-0 p-0" data-aos="fade-left" data-aos-duration="3000">PLOT B-226</p>
+            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0" data-aos="zoom-out-up" data-aos-duration="3000">
               Impregnation & Assembly Malegaon MIDC Area, Taluka - Sinnar,
               Nashik - 422113 Maharashtra, India.
             </p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0">
+      <div class="col-lg-4 col-md-4 col-12 my-2 my-md-0" data-aos="zoom-in-up"  data-aos-easing="linear"
+      data-aos-duration="1500">
         <div class="card unitCard shadow-lg mx-auto" style="width: 90%">
-          <img src="{{ asset('website/assets/images/contact/unit3.png')}}" alt="..." />
+          <img data-aos="zoom-in"  data-aos-duration="3000" src="{{ asset('website/assets/images/contact/unit3.png')}}" alt="..." />
           <div class="card-body cardContactUnit text-center">
-            <h5 class="card-title text-center">UNIT 3</h5>
-            <p class="text-center fw-bold m-0 p-0">PLOT B-257</p>
-            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0">
+            <h5 class="card-title text-center"  data-aos="fade-right" data-aos-duration="3000">UNIT 3</h5>
+            <p class="text-center fw-bold m-0 p-0" data-aos="fade-left" data-aos-duration="3000">PLOT B-257</p>
+            <p style="font-weight: 400; font-size: 0.8rem; color:#000;" class="m-0 p-0" data-aos="zoom-out-up" data-aos-duration="3000">
               Steel Fabrication Shop & Warehouse Malegaon MIDC Area, Taluka
               - Sinnar, Nashik - 422113 Maharashtra, India.
             </p>

@@ -24,10 +24,10 @@
                    </div>
                @else
                    @foreach ($data_output_all_product as $product)
-                   <div class="col-lg-4 col-md-4 col-sm-4">
+                   <div class="col-lg-4 col-md-4 col-sm-4" data-aos="zoom-in-up" data-aos-duration="3000">
                     <div class="card">
                     <img src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}" alt="{{ strip_tags($product['title']) }}" class="img-fluid" />
-                    <div class="card-body shadow-sm card-title" >{{ strip_tags($product['title']) }}</div>
+                    <div class="card-body shadow-sm card-title" data-aos="zoom-in-up" data-aos-duration="3000">{{ strip_tags($product['title']) }}</div>
                   </div>
                  </div>
                   @endforeach
@@ -68,7 +68,7 @@
                                         data-bs-target="#data_id_{{ $categories_data['id'] }}"
                                         onclick="getServices('{{ $categories_data['id'] }}')" type="button" role="tab"
                                         aria-controls="nav-profile"
-                                        aria-selected="false">{{ $categories_data['product_name'] }}</button>
+                                        aria-selected="false" data-aos="zoom-in" data-aos-duration="3000">{{ $categories_data['product_name'] }}</button>
                                 @empty
                                     <div class="alert alert-primary" role="alert">
                                         No Data Found
@@ -83,7 +83,8 @@
                             <div class="row d-flex gallery" id="gallary_data">
                                 <div class="row row-cols-1 row-cols-md-4 ">
                                     @forelse($all_services as $key=>$categories_data)
-                                    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3" data-aos="fade-up"
+                                    data-aos-duration="3000">
                                         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
                                             <h4 class="card-title dis-ellipse fw-7">{{ $categories_data['product_title'] }}</h4>
                                             <h4 class="card-title fw-7 dis-ellipse">{{ $categories_data['product_description'] }}</h4>
@@ -177,8 +178,8 @@ function displayCategoryData(categoryData) {
     $("#gallary_data").append(`
     <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3">
         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
-            <h4 class="card-title dis-ellipse fw-7">${categoryData[0].product_title}</h4>
-            <h4 class="card-title fw-7 dis-ellipse">${categoryData[0].product_description}</h4>
+            <h4 class="card-title dis-ellipse fw-7"  data-aos="fade-right"  data-aos-duration="3000">${categoryData[0].product_title}</h4>
+            <h4 class="card-title fw-7 dis-ellipse" data-aos="fade-left"  data-aos-duration="3000">${categoryData[0].product_description}</h4>
         </div>
         </div>
     `);
@@ -186,7 +187,8 @@ function displayCategoryData(categoryData) {
     // Append images
     $.each(categoryData, function(i, item) {
         $("#gallary_data").append(`
-            <div class="col-md-6 col-lg-4 col-sm-12 card-padding">
+            <div class="col-md-6 col-lg-4 col-sm-12 card-padding" data-aos="fade-up"
+     data-aos-duration="3000">
                 <div class="card article_card_container sub-card-padding">
                     <img src="${path}${item.image}"
                         class="card-img-top" alt="${item.title}">

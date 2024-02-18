@@ -44,7 +44,8 @@
       <section class="bg-white">
         <div class="container py-md-5 py-4">
           <div class="card border-0 py-3 px-lg-3 px-2 mediaCard shadow-lg">
-            <h4 class="heading text-start mx-md-4 mt-3 ">Media</h4>
+            <h4 class="heading text-start mx-md-4 mt-3 " data-aos="fade-right"  data-aos-easing="linear"
+            data-aos-duration="1500">Media</h4>
             <div class="row justify-content-center px-lg-5">
               @if (empty($data_output))
               <div class="container">
@@ -55,7 +56,8 @@
           @else
               @foreach ($data_output as $media)
 
-              <div class="col-lg-3 col-md-3 col-sm-8 pt-3">
+              <div class="col-lg-3 col-md-3 col-sm-8 pt-3" data-aos="zoom-in-up"  data-aos-easing="linear"
+              data-aos-duration="1500">
                 <img src="{{ Config::get('DocumentConstant.MEDIA_VIEW') }}{{ $media['image'] }}" class="w-100" alt="media1" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" />
               </div>
               @endforeach
