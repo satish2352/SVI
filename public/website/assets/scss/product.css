@@ -207,8 +207,6 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
-
   font-family: "Poppins", sans-serif;
   text-align: justify;
  
@@ -245,12 +243,73 @@
  
 /* Media query for mobile devices */
 @media (max-width: 767px) {
+
+  .main-card-product-dis {
+    position: relative;
+    /* top: 50%; */
+    left: 0%;
+    transform: translate(0%, 0%);
+    /* width: 300px; */
+    height: auto;
+    background-color: #ECFFFE;
+    padding: 20px 20px 20px 20px;
+    margin-top: 0px;
+  }
+  
+  .sub-card-product-dis {
+    position: relative;
+    /* top: calc(85% - 150px);
+    left: calc(50% - 75px);  */
+    width: 100%;
+    /* height: 300px; */
+    background-color: #FFFFFF;
+    padding: 10px;
+    /* overflow-y: auto; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    
+  }
+
+  .card-padding{
+    padding-top: 0px;
+  }
+  .article_card_container .card-title{
+    font-size: 18px;
+    height: 35px;
+    text-align: left;
+    align-items: start;
+    justify-content: left;
+    display: contents;
+  }
+  .dis-ellipse {
+    text-overflow: initial;
+  overflow: visible;
+  display: -webkit-box;
+  -webkit-line-clamp:initial;
+  -webkit-box-orient: vertical;
+  font-family: "Poppins", sans-serif;
+  text-align:left;
+ 
+  }
+  .dis-ellipse p {
+    text-overflow: initial;
+    overflow: visible;
+    display: -webkit-box;
+    -webkit-line-clamp: initial;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    color: #778088;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+}
+  /* ================ */
   .article_nav {
       padding: 10px 0; /* Adjust padding as needed */
       overflow-x: auto; /* Enable horizontal scrolling */
   }
   .article_tab .article_tab_link{
     border-bottom: 0px;
+    width: 100% !important;
   }
 
   .article_nav .nav-link {
@@ -261,7 +320,27 @@
       margin-right: 5px; /* Add spacing between tabs */
       white-space: nowrap; /* Prevent text from wrapping */
   }
-
+  .article_tab .article_tab_link.active {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: inherit !important;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-bottom: 2px solid;
+    text-align: start;
+    padding: 10px;
+    width: 100% !important;
+  }
+  .article_tab .article_tab_link {
+    border-bottom: 2px solid;
+    margin-top: 10px;
+    text-align: start;
+    padding: 10px;
+    font-size: 18px;
+    width: 100% !important;
+  }
   .article_tab {
       background: #6246E5;
       display: flex; /* Use flexbox for layout */
@@ -284,12 +363,11 @@
       white-space: nowrap; /* Prevent text from wrapping */
   }
 
-  .main-card-product-dis {
+  /* .main-card-product-dis {
       background-color: #ECFFFE;
       padding: 10px;
-      margin-top: 20px; /* Add margin between tabs and content */
+      margin-top: 20px; 
       transform: translate(-50%, -10%);
-      /* width: 300px; */
       height: 200px;
 
   }
@@ -297,18 +375,17 @@
   .sub-card-product-dis {
       background-color: #FFFFFF;
       padding: 10px;
-      margin-top: 20px; /* Add margin between tabs and content */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
-  }
+      margin-top: 20px; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
   
-
+  } */
   .card-body h5 {
-      font-size: 15px;
+      font-size: 14px !important;
   }
 
   .main-card-product-dis h4 {
       overflow-wrap: anywhere; /* Adjust text overflow */
-      font-size: 24px;
+      font-size: 18px;
   }
 
   .main-card-product-dis p {

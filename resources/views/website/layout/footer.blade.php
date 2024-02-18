@@ -162,7 +162,13 @@
           </div>
         </div>
       </footer>
-
+      <a href="https://wa.me/7709777526"
+      style="position: fixed; bottom: 90px; right: 24px;"
+      target="_blank"
+      className="btn-whatsapp-pulse">
+      <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
+      {{-- <i className="fa fa-whatsapp"></i> --}}
+      </a>  
 
       <section class="copyright text-center">
         <div class="container wow fadeInUp" data-wow-delay="400ms">

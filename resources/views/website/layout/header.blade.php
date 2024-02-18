@@ -17,6 +17,8 @@
   <link href="{{ asset('website/assets/scss/media.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/product.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/services.css') }}" rel="stylesheet">
+  <link href="{{ asset('website/assets/scss/whatsapp.scss') }}" rel="stylesheet">
+  
 
   <title>SVI - Home</title>
 </head>

@@ -168,7 +168,7 @@ function displayCategoryData(categoryData) {
 
     // Append product title and description
     $("#gallary_data").append(`
-    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-3">
+    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3">
         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
             <h4 class="card-title dis-ellipse fw-7">${categoryData[0].product_title}</h4>
             <h4 class="card-title fw-7 dis-ellipse">${categoryData[0].product_description}</h4>
