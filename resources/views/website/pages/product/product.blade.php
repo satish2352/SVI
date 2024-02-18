@@ -82,11 +82,18 @@
                         <div class="tab-content p-3" id="nav-tabContent">
                             <div class="row d-flex gallery" id="gallary_data">
                                 <div class="row row-cols-1 row-cols-md-4 ">
-                                    {{-- <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <h4 class="card-title fw-7">{{ $item['product_title'] }}</h4>
-                                    <h4 class="card-title fw-7">{{ $item['product_description'] }}</h4>
-                                </div> --}}
-
+                                    @forelse($all_services as $key=>$categories_data)
+                                    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
+                                            <h4 class="card-title dis-ellipse fw-7">{{ $categories_data['product_title'] }}</h4>
+                                            <h4 class="card-title fw-7 dis-ellipse">{{ $categories_data['product_description'] }}</h4>
+                                        </div>
+                                        </div>
+                                        @empty
+                                        <div class="alert alert-primary" role="alert">
+                                            No Data Found
+                                        </div>
+                                    @endforelse
                               
                                     @forelse ($all_services_details as $key=>$item)
                                         {{-- <h4 class="card-title fw-7">{{ $item['service_details'] }}</h4> --}}
