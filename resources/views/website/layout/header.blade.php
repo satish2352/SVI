@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>SVI</title>
+  <title>Shri Vyanktesh Industries</title>
   <link rel="icon" type="image/x-icon" href="{{ asset('website/assets/images/favicons/logoadmin1.png') }}">
   <meta charset="utf-8">
   <meta name="csrf-token" content="{{ csrf_token() }}">
