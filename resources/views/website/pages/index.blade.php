@@ -32,14 +32,15 @@
               </div>
             </div>
             <div class="col-lg-7 d-flex align-items-center bg-white shadow-lg">
-              <p class="pText pTexthome pt-4 px-3 ms-md-5 pt-md-4 py-md-1 pe-md-3">
+              <p class="pText pTexthome pt-4 px-3 ms-md-5 pt-md-4 py-md-1 pe-md-3" data-aos="zoom-in" data-aos-duration="2000">
                 {{ strip_tags($aboutus['description']) }}
               </p>
             </div>
             @endforeach
             @endif
-            <div class="HomeAboutButton1 text-md-end text-center mt-3">
-                <a href="{{ route('aboutus') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View More </a>
+            <div class="HomeAboutButton1 text-md-end text-center mt-3" >
+                <a href="{{ route('aboutus') }}" type="button" class="text-decoration-none HomeAboutButton text-white" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                data-aos-offset="500" data-aos-duration="3000">View More </a>
             </div>
           </div>
         </div>
@@ -80,14 +81,14 @@
                   Product
                 </h2>
                 <div class="card px-lg-5 px-3 py-4 w-100 cardContent ">
-                  <h5 class="cardContent_text">
+                  <h5 class="cardContent_text" >
                     {{ strip_tags($product['title']) }} 
                   </h5>
                   <p>
                     {{ strip_tags($product['description']) }}
                   </p>
                 </div>
-                <div class="HomeAboutButton1 text-md-end text-center my-3 mt-md-3 me-xl-4 ">
+                <div class="HomeAboutButton1 text-md-end text-center my-3 mt-md-3 me-xl-4 " >
                   <a href="{{ route('product') }}" type="button" class="text-decoration-none HomeAboutButton text-white">View all </a>
               </div>
               </div>
@@ -132,7 +133,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-10 my-2 px-3 pt-2" data-aos="fade-left">
               <div class="card shadow py-1 coreCompCards pt-4 border-0">
                 <img
                   class="w-75 mx-auto"

@@ -57,11 +57,15 @@
 
           <div class="row justify-content-center py-3">
             <h4 class="heading d-block d-md-block visionHeading">Vision</h4>
-            <div class="col-lg-4 col-md-4 p-0 col-sm-10 col-10">
+            <div class="col-lg-4 col-md-4 p-0 col-sm-10 col-10" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
                 <img src="{{ Config::get('DocumentConstant.VISION_MISSION_VIEW') }}{{ $visionmission['vision_image'] }}" class="img-fluid"
                 alt="vision" />
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-10 col-10 d-flex justify-content-center align-items-center bg-white">
+            <div class="col-lg-6 col-md-6 col-sm-10 col-10 d-flex justify-content-center align-items-center bg-white" data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
               <div>
                 <p class="px-md-5 mt-3 visionText">
                     {{ strip_tags($visionmission['vision_description']) }}

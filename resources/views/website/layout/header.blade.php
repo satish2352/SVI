@@ -18,7 +18,7 @@
   <link href="{{ asset('website/assets/scss/product.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/services.css') }}" rel="stylesheet">
   <link href="{{ asset('website/assets/scss/whatsapp.scss') }}" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <title>SVI - Home</title>
 </head>

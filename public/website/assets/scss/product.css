@@ -319,10 +319,15 @@
       padding: 10px 0; /* Adjust padding as needed */
       overflow-x: auto; /* Enable horizontal scrolling */
   }
-  .article_tab .article_tab_link{
-    border-bottom: 0px;
-    width: 100% !important;
-  }
+
+  .article_nav .nav-link.active  {
+    padding: 10px; /* Adjust padding as needed */
+    color: #fff !important;
+    border-right: 1px solid #fff; /* Optional: Add border between tabs */
+    border-radius: 0; /* Remove border radius */
+    margin-right: 5px; /* Add spacing between tabs */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
 
   .article_nav .nav-link {
       padding: 10px; /* Adjust padding as needed */
@@ -346,7 +351,7 @@
     width: 100% !important;
   }
   .article_tab .article_tab_link {
-    border-bottom: 2px solid;
+    border-bottom: none;
     margin-top: 10px;
     text-align: start;
     padding: 10px;
