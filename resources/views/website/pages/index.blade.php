@@ -79,7 +79,7 @@
                 >
                   Product
                 </h2>
-                <div class="card px-5 py-4 w-100 cardContent ">
+                <div class="card px-lg-5 px-3 py-4 w-100 cardContent ">
                   <h5 class="cardContent_text">
                     {{ strip_tags($product['title']) }} 
                   </h5>

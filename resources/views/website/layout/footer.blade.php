@@ -163,7 +163,7 @@
         </div>
       </footer>
       <a href="https://wa.me/7709777526"
-      style="position: fixed; bottom: 90px; right: 24px;"
+      style="position: fixed; bottom: 132px; right: 24px;"
       target="_blank"
       className="btn-whatsapp-pulse">
       <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">

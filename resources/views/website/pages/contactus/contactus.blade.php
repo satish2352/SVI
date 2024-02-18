@@ -11,7 +11,7 @@
             <div
               class="col-lg-8 col-md-8 col-sm-12 col-12 d-flex align-items-center"
             >
-              <div class="card border-0 contactPageCard shadow p-4 px-5">
+              <div class="card border-0 contactPageCard shadow p-lg-4 p-2 px-lg-5">
                 <div class="row">
                   <h2 class="text-start heading">CONTACT US</h2>
                   <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"

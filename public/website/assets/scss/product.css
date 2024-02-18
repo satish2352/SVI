@@ -270,6 +270,18 @@
     
   }
 
+  .dis-ellipse p span{
+    text-overflow: inherit !important;
+  overflow: visible !important;
+  display: -webkit-box;
+  -webkit-line-clamp: initial !important;
+  -webkit-box-orient: vertical;
+  font-size: 17px !important;
+  color: #778088 !important;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+ 
+  }
   .card-padding{
     padding-top: 0px;
   }
@@ -339,7 +351,7 @@
     text-align: start;
     padding: 10px;
     font-size: 18px;
-    width: 100% !important;
+    width: 255% !important;
   }
   .article_tab {
       background: #6246E5;

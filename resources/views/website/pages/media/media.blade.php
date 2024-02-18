@@ -43,9 +43,9 @@
   
       <section class="bg-white">
         <div class="container py-md-5 py-4">
-          <div class="card border-0 py-3 px-3 mediaCard shadow-lg">
+          <div class="card border-0 py-3 px-lg-3 mediaCard shadow-lg">
             <h4 class="heading text-start mx-md-4 mt-3 ">Media</h4>
-            <div class="row justify-content-center px-5">
+            <div class="row justify-content-center px-lg-5">
               @if (empty($data_output))
               <div class="container">
                   <div class="row">
