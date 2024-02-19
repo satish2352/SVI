@@ -242,7 +242,7 @@ body {
     justify-content: center;
 }
 .linkedin{
-    width: 18%; 
+    width: 10%; 
     padding-left: 5px
 }
 .footericonposition{
@@ -256,7 +256,7 @@ body {
     padding-left: 10px;
 }
 .footericonsize{
-    width: 12%;
+    /* width: 12%; */
      padding:2px; 
      height:20px
 }
@@ -307,7 +307,7 @@ body {
     padding-left: 10px;
 }
 .footericonsize{
-    width: 9%;
+    /* width: 9%; */
      padding:2px; 
      height:20px
 }
@@ -355,7 +355,7 @@ body {
         width: 11%; 
     }
     .footericonsize{
-        width: 9%;
+        /* width: 9%; */
    
     }
     
