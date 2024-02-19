@@ -256,7 +256,7 @@ body {
     padding-left: 10px;
 }
 .footericonsize{
-    width: 17%;
+    width: 12%;
      padding:2px; 
      height:20px
 }
@@ -311,6 +311,17 @@ body {
      padding:2px; 
      height:20px
 }
+.copyright {
+    position: relative;
+    background-color: #23569E;
+    padding: 5px 0 5px;
+   
+  }
+  .copyright__text {
+    color: #fff;
+    margin: 0;
+    font-size: 13px;
+  }
 }
 
 

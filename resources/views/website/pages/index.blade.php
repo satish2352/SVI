@@ -82,11 +82,11 @@
                   Product
                 </h2>
                 <div class="card px-lg-5 px-3 py-4 w-100 cardContent ">
-                  <h5 class="cardContent_text" data-aos="fade-right" data-aos-easing="linear"
+                  <h5 class="cardContent_text" data-aos="zoom-in" data-aos-easing="linear"
                   data-aos-duration="1500">
                     {{ strip_tags($product['title']) }} 
                   </h5>
-                  <p  data-aos="fade-left" data-aos-easing="linear"
+                  <p data-aos="zoom-in" data-aos-easing="linear"
                   data-aos-duration="1500">
                     {{ strip_tags($product['description']) }}
                   </p>

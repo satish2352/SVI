@@ -9,7 +9,7 @@
       <footer class="sviFooter text-center text-md-start py-3 py-md-5">
         <div class="container">
           <div class="row text-white justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
               <div class="footerBack text-center mx-auto mx-md-1">
                 <img
                   src="{{ asset('website/assets/images/logo1.png')}}"
@@ -105,7 +105,7 @@
                 Nashik. Maharashtra, India.
               </p>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 mt-4 socialIconsFooter">
+            <div class="col-lg-3 col-md-6 col-sm-12 mt-4 socialIconsFooter">
               <h6 class="mb-3 mt-2">FOLLOW US <a href="https://www.linkedin.com/company/svi-carbon-pvt-ltd/" target="_blank"> <img
                 src="{{ asset('website/assets/images/linkedin.png')}}"
               class="linkedin"
@@ -164,7 +164,7 @@
         </div>
       </footer>
       <a href="https://wa.me/7709777526"
-      style="position: fixed; bottom: 50px; right: 24px;"
+      style="position: fixed; bottom: 70px; right: 24px;"
       target="_blank"
       className="btn-whatsapp-pulse">
       <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">

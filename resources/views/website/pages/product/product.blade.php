@@ -86,7 +86,7 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis" data-aos="fade-up"
                                     data-aos-duration="3000">
                                         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
-                                            <h4 class="card-title dis-ellipse fw-7">{{ $categories_data['product_title'] }}</h4>
+                                            <h4 class="card-title dis-ellipse fw-7 pb-3">{{ $categories_data['product_title'] }}</h4>
                                             <h4 class="card-title fw-7 dis-ellipse">{{ $categories_data['product_description'] }}</h4>
                                         </div>
                                         </div>
@@ -178,7 +178,7 @@ function displayCategoryData(categoryData) {
     $("#gallary_data").append(`
     <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3">
         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
-            <h4 class="card-title dis-ellipse fw-7"  data-aos="fade-right"  data-aos-duration="3000">${categoryData[0].product_title}</h4>
+            <h4 class="card-title dis-ellipse fw-7 pb-3"  data-aos="fade-right"  data-aos-duration="3000">${categoryData[0].product_title}</h4>
             <h4 class="card-title fw-7 dis-ellipse" data-aos="fade-left"  data-aos-duration="3000">${categoryData[0].product_description}</h4>
         </div>
         </div>
