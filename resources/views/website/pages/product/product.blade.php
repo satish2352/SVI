@@ -27,7 +27,7 @@
                    <div class="col-lg-4 col-md-4 col-sm-4" data-aos="zoom-in-up" data-aos-duration="3000">
                     <div class="card">
                     <img src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}" alt="{{ strip_tags($product['title']) }}" class="img-fluid" />
-                    <div class="card-body shadow-sm card-title" data-aos="zoom-in-up" data-aos-duration="3000">{{ strip_tags($product['title']) }}</div>
+                    <div class="card-body shadow-sm card-title mob-size" data-aos="zoom-in-up" data-aos-duration="3000">{{ strip_tags($product['title']) }}</div>
                   </div>
                  </div>
                   @endforeach

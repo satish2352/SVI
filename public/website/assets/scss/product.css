@@ -331,6 +331,15 @@
 /* Media query for mobile devices */
 @media (max-width: 767px) {
 
+  .main-product .card .card-title {
+    color: #1C2B38;
+    font-size: 14px !important;
+    font-weight: 700;
+    display: flex;
+    justify-content: start;
+    font-family: "Volkhov", serif;
+    height: 93px;
+}
   .main-card-product-dis {
     position: relative;
     /* top: 50%; */
@@ -505,7 +514,7 @@
 @media (min-width: 767px) and (max-width: 1024px) {
   .main-product .card .card-title {
     color: #1C2B38;
-    font-size: 14px;
+    font-size: 14px !important;
     font-weight: 700;
     display: flex;
     justify-content: start;
