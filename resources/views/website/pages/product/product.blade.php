@@ -83,7 +83,7 @@
                             <div class="row d-flex gallery" id="gallary_data">
                                 <div class="row row-cols-1 row-cols-md-4 ">
                                     @forelse($all_services as $key=>$categories_data)
-                                    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3" data-aos="fade-up"
+                                    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis" data-aos="fade-up"
                                     data-aos-duration="3000">
                                         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
                                             <h4 class="card-title dis-ellipse fw-7">{{ $categories_data['product_title'] }}</h4>
