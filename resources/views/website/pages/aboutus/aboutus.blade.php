@@ -145,7 +145,7 @@
             Company
         </h4>
         <div class="" data-aos="zoom-in-up"  data-aos-duration="3000">
-            <img src="{{ asset('website/assets/images/aboutus/aboutPageImg.png') }}" class="img-fluid w-100"
+            <img src="{{ asset('website/assets/images/aboutus/aboutPageImg.jpg') }}" class="img-fluid w-100"
                 alt="" />
         </div>
     </section>

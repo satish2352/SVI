@@ -63,7 +63,7 @@
               @endforeach
               @endif
               {{-- <div class="col-lg-3 col-md-3 col-sm-8">
-                <img src="{{ asset('website/assets/images/media/media2.png')}}" class="w-100" alt="media2" />
+                <img src="{{ asset('website/assets/images/media/media2.png')}}" class="w-md-100 w-sm-75" alt="media2" />
               </div>
               <div class="col-lg-3 col-md-3 col-sm-8">
                 <img src="{{ asset('website/assets/images/media/media3.png')}}" class="w-100" alt="media3" />

@@ -106,11 +106,20 @@
               </p>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12 mt-4 socialIconsFooter">
-              <h6 class="mb-3 mt-2 ms-xl-2">FOLLOW US <a href="https://www.linkedin.com/company/svi-carbon-pvt-ltd/" target="_blank"> <img
+              <h6 class="mb-3 mt-2">FOLLOW US <a href="https://www.linkedin.com/company/svi-carbon-pvt-ltd/" target="_blank"> <img
                 src="{{ asset('website/assets/images/linkedin.png')}}"
               class="linkedin"
                 alt="logo"
               /></a></h6>
+              <p>
+                <a class="text-decoration-none d-flex footericonposition" href="mailto:svicpl@gmail.com"
+                  ><img
+                  src="{{ asset('website/assets/images/footeremail.png')}}"
+                  class="footericonsize"
+                  alt="logo"
+                /> <span class="footericon">svicpl@gmail.com</span></a
+                >
+              </p>
               <p>
                 <a class="text-decoration-none d-flex footericonposition" href="mailto:mktdev@svicarbon.com"
                   ><img
@@ -129,15 +138,7 @@
                 /> <span class="footericon">purchase@svicarbon.com</span></a
                 >
               </p>
-              <p>
-                <a class="text-decoration-none d-flex footericonposition" href="mailto:svicpl@gmail.com"
-                  ><img
-                  src="{{ asset('website/assets/images/footeremail.png')}}"
-                  class="footericonsize"
-                  alt="logo"
-                /> <span class="footericon">svicpl@gmail.com</span></a
-                >
-              </p>
+             
               
 
               {{-- <a href=""
@@ -163,7 +164,7 @@
         </div>
       </footer>
       <a href="https://wa.me/7709777526"
-      style="position: fixed; bottom: 132px; right: 24px;"
+      style="position: fixed; bottom: 110px; right: 24px;"
       target="_blank"
       className="btn-whatsapp-pulse">
       <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="whatsapp">
