@@ -81,7 +81,17 @@
     color: #fff;
     border-bottom-left-radius: 10px;
    border-bottom-right-radius: 10px;
+   font-size: 18px;
+   height: 79px;
+   text-align: left;
+   align-items: start;
+   justify-content: left;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+ overflow: hidden;
+ -webkit-line-clamp:2;
 }
+
 #gallary_data .card{
     border: none !important;
 }
@@ -187,6 +197,19 @@
   .main-card-product-dis p{
     overflow-wrap: anywhere;
   }
+  
+
+
+  /* .dis-ellipse {
+    text-overflow: initial;
+  overflow: visible;
+  display: -webkit-box;
+  -webkit-line-clamp:initial;
+  -webkit-box-orient: vertical;
+  font-family: "Poppins", sans-serif;
+  text-align:left;
+ 
+  } */
   /* .article_card_container .card-title{
     font-size: 18px;
     height: 35px;
@@ -462,6 +485,7 @@
   } */
   .card-body h5 {
       font-size: 14px !important;
+      
   }
 
   .main-card-product-dis h4 {
