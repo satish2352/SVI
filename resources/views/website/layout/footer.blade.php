@@ -10,7 +10,7 @@
         <div class="container">
           <div class="row text-white justify-content-center">
             <div class="col-lg-3 col-md-6 col-sm-12 col-12">
-              <div class="footerBack text-center mx-auto mx-md-1">
+              <div class="footerBack text-center mx-auto mx-md-1 ">
                 <img
                   src="{{ asset('website/assets/images/logo1.png')}}"
                   class="mt-3 mx-auto"
