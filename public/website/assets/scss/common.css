@@ -340,6 +340,13 @@ body {
     .bannerCardHeading {
         font-size: 0.49rem;
     }
+    .linkedin{
+        width: 11%; 
+    }
+    .footericonsize{
+        width: 9%;
+   
+    }
     
 
 }

@@ -104,7 +104,15 @@
         width: 100%;
     }
 }
+@media only screen and (min-width: 718px) and (max-width: 987px){
 
+    .certificateSection {
+        transform: translate(0px, 0px);
+        height: 550px;
+        background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
+    }
+
+}
 @media only screen and (min-width: 1367px) and (max-width: 1920px) {
     .HomeAbout1 {
         color: #23569E;
