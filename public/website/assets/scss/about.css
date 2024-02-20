@@ -73,6 +73,11 @@
 }
 
 @media only screen and (max-width: 576px) {
+    .HomeAbout {
+        color: #23569e;
+        font-size: 29px;
+        padding: 20px;
+    }
     .aboutVideoMain {
         height: 200px;
         width: 320px;
@@ -105,11 +110,24 @@
     }
 }
 @media only screen and (min-width: 718px) and (max-width: 987px){
+    .HomeAbout {
+        color: #23569e;
+        font-size: 29px;
+        padding: 20px;
+    }
 
     .certificateSection {
         transform: translate(0px, 0px);
         height: 550px;
         background: linear-gradient(180deg, #ffffff 40%, #e8e8e8 40%);
+    }
+    .aboutVideoMain {
+        height: 280px;
+        width: 320px;
+        transform: translate(0px, 0px) !important;
+        background: linear-gradient(180deg,
+                #23569e 0%,
+                rgba(160, 238, 255, 0.99) 100%);
     }
 
 }

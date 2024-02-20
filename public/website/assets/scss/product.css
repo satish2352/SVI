@@ -511,6 +511,16 @@
       max-width: 100%; /* Ensure images don't overflow */
       height: auto; /* Maintain aspect ratio */
   }
+  .product-name {
+    padding-top: 70px;
+    padding-bottom: 30px;
+      color: #23569E;
+      font-size: 29px !important;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 }
 @media (min-width: 767px) and (max-width: 1024px) {
   .main-product .card .card-title {
@@ -527,6 +537,16 @@
   margin: 0px 21px;
   border-radius: 10px;
   box-shadow: 10px 10px 50px #00000012%;
+}
+.product-name {
+  padding-top: 70px;
+  padding-bottom: 30px;
+    color: #23569E;
+    font-size: 29px !important;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 }
 

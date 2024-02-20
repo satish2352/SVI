@@ -12,7 +12,7 @@
         <div class="card border-0 contactPageCard shadow p-lg-4 p-2 px-lg-5" data-aos="zoom-in"
           data-aos-duration="3000">
           <div class="row">
-            <h2 class="text-start heading">CONTACT US</h2>
+            <h2 class="text-start heading media-heading">CONTACT US</h2>
             <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
               enctype="multipart/form-data">
               @csrf

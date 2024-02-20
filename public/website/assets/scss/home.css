@@ -132,6 +132,12 @@
 /* media query */
 
 @media only screen and (max-width: 576px) {
+    .productH1 {
+        color: #1e4f9c !important;
+        font-weight: bold;
+        /* padding-left: 1.5rem; */
+        font-size: 29px !important;
+    }
     .aboutVideoMain {
         height: 200px;
         width: 320px;
@@ -189,7 +195,7 @@
         padding-bottom: 8px;
     }
     .svpilHeading {
-        font-size: 1.5rem;
+        font-size: 29px !important;
     }
     .productH1 {
         color: #1e4f9c !important;
@@ -203,6 +209,19 @@
         font-size: 1.8rem;
     }
 }
+@media only screen and (min-width: 568px) and (max-width: 1366px) {
+    .productH1 {
+        color: #1e4f9c !important;
+        font-weight: bold;
+        /* padding-left: 1.5rem; */
+        font-size: 29px !important;
+    }
+    .svpilHeading {
+        font-size: 29px !important;
+    }
+}
+
+
 
 @media only screen and (min-width: 1367px) and (max-width: 1920px) {
     .HomeAbout {

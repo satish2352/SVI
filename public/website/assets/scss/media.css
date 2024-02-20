@@ -28,4 +28,13 @@
         font-size: 1.8rem;
         padding-left: 16px;
     }
+    .media-heading{
+        font-size: 29px !important;
+    }
+}
+    @media (min-width: 577px) and (max-width: 1180px) {
+        .media-heading{
+            font-size: 29px !important;
+        }
+
 }

@@ -338,6 +338,11 @@ body {
     width: auto;
     float: initial;
     }
+    .onVideoBanner {
+        position: absolute;
+        right: 0;
+        top: 16% !important;
+    }
     .navbarView {
         display: grid;
         justify-content: left;
@@ -369,7 +374,7 @@ body {
     
 
 }
-@media only screen and (min-width: 1367px) and (max-width: 1920px) {
+@media only screen and (min-width: 1025px) and (max-width: 1920px) {
     .videoBanner {
         width: 100%;
         height: 80vh;
