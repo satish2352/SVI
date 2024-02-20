@@ -266,6 +266,14 @@ body {
         float: left;
     }
     
+    .footerBack {
+        background-image: url("../../../website/assets/images/footerBack.png");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 320px;
+        border-radius: 10%;
+        width: 90%;
+    } 
 .navbarView {
     display: grid;
     justify-content: left;

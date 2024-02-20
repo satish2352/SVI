@@ -79,7 +79,7 @@
 
                     </div>
                     <div class="col-md-9">
-                        <div class="tab-content p-3" id="nav-tabContent">
+                        <div class="tab-content" id="nav-tabContent">
                             <div class="row d-flex gallery" id="gallary_data">
                                 <div class="row row-cols-1 row-cols-md-4 ">
                                     @forelse($all_services as $key=>$categories_data)
@@ -176,7 +176,7 @@ function displayCategoryData(categoryData) {
 
     // Append product title and description
     $("#gallary_data").append(`
-    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis mt-lg-3">
+    <div class="col-lg-12 col-md-12 col-sm-12 main-card-product-dis">
         <div class="col-lg-12 col-md-12 col-sm-12 sub-card-product-dis py-2 px-4 ">
             <h4 class="card-title dis-ellipse fw-7 pb-3 titile-family"  data-aos="fade-up"  data-aos-duration="3000">${categoryData[0].product_title}</h4>
             <h4 class="card-title fw-7 dis-ellipse" data-aos="fade-up"  data-aos-duration="3000">${categoryData[0].product_description}</h4>

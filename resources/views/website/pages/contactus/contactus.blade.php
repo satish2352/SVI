@@ -8,7 +8,7 @@
 <section class="contactSection d-flex align-items-center">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-8 col-md-8 col-sm-12 col-12 d-flex align-items-center">
+      <div class="col-lg-8 col-md-12 col-sm-12 col-12 d-flex align-items-center">
         <div class="card border-0 contactPageCard shadow p-lg-4 p-2 px-lg-5" data-aos="zoom-in"
           data-aos-duration="3000">
           <div class="row">
@@ -110,7 +110,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-3 d-none d-sm-none d-md-block d-lg-block">
+      <div class="col-lg-3 col-md-6 d-none d-sm-none d-md-none d-lg-block">
         <div class="card contactInfoCard text-center border-0 p-4 shadow" data-aos="fade-left" data-aos-duration="3000">
           <div>
             <img src="{{ asset('website/assets/images/contact/phoneIcon.png')}}" alt="phoneIcon" />
