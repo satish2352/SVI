@@ -7,9 +7,9 @@
 }
 
 .main-product .card .card-body {
-    background-color: #ECFFFE;
+    background-color: #23569E;
     /* margin: 0px 42px; */
-    color:#23569E;
+    color: #fff !important;
     border-radius: 10px;
     box-shadow: 10px 10px 50px #00000012%;
 }
@@ -534,9 +534,9 @@
     height: 93px;
 }
 .main-product .card .card-body {
-  background-color: #ECFFFE;
+  background-color: #23569E;
   /* margin: 0px 21px; */
-  color:#23569E;
+  color: #fff !important;
   border-radius: 10px;
   box-shadow: 10px 10px 50px #00000012%;
 }
@@ -563,9 +563,9 @@
     height: 93px;
 }
 .main-product .card .card-body {
-  background-color: #ECFFFE;
-  color:#23569E;
+  background-color: #23569E;
   /* margin: 0px 21px; */
+  color: #fff !important;
   border-radius: 10px;
   box-shadow: 10px 10px 50px #00000012%;
 }
