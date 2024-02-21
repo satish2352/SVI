@@ -8,7 +8,8 @@
 
 .main-product .card .card-body {
     background-color: #ECFFFE;
-    margin: 0px 42px;
+    /* margin: 0px 42px; */
+    color:#23569E;
     border-radius: 10px;
     box-shadow: 10px 10px 50px #00000012%;
 }
@@ -534,7 +535,8 @@
 }
 .main-product .card .card-body {
   background-color: #ECFFFE;
-  margin: 0px 21px;
+  /* margin: 0px 21px; */
+  color:#23569E;
   border-radius: 10px;
   box-shadow: 10px 10px 50px #00000012%;
 }
@@ -562,7 +564,8 @@
 }
 .main-product .card .card-body {
   background-color: #ECFFFE;
-  margin: 0px 21px;
+  color:#23569E;
+  /* margin: 0px 21px; */
   border-radius: 10px;
   box-shadow: 10px 10px 50px #00000012%;
 }
