@@ -143,7 +143,7 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
 <section class="container videoCard ">
   <div class="card videoCard_card border-0 pt-md-3 pt-4 pb-2 pb-md-1">
     <div class="row bannerCardMainRow align-items-center">
-      <div class="col-lg-4 col-md-4 col-4 ">
+      <div class="col-lg-3 col-md-3 col-3 ">
         <h6 class="px-lg-5 py-lg-2 bannerCardHeading">
         ISO 9001:2015 certified company
         </h6>
@@ -153,7 +153,7 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
         Process Design And Economical Prices
         </h6>
       </div>
-      <div class="col-lg-4 col-md-4 col-4">
+      <div class="col-lg-5 col-md-5 col-5">
         <h6 class="px-lg-5 py-lg-2 bannerCardHeading">
         Durable and High Performance Graphite Equipment
         </h6>
