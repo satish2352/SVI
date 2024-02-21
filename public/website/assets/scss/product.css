@@ -15,7 +15,7 @@
 }
 
 .main-product .card .card-title {
-    color: #1C2B38;
+    color: #fff;
     font-size: 22px;
     font-weight: 700;
     display: flex;
@@ -334,7 +334,7 @@
 @media (max-width: 767px) {
 
   .main-product .card .card-title {
-    color: #1C2B38;
+    color: #fff;
     font-size: 14px !important;
     font-weight: 700;
     display: flex;
@@ -525,7 +525,7 @@
 }
 @media (min-width: 767px) and (max-width: 1024px) {
   .main-product .card .card-title {
-    color: #1C2B38;
+    color: #fff;
     font-size: 14px !important;
     font-weight: 700;
     display: flex;
@@ -554,7 +554,7 @@
 
 @media (min-width: 1024px) and (max-width: 1190px) {
   .main-product .card .card-title {
-    color: #1C2B38;
+    color: #fff;
     font-size: 14px;
     font-weight: 700;
     display: flex;
