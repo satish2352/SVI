@@ -26,22 +26,24 @@
                 <p class="p-0 m-0">
                   <span
                     ><a
-                      href="tel:+918605770042"
+                      href="tel:+917709777526"
                       style="font-size: 14px"
                       class="text-decoration-none text-white"
-                      >+91 8605770042</a
+                      >+91 7709777526</a
                     ></span
                   >
-                  <span
+                <div>
+                <span
                     ><a
-                      href="tel:+919850762935"
+                      href="tel:+919561834935"
                       style="font-size: 14px"
                       class="text-decoration-none text-white"
-                      >+91 9850762935</a
+                      >+91 9561834935</a
                     ></span
                   >
+</div>
                 </p>
-                <p class="p-0 m-0" style="font-size:14px;">
+                <!-- <p class="p-0 m-0" style="font-size:14px;">
                   LANDLINE:
                   <span
                     ><a
@@ -62,7 +64,7 @@
                       >+91 253 2326872</a
                     ></span
                   >
-                </p>
+                </p> -->
               </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-12 mt-4 quickLinksFooter">
@@ -101,7 +103,7 @@
                 Vrindavan Society, Wadala-Pathardi shivar, Indira Nagar, Nashik.
               </p>
               <p>
-                Plot No B - 226, B - 257, Malegaon MIDC Area, Sinnar, Dist.
+              Plot B - 224, Plot B - 226, Plot B - 257, Malegaon MIDC Area, Sinnar, Dist.
                 Nashik. Maharashtra, India.
               </p>
             </div>
@@ -112,21 +114,21 @@
                 alt="logo"
               /></a></h6>
               <p>
-                <a class="text-decoration-none d-flex footericonposition" href="mailto:svicpl@gmail.com"
-                  ><img
-                  src="{{ asset('website/assets/images/footeremail.png')}}"
-                  class="footericonsize"
-                  alt="logo"
-                /> <span class="footericon">svicpl@gmail.com</span></a
-                >
-              </p>
-              <p>
                 <a class="text-decoration-none d-flex footericonposition" href="mailto:mktdev@svicarbon.com"
                   ><img
                   src="{{ asset('website/assets/images/footeremail.png')}}"
                   class="footericonsize"
                   alt="logo"
                 /> <span class="footericon">mktdev@svicarbon.com</span></a
+                >
+              </p>
+              <p>
+                <a class="text-decoration-none d-flex footericonposition" href="mailto:svicpl@gmail.com"
+                  ><img
+                  src="{{ asset('website/assets/images/footeremail.png')}}"
+                  class="footericonsize"
+                  alt="logo"
+                /> <span class="footericon">svicpl@gmail.com</span></a
                 >
               </p>
               <p>
@@ -174,7 +176,7 @@
       <section class="copyright text-center">
         <div class="container wow fadeInUp" data-wow-delay="400ms">
             <p class="copyright__text">Copyright @2024 <span class="dynamic-year"></span><!-- /.dynamic-year --> 
-                | Shri Vyanktesh Industries Designed by 
+                | SVI Designed by 
                 <a href="https://www.sumagoinfotech.com/index1.php" target="_blank">
                     <img src="{{ asset('website/assets/images/red-heart.png')}}" className="img-fluid" style="width:20px " alt="" />
                   </a>From Nashik 

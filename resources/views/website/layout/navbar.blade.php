@@ -145,17 +145,17 @@ $common_data = App\Http\Controllers\Website\IndexController::getCommonBanner($pa
     <div class="row bannerCardMainRow align-items-center">
       <div class="col-lg-4 col-md-4 col-4 ">
         <h6 class="px-lg-5 py-lg-2 bannerCardHeading">
-          ISO 9000 CERTIFIED COMPANY
+        ISO 9001:2015 certified company
         </h6>
       </div>
       <div class="col-lg-4 col-md-4 col-4">
         <h6 class="px-lg-5 py-lg-2 bannerCardHeading">
-          PROFESSIONAL AND TIMELY SERVICE
+        Process Design And Economical Prices
         </h6>
       </div>
       <div class="col-lg-4 col-md-4 col-4">
         <h6 class="px-lg-5 py-lg-2 bannerCardHeading">
-          WE MAKE DURABLE GRAPHITE PRODUCTS
+        Durable and High Performance Graphite Equipment
         </h6>
       </div>
     </div>

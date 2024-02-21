@@ -87,14 +87,14 @@ class OurProductController extends Controller
 {
     $id = $request->input('id'); // Assuming the 'id' value is present in the request
     $rules = [
-        'product_name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('our_product', 'product_name')->ignore($id, 'id')],
+        'product_name' => ['required', 'max:255', Rule::unique('our_product', 'product_name')->ignore($id, 'id')],
         'product_title' => 'required|max:255',
         'product_description' => 'required',
     ];
 
     $messages = [
         'product_name.required' => 'Please enter an title.',
-        'product_name.regex' => 'Please  enter text only.',
+        // 'product_name.regex' => 'Please  enter text only.',
         // 'product_name.max' => 'Please enter an  title with a maximum of 255 characters.',
         'product_name.unique' => 'The title already exists.',
         'product_title.required'       =>  'Please enter title.',

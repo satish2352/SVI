@@ -4,7 +4,7 @@
     <div class="main-product bg-white">
 
 
-        <section class="main-product">
+        <!-- <section class="main-product">
             <div class="container-fluid">
               <h4 class="product-name py-4">Product</h4>
               <div class="row">
@@ -44,7 +44,7 @@
             </div>
            </section>
            
-        <section class="main-product-sub">
+        <section class="main-product-sub"> -->
             <div class="container-fluid">
                 <h4 class="product-name">Our Products</h4>
                 <div class="row">

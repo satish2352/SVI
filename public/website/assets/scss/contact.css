@@ -109,6 +109,7 @@ input[type=number] {
 .contactInfoCard h5 {
   color: #23569E;
   font-weight: 600;
+  font-size: 20px;
 }
 .telf{
   font-size: 14px

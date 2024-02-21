@@ -30,15 +30,15 @@
                     @endif
                   </div>
                 </div>
-                <div class="col-md-6 pt-md-0 pt-2">
+                <div class="col-md-6 pt-2">
                   <div class="">
-                    <label for="email"><strong style="color:#323232"> Email </strong></label>
-                    <input type="email" placeholder="Email Address" name="email" value="{{ old('email') }}"
+                    <label for="subject"><strong style="color:#323232"> Company Name </strong></label>
+                    <input type="text" placeholder="Enter Company Name" name="subject" value="{{ old('subject') }}"
                       class="form-control">
                     <span id="number-validate" class="red-text"></span>
-                    @if ($errors->has('email'))
+                    @if ($errors->has('subject'))
                     <span class="red-text">
-                      <?php echo $errors->first('email', ':message'); ?>
+                      <?php echo $errors->first('subject', ':message'); ?>
                     </span>
                     @endif
                   </div>
@@ -57,15 +57,15 @@
 
                   </div>
                 </div>
-                <div class="col-md-6 pt-2">
+                <div class="col-md-6 pt-md-0 pt-2">
                   <div class="">
-                    <label for="subject"><strong style="color:#323232"> Subject </strong></label>
-                    <input type="text" placeholder="Subject" name="subject" value="{{ old('subject') }}"
+                    <label for="email"><strong style="color:#323232"> Email Id</strong></label>
+                    <input type="email" placeholder="Email Address" name="email" value="{{ old('email') }}"
                       class="form-control">
                     <span id="number-validate" class="red-text"></span>
-                    @if ($errors->has('subject'))
+                    @if ($errors->has('email'))
                     <span class="red-text">
-                      <?php echo $errors->first('subject', ':message'); ?>
+                      <?php echo $errors->first('email', ':message'); ?>
                     </span>
                     @endif
                   </div>
@@ -118,14 +118,14 @@
           </div>
           <div class="text-start contactText">
             <p class="p-0 m-0 alignbox ">
-              <span><a href="tel:+918605770042" style="font-size: 14px"
-                  class="text-decoration-none text-black contactPtext telf">+91 8605770042</a></span>
-              <span><a href="tel:+919850762935" style="font-size: 14px"
-                  class="text-decoration-none text-black contactPtext telf">+91 9850762935</a></span>
+              <span><a href="tel:+917709777526" style="font-size: 14px"
+                  class="text-decoration-none text-black contactPtext telf">+91 7709777526</a></span>
+              <span><a href="tel:+919561834935" style="font-size: 14px"
+                  class="text-decoration-none text-black contactPtext telf">+91 9561834935</a></span>
             </p>
             <!-- ========================== -->
             
-            <p class="p-0 m-0 alignbox" style="font-size:14px">
+            <!-- <p class="p-0 m-0 alignbox" style="font-size:14px">
               LANDLINE:
               <span><a href="tel:+912536698006" 
                   class="text-decoration-none text-black contactPtext telf">+91 253 6698006
@@ -135,14 +135,19 @@
               FAX:
               <span><a href="fax:+912532326872" 
                   class="text-decoration-none text-black contactPtext telf">+91 253 2326872</a></span>
+            </p> -->
+            <p class="p-0 m-0">
+              
+              <span><a href="mktdev@svicarbon.com" 
+                  class="text-decoration-none text-black contactPtext telf">mktdev@svicarbon.com</a></span>
             </p>
             <p class="p-0 m-0">
-              <!-- FAX: -->
+              
               <span><a href="svicpl@gmail.com" 
                   class="text-decoration-none text-black contactPtext telf">svicpl@gmail.com</a></span>
             </p>
             <p class="p-0 m-0">
-              <!-- FAX: -->
+           
               <span><a href="svic12@rediffmail.com" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext telf">svic12@rediffmail.com</a></span>
             </p>
@@ -150,13 +155,14 @@
         </div>
         <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow" data-aos="fade-left"
           data-aos-duration="3000">
-          <div>
+          <!-- <div>
             <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" />
             <h5 class="mt-2">Scan</h5>
-          </div>
+          </div> -->
           <div class="text-center">
-            <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-50" alt="scanner" />
+            <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-75" alt="scanner" />
           </div>
+          <h5 class="mt-2">Scan to float an enquiry</h5>
         </div>
       </div>
     </div>
@@ -204,12 +210,13 @@
         <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow" data-aos="fade-left"
           data-aos-duration="3000">
           <div>
-            <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" />
-            <h5 class="mt-2">Scan</h5>
+            <!-- <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" /> -->
+            <!-- <h5 class="mt-2">Scan to float an enquiry</h5> -->
           </div>
           <div class="text-center">
-            <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-50" alt="scanner" />
+            <img src="{{ asset('website/assets/images/contact/scanner.png')}}" class="w-75" alt="scanner" />
           </div>
+          <h5 class="mt-2">Scan to float an enquiry</h5>
         </div>
       </div>
     </div>
@@ -296,46 +303,83 @@
 <!-- Unit Section Ends Here -->
 <!-- ------------------------------------------------------------------------------------>
 
-
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
 <script>
-  $(document).ready(funct          $("#regForm").val          error        ,
-      rules          ame: {
-                            spcenotallo                   il: {
-             rue,
-          e            },
-                 {
-        ired: true,
-                true,
-        }           {
-          require                   sage: {
-             rue,
-          s        rue             },
-                  full_name:           ed: "Enter Full Name        pce      "En      ext",
-              mail: {
-               ter Email Id",
-          spce          ome Text",
-        },
-        mob                   d: "Enter                   pattern: "Invalid M                 remote: "This mobile numbe        ts.        pcenotallow: "Ent               },
-        subject: {
-                er Subject",
-        },
-        me           required: "Enter Message",
-        },
-      }           function (element, errorClass) {        men        (errorClass          submitHandler: function (fo        //         TCHA challe                 if (grecaptcha.getRe        ")         a      se complete the reC APTCHA challenge.");
-                     // Proceed with form submi               bmit();
-        }
-       }
-    })        t#document_file").hide();
+  $(document).ready(function() {
+
+      $("#regForm").validate({
+          errorClass: "error",
+          rules: {
+              full_name: {
+                  required: true,
+                  spcenotallow: true,
+              },
+              email: {
+                  required: true,
+                  email: true,
+              },
+              mobile_number: {
+                  required: true,
+                  spcenotallow: true,
+              },
+              subject: {
+                  required: true,
+              },
+              message: {
+                  required: true,
+                  spcenotallow: true,
+              },
+          },
+          messages: {
+              full_name: {
+                  required: "Enter Full Name",
+                  spcenotallow: "Enter Some Text",
+              },
+              email: {
+                  required: "Enter Email Id",
+                  spcenotallow: "Enter Some Text",
+              },
+              mobile_number: {
+                  required: "Enter Mobile Number",
+                  pattern: "Invalid Mobile Number",
+                  remote: "This mobile number already exists.",
+                  spcenotallow: "Enter Some Text",
+              },
+              subject: {
+                  required: "Enter Subject",
+              },
+              message: {
+                  required: "Enter Message",
+              },
+          },
+          highlight: function(element, errorClass) {
+              $(element).removeClass(errorClass);
+          },
+          submitHandler: function(form) {
+              // Check if reCAPTCHA challenge is completed
+              if (grecaptcha.getResponse() === "") {
+                  alert("Please complete the reCAPTCHA challenge.");
+              } else {
+                  // Proceed with form submission
+                  form.submit();
+              }
+          }
+      });
+
+      $("input#document_file").hide();
 
   });
 
-  $.extend(        thods, {
-    spcenotallow: function (b,          (!this.depend(d, c)) return "dependency-mismatch";
-        ect" ===           Case()) {
-        var e = a(c).v          rn e && e.lengt                 t    eckab    ? this.getLength(b, c) > 0 : b.trim().length > 0
-    }
+  $.extend($.validator.methods, {
+      spcenotallow: function(b, c, d) {
+          if (!this.depend(d, c)) return "dependency-mismatch";
+          if ("select" === c.nodeName.toLowerCase()) {
+              var e = a(c).val();
+              return e && e.length > 0
+          }
+          return this.checkable(c) ? this.getLength(b, c) > 0 : b.trim().length > 0
+      }
   });
 </script>
 @endsection

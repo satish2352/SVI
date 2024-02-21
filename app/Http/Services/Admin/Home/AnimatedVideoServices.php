@@ -25,6 +25,8 @@ class AnimatedVideoServices
     {
         try {
             $last_id = $this->repo->addAll($request);
+            dd($last_id);
+            die();
             $path = Config::get('DocumentConstant.ANIMATED_VIDEO_ADD');
             $ImageName = $last_id['ImageName'];
             uploadImage($request, 'video_upload', $path, $ImageName);

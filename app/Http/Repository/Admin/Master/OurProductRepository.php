@@ -72,7 +72,7 @@ class OurProductRepository{
             // $incidenttype_data->url = $request['url'];
           
             $incidenttype_data->save();        
-           
+       
             return [
                 'msg' => 'Product Category updated successfully.',
                 'status' => 'success'
