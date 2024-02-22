@@ -12,6 +12,11 @@
         <div class="card border-0 contactPageCard shadow p-lg-4 p-2 px-lg-5" data-aos="zoom-in"
           data-aos-duration="3000">
           <div class="row">
+            @if(Session::has('success_message'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('success_message') }}
+    </div>
+@endif
             <h2 class="text-start heading media-heading">CONTACT US</h2>
             <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
               enctype="multipart/form-data">
@@ -195,6 +200,12 @@
               <span><a href="fax:+912532326872" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext">+91 253 2326872</a></span>
             </p> --}}
+
+            <p class="p-0 m-0">
+              <!-- FAX: -->
+              <span><a href="mktdev@svicarbon.com" style="font-size: 14px"
+                  class="text-decoration-none text-black contactPtext">mktdev@svicarbon.com</a></span>
+            </p>
             <p class="p-0 m-0">
               <!-- FAX: -->
               <span><a href="svicpl@gmail.com" style="font-size: 14px"
@@ -347,7 +358,7 @@
                   spcenotallow: "Enter Some Text",
               },
               subject: {
-                  required: "Enter Subject",
+                  required: "Enter Company Name",
               },
               message: {
                   required: "Enter Message",

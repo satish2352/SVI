@@ -34,10 +34,10 @@ class ContactUsController extends Controller
         $messages = [   
             'full_name.required' => 'Please Enter Full Name.',
             'email.required' => 'Please Enter Email.',
-            'email.email' => 'Please Enter a Valid Email Address.',
+            'email.email' => 'Please Enter a Valid Email Id.',
             'mobile_number.required' => 'Please Enter Mobile Number.',
             'mobile_number.regex' => 'Please Enter a Valid Mobile Number.',
-            'subject.required' => 'Please Enter Subject.',
+            'subject.required' => 'Please Enter Company Name.',
             'message.required' => 'Please Enter Message.',
             'g-recaptcha-response.captcha' => 'Captcha error! try again later or contact site admin.',
             'g-recaptcha-response.required' =>'Please verify that you are not a robot.',
@@ -61,7 +61,10 @@ class ContactUsController extends Controller
                     $msg = $add_contact['msg'];
                     $status = $add_contact['status'];
                     if($status=='success') {
-                        Session::flash('success_message', 'Contact Us submitted successfully!');
+                        // Inside your controller method handling the form submission
+return redirect()->back()->with('success_message', 'Your message has been submitted successfully!');
+
+                        // Session::flash('success_message', 'Contact Us submitted successfully!');
                         return redirect('contactus')->with(compact('msg','status'));
                     }
                     else {
