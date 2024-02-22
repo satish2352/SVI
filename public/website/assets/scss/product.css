@@ -17,7 +17,7 @@
 .main-product .card .card-title {
     color: #fff;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
     display: flex;
     justify-content: center !important;
     text-align: center;
@@ -336,7 +336,7 @@
   .main-product .card .card-title {
     color: #fff;
     font-size: 14px !important;
-    font-weight: 700;
+    font-weight: 500 !important;
     display: flex;
     justify-content: start;
     font-family: "Volkhov", serif;
@@ -527,7 +527,7 @@
   .main-product .card .card-title {
     color: #fff;
     font-size: 14px !important;
-    font-weight: 700;
+    font-weight: 500;
     display: flex;
     justify-content: start;
     font-family: "Volkhov", serif;
@@ -556,7 +556,7 @@
   .main-product .card .card-title {
     color: #fff;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     display: flex;
     justify-content: start;
     font-family: "Volkhov", serif;

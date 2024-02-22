@@ -57,10 +57,10 @@
 
                   </div>
                 </div>
-                <div class="col-md-6 pt-md-0 pt-2">
+                <div class="col-md-6 pt-2">
                   <div class="">
                     <label for="email"><strong style="color:#323232"> Email Id</strong></label>
-                    <input type="email" placeholder="Email Address" name="email" value="{{ old('email') }}"
+                    <input type="email" placeholder="Email Id" name="email" value="{{ old('email') }}"
                       class="form-control">
                     <span id="number-validate" class="red-text"></span>
                     @if ($errors->has('email'))
@@ -179,12 +179,12 @@
           </div>
           <div class="text-start contactText">
             <p class="p-0 m-0">
-              <span><a href="tel:+918605770042" style="font-size: 14px"
-                  class="text-decoration-none text-black contactPtext">+91 8605770042</a></span>
+              <span><a href="tel:+917709777526" style="font-size: 14px"
+                  class="text-decoration-none text-black contactPtext">+91 7709777526</a></span>
               <br><span><a href="tel:+919850762935" style="font-size: 14px"
-                  class="text-decoration-none text-black contactPtext">+91 9850762935</a></span>
+                  class="text-decoration-none text-black contactPtext">+91 9561834935</a></span>
             </p>
-            <p class="p-0 m-0" style="font-size:16px">
+            {{-- <p class="p-0 m-0" style="font-size:16px">
               LANDLINE:
               <span><a href="tel:+912536698006" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext">+91 253 6698006
@@ -194,7 +194,7 @@
               FAX:
               <span><a href="fax:+912532326872" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext">+91 253 2326872</a></span>
-            </p>
+            </p> --}}
             <p class="p-0 m-0">
               <!-- FAX: -->
               <span><a href="svicpl@gmail.com" style="font-size: 14px"

@@ -8,7 +8,7 @@
 <section class="bg-white">
   <div class="container-fluid m-0 p-0">
     <video autoplay loop muted playsinline class="videoBanner" controls>
-      <source src="{{ asset('website/assets/images/home/mediaSampleVideo.mp4')}}" type="video/mp4">
+      <source src="{{ asset('website/assets/images/home/sampleVideo.mp4')}}" type="video/mp4">
       <!-- Add additional source elements for different formats if needed -->
       Your browser does not support the video tag.
     </video>

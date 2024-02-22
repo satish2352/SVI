@@ -109,7 +109,7 @@
       <!-- ------------------------------------------------------------------------------------>
       <!-- Square Banner Section Starts Here -->
       <!-- ------------------------------------------------------------------------------------>
-      <section class="d-none d-sm-none d-md-block d-lg-block">
+      <section class="">
         <div class="container-fluid p-0">
           <img src="{{ asset('website/assets/images/aboutus/HomePageBanner.png') }}" alt="" class="img-fluid" />
         </div>
