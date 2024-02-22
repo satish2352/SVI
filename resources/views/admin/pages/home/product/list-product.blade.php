@@ -6,8 +6,8 @@
             <div class="page-header">
                 <h3 class="page-title">
                     Product List
-                    <a href="{{ route('add-product') }}" class="btn btn-sm btn-primary ml-3">+
-                        Add</a>
+                    {{-- <a href="{{ route('add-product') }}" class="btn btn-sm btn-primary ml-3">+
+                        Add</a> --}}
 
                 </h3>
                 <nav aria-label="breadcrumb">
@@ -32,7 +32,7 @@
                                                     <th>Title</th>
                                                     <th>Description </th>
                                                     <th>Image</th>
-                                                    <th>Status</th>
+                                                    {{-- <th>Status</th> --}}
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -46,7 +46,7 @@
                                                                 src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $item->image }}"
                                                                 alt=" {{ strip_tags($item['title']) }} Image" />
                                                         </td>
-                                                        <td>
+                                                        {{-- <td>
                                                             <label class="switch">
                                                                 <input data-id="{{ $item->id }}" type="checkbox"
                                                                     {{ $item->is_active ? 'checked' : '' }}
@@ -56,7 +56,7 @@
                                                                 <span class="slider round"></span>
                                                             </label>
 
-                                                        </td>
+                                                        </td> --}}
                                                         <td>
                                                             <div class="d-flex">
                                                                 <a href="{{ route('edit-product', base64_encode($item->id)) }}"
@@ -68,9 +68,9 @@
                                                                     class="show-btn btn btn-sm btn-outline-primary m-1"
                                                                     title="Show Slide "><i class="fas fa-eye"></i></a>
 
-                                                                <a data-id="{{ $item->id }}"
+                                                                {{-- <a data-id="{{ $item->id }}"
                                                                     class="delete-btn btn btn-sm btn-outline-danger m-1"
-                                                                    title="Delete Slide"><i class="fas fa-archive"></i></a>
+                                                                    title="Delete Slide"><i class="fas fa-archive"></i></a> --}}
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -86,10 +86,10 @@
                 </div>
             </div>
         </div>
-        <form method="POST" action="{{ url('/delete-product') }}" id="deleteform">
+        {{-- <form method="POST" action="{{ url('/delete-product') }}" id="deleteform">
             @csrf
             <input type="hidden" name="delete_id" id="delete_id" value="">
-        </form>
+        </form> --}}
         <form method="POST" action="{{ url('/show-product') }}" id="showform">
             @csrf
             <input type="hidden" name="show_id" id="show_id" value="">
