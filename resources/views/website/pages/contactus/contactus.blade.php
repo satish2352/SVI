@@ -4,7 +4,27 @@
 <!-- ------------------------------------------------------------------------------------>
 <!-- Contact Section Ends Here -->
 <!-- ------------------------------------------------------------------------------------>
+@if (Session::get('status') == 'success')
+<div class="col-12 grid-margin">
+    <div class="alert alert-success" id="success-alert">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong> <span id="data_to_show">
+                {{ Session::get('msg') }}
+            </span> </strong>
+    </div>
+</div>
+@endif
 
+@if (Session::get('status') == 'error')
+<div class="col-12 grid-margin">
+    <div class="alert alert-danger" id="danger-alert">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong> <span id="data_to_show">
+                {!! session('msg') !!}
+            </span> </strong>
+    </div>
+</div>
+@endif
 <section class="contactSection d-flex align-items-center">
   <div class="container">
     <div class="row justify-content-center">
@@ -12,11 +32,7 @@
         <div class="card border-0 contactPageCard shadow p-lg-4 p-2 px-lg-5" data-aos="zoom-in"
           data-aos-duration="3000">
           <div class="row">
-            @if(Session::has('success_message'))
-    <div class="alert alert-success" role="alert">
-        {{ Session::get('success_message') }}
-    </div>
-@endif
+         
             <h2 class="text-start heading media-heading">CONTACT US</h2>
             <form class="forms-sample" action="{{ url('add-contactus') }}" id="regForm" method="POST"
               enctype="multipart/form-data">
@@ -153,8 +169,8 @@
             </p>
             <p class="p-0 m-0">
            
-              <span><a href="svic12@rediffmail.com" style="font-size: 14px"
-                  class="text-decoration-none text-black contactPtext telf">svic12@rediffmail.com</a></span>
+              <span><a href="purchase@svicarbon.com" style="font-size: 14px"
+                  class="text-decoration-none text-black contactPtext telf">purchase@svicarbon.com</a></span>
             </p>
           </div>
         </div>
@@ -213,8 +229,8 @@
             </p>
             <p class="p-0 m-0">
               <!-- FAX: -->
-              <span><a href="svic12@rediffmail.com" style="font-size: 14px"
-                  class="text-decoration-none text-black contactPtext">svic12@rediffmail.com</a></span>
+              <span><a href="purchase@svicarbon.com" style="font-size: 14px"
+                  class="text-decoration-none text-black contactPtext">purchase@svicarbon.com</a></span>
             </p>
           </div>
         </div>
