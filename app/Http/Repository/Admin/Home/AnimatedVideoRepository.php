@@ -81,7 +81,7 @@ class AnimatedVideoRepository  {
             $previousEnglishImage = $dataOutput->video_upload;
 
             // Update the fields from the request
-            $dataOutput->name = $request['name'];
+            // $dataOutput->name = $request['name'];
             
             $dataOutput->save();
             $last_insert_id = $dataOutput->id;
