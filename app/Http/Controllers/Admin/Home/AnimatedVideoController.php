@@ -88,13 +88,13 @@ class AnimatedVideoController extends Controller
 
         public function update(Request $request){
             $rules = [
-                'name' => 'required',
+                // 'name' => 'required',
                 'video_upload' => 'required',
                 
             ];
     
             $messages = [   
-                'name.required'=>'Please enter name.',
+                // 'name.required'=>'Please enter name.',
                 'video_upload.required' => 'Please  upload video upload.',
                              
             ];
