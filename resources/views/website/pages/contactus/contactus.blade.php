@@ -67,8 +67,8 @@
                 <div class="col-md-6 pt-2">
                   <div class="">
                     <label for="mobile_number"><strong style="color:#323232"> Mobile Number </strong></label>
-                    <input type="number" placeholder="Mobile Number" name="mobile_number"
-                      value="{{ old('mobile_number') }}" class="form-control">
+                    <input type="text" placeholder="Mobile Number" name="mobile_number"
+                      value="{{ old('mobile_number') }}" class="form-control" maxlength="10" minlength="10" onkeyup="addvalidateMobileNumber(this.value)">
                     <span id="number-validate" class="red-text"></span>
                     @if ($errors->has('mobile_number'))
                     <span class="red-text">
@@ -332,6 +332,18 @@
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+<script>
+  function addvalidateMobileNumber(number) {
+      var mobileNumberPattern = /^\d*$/;
+      var validationMessage = document.getElementById("validation-message");
+
+      if (mobileNumberPattern.test(number)) {
+          validationMessage.textContent = "";
+      } else {
+          validationMessage.textContent = "Please enter only numbers.";
+      }
+  }
+</script>
 <script>
   $(document).ready(function() {
 
