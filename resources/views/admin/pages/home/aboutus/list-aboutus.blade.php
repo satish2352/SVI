@@ -33,7 +33,7 @@
                                                     <th>Sr. No.</th>
                                                     <th>Video</th>
                                                     <th>Description</th>
-                                                    <th>Status</th>
+                                                    {{-- <th>Status</th> --}}
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -47,7 +47,7 @@
                                                         </video></td>
 
                                                         <td>{{ strip_tags($item->description) }}</td>
-                                                        <td>
+                                                        {{-- <td>
                                                             <label class="switch">
                                                                 <input data-id="{{ $item->id }}" type="checkbox"
                                                                     {{ $item->is_active ? 'checked' : '' }}
@@ -57,7 +57,7 @@
                                                                 <span class="slider round "></span>
                                                             </label>
 
-                                                        </td>
+                                                        </td> --}}
                                                         <td>
                                                             <div class="d-flex">
                                                                

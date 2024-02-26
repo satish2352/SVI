@@ -31,7 +31,7 @@
                                                     <th>Sr. No.</th>
                                                     <th>Title</th>
                                                     <th>Image</th>
-                                                    <th>Status</th>
+                                                    {{-- <th>Status</th> --}}
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -44,7 +44,7 @@
                                                                 src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item->image }}"
                                                                 alt=" {{ strip_tags($item['title']) }} Image" />
                                                         </td>
-                                                        <td>
+                                                        {{-- <td>
                                                             <label class="switch">
                                                                 <input data-id="{{ $item->id }}" type="checkbox"
                                                                     {{ $item->is_active ? 'checked' : '' }}
@@ -54,7 +54,7 @@
                                                                 <span class="slider round"></span>
                                                             </label>
 
-                                                        </td>
+                                                        </td> --}}
                                                         <td>
                                                             <div class="d-flex">
                                                                 <a href="{{ route('edit-product-services', base64_encode($item->id)) }}"
