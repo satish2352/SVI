@@ -12,7 +12,10 @@
   background: #23569E;
   color: white;
 }
-
+.formSubmit:hover {
+  background: #23569E;
+  color: white;
+}
 .unitCard {
   border-left: 0;
   border-right: 0;

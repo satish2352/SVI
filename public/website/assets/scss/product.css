@@ -335,7 +335,7 @@
 
   .main-product .card .card-title {
     color: #fff;
-    font-size: 14px !important;
+    font-size: 18px !important;
     font-weight: 500 !important;
     display: flex;
     justify-content: start;
@@ -526,7 +526,7 @@
 @media (min-width: 767px) and (max-width: 1024px) {
   .main-product .card .card-title {
     color: #fff;
-    font-size: 14px !important;
+    font-size: 18px !important;
     font-weight: 500;
     display: flex;
     justify-content: start;

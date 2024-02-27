@@ -163,12 +163,12 @@
             </p> -->
             <p class="p-0 m-0">
               
-              <span><a href="mktdev@svicarbon.com" 
+              <span><a href="mailto:mktdev@svicarbon.com" 
                   class="text-decoration-none text-black contactPtext telf">mktdev@svicarbon.com</a></span>
             </p>
             <p class="p-0 m-0">
               
-              <span><a href="svicpl@gmail.com" 
+              <span><a href="mailto:svicpl@gmail.com" 
                   class="text-decoration-none text-black contactPtext telf">svicpl@gmail.com</a></span>
             </p>
             <p class="p-0 m-0">
@@ -224,12 +224,12 @@
 
             <p class="p-0 m-0">
               <!-- FAX: -->
-              <span><a href="mktdev@svicarbon.com" style="font-size: 14px"
+              <span><a href="mailto:mktdev@svicarbon.com" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext">mktdev@svicarbon.com</a></span>
             </p>
             <p class="p-0 m-0">
               <!-- FAX: -->
-              <span><a href="svicpl@gmail.com" style="font-size: 14px"
+              <span><a href="mailto:svicpl@gmail.com" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext">svicpl@gmail.com</a></span>
             </p>
             <p class="p-0 m-0">
