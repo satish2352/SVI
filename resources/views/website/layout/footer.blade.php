@@ -14,15 +14,15 @@
                 <img
                   src="{{ asset('website/assets/images/logo1.png')}}"
                   class="mt-3 mx-auto"
-                  style="width: 20%"
+                  style="width: 40%"
                   alt="logo"
                 /><br />
-                <img
+                {{-- <img
                   src="{{ asset('website/assets/images/footerLogo.png')}}"
                   class="my-2 mx-auto w-75"
                   alt="logo"
-                />
-                <h6>GET IN TOUCH</h6>
+                /> --}}
+                <h6 class="pt-2">GET IN TOUCH</h6>
                 <p class="p-0 m-0">
                   <span
                     ><a
@@ -176,7 +176,7 @@
       <section class="copyright text-center">
         <div class="container wow fadeInUp" data-wow-delay="400ms">
             <p class="copyright__text">Copyright @2024 <span class="dynamic-year"></span><!-- /.dynamic-year --> 
-                | SVI Designed by 
+                | SVICPL Designed by 
                 <a href="https://www.sumagoinfotech.com/index1.php" target="_blank">
                     <img src="{{ asset('website/assets/images/red-heart.png')}}" className="img-fluid" style="width:20px " alt="" />
                   </a>From Nashik 
