@@ -1,30 +1,33 @@
 @extends('website.layout.master')
 
 @section('content')
+<style>
+  .error{
+    color: red !important;
+    font-size: 14px;
+}
+  </style>
 <!-- ------------------------------------------------------------------------------------>
 <!-- Contact Section Ends Here -->
 <!-- ------------------------------------------------------------------------------------>
-@if (Session::get('status') == 'success')
-<div class="col-12 grid-margin">
+@if (Session::has('status') && Session::get('status') == 'success')
+<div class="col-12 grid-margin d-flex align-items-center justify-content-center">
     <div class="alert alert-success" id="success-alert">
-        <button type="button" class="close" data-dismiss="alert">x</button>
-        <strong> <span id="data_to_show">
-                {{ Session::get('msg') }}
-            </span> </strong>
+        <button type="button" class="closebtn" onclick="dismissAlert('success-alert')">x</button>
+        <strong><span id="data_to_show">{{ Session::get('msg') }}</span></strong>
     </div>
 </div>
 @endif
 
-@if (Session::get('status') == 'error')
-<div class="col-12 grid-margin">
+@if (Session::has('status') && Session::get('status') == 'error')
+<div class="col-12 grid-margin d-flex align-items-center justify-content-center">
     <div class="alert alert-danger" id="danger-alert">
-        <button type="button" class="close" data-dismiss="alert">x</button>
-        <strong> <span id="data_to_show">
-                {!! session('msg') !!}
-            </span> </strong>
+        <button type="button" class="closebtn" onclick="dismissAlert('danger-alert')">x</button>
+        <strong><span id="data_to_show">{!! session('msg') !!}</span></strong>
     </div>
 </div>
 @endif
+
 <section class="contactSection d-flex align-items-center">
   <div class="container">
     <div class="row justify-content-center">
@@ -51,7 +54,7 @@
                     @endif
                   </div>
                 </div>
-                <div class="col-md-6 pt-2">
+                <div class="col-md-6">
                   <div class="">
                     <label for="subject"><strong style="color:#323232"> Company Name </strong></label>
                     <input type="text" placeholder="Enter Company Name" name="subject" value="{{ old('subject') }}"
@@ -132,7 +135,8 @@
         </div>
       </div>
       <div class="col-lg-3 col-md-6 d-none d-sm-none d-md-none d-lg-block">
-        <div class="card contactInfoCard text-center border-0 p-4 shadow" data-aos="fade-left" data-aos-duration="3000">
+        <div class="card contactInfoCard text-center border-0 p-4 shadow" data-aos="fade-up"
+        data-aos-duration="3000">
           <div>
             <img src="{{ asset('website/assets/images/contact/phoneIcon.png')}}" alt="phoneIcon" />
             <h5 class="mb-2 mt-2">Phone no.</h5>
@@ -174,8 +178,8 @@
             </p>
           </div>
         </div>
-        <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow" data-aos="fade-left"
-          data-aos-duration="3000">
+        <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow" data-aos="fade-up"
+        data-aos-duration="3000">
           <!-- <div>
             <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" />
             <h5 class="mt-2">Scan</h5>
@@ -193,7 +197,8 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-10 d-block d-sm-block d-md-block d-lg-none">
-        <div class="card contactInfoCard text-center border-0 p-4 shadow" data-aos="fade-left" data-aos-duration="3000">
+        <div class="card contactInfoCard text-center border-0 p-4 shadow" data-aos="fade-up"
+        data-aos-duration="3000">
           <div>
             <img src="{{ asset('website/assets/images/contact/phoneIcon.png')}}" alt="phoneIcon" />
             <h5 class="mb-2 mt-2">Phone no.</h5>
@@ -234,8 +239,8 @@
             </p>
           </div>
         </div>
-        <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow" data-aos="fade-left"
-          data-aos-duration="3000">
+        <div class="card contactInfoCard text-center border-0 p-4 mt-4 shadow" data-aos="fade-up"
+        data-aos-duration="3000">
           <div>
             <!-- <img src="{{ asset('website/assets/images/contact/scan.png')}}" alt="scan" /> -->
             <!-- <h5 class="mt-2">Scan to float an enquiry</h5> -->
@@ -329,9 +334,13 @@
 <!-- ------------------------------------------------------------------------------------>
 <!-- Unit Section Ends Here -->
 <!-- ------------------------------------------------------------------------------------>
+<script src="{{ asset('website/assets/js/jquery-3.7.0.min.js') }}"></script>
+    <script src="{{ asset('website/assets/js/jquery.validate.min.js') }}"></script>
 
+{{--      
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script> --}}
+
 <script>
   function addvalidateMobileNumber(number) {
       var mobileNumberPattern = /^\d*$/;
@@ -420,5 +429,16 @@
           return this.checkable(c) ? this.getLength(b, c) > 0 : b.trim().length > 0
       }
   });
+</script>
+
+<script>
+  function dismissAlert(alertId) {
+      var alertElement = document.getElementById(alertId);
+      if (alertElement) {
+          setTimeout(function() {
+              alertElement.style.display = "none";
+          }, 2000); // 2000 milliseconds = 2 seconds
+      }
+  }
 </script>
 @endsection

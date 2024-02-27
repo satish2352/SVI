@@ -16,22 +16,22 @@
                       <div class="card-body shadow-sm card-title" >Largest Heat Exchanger </div>
                     </div>
                   </div> --}}           
-                   @if (empty($data_output_all_product))
+                   {{-- @if (empty($data_output_all_product)) --}}
                    <div class="container">
                        <div class="row">
                            <h3 class="d-flex justify-content-center" style="color: #00000">No Data Found For Services</h3>
                        </div>
                    </div>
-               @else
-                   @foreach ($data_output_all_product as $product)
+               {{-- @else --}}
+                   {{-- @foreach ($data_output_all_product as $product) --}}
                    <div class="col-lg-4 col-md-4 col-sm-4" data-aos="zoom-in-up" data-aos-duration="3000">
                     <div class="card">
-                    <img src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}" alt="{{ strip_tags($product['title']) }}" class="img-fluid" />
-                    <div class="card-body shadow-sm card-title mob-size" data-aos="zoom-in-up" data-aos-duration="3000">{{ strip_tags($product['title']) }}</div>
+                    {{-- <img src="{{ Config::get('DocumentConstant.PRODUCT_VIEW') }}{{ $product['image'] }}" alt="{{ strip_tags($product['title']) }}" class="img-fluid" /> --}}
+                    {{-- <div class="card-body shadow-sm card-title mob-size" data-aos="zoom-in-up" data-aos-duration="3000">{{ strip_tags($product['title']) }}</div> --}}
                   </div>
                  </div>
-                  @endforeach
-                  @endif
+                  {{-- @endforeach
+                  @endif --}}
                   
         
                   {{-- <div class="col-lg-4 col-md-4 col-sm-4">

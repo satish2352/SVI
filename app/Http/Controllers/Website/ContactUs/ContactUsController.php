@@ -108,13 +108,29 @@ public function addContactUs(Request $request) {
         } else {
             $add_contact = $this->service->addAll($request);
 
-            if($add_contact['status'] == 'success') {
-                // dd($add_contact['status']);
-                // die();
-                return redirect()->back()->with('success_message', 'Your message has been submitted successfully!');
+
+
+            if ($add_contact) {
+                $msg = 'Contact Information Submitted Successfully!!';
+                $status = 'success';
             } else {
-                return redirect('contactus')->withInput()->with(compact('msg', 'status'));
+                $msg = 'Failed to Your Contact Information Submitted';
+                $status = 'error';
             }
+            
+            // Session::flash('success_message', 'Contact Us submitted successfully!');
+            $request->session()->flash('success', 'Contact Information Submitted Successfully!!');
+            return redirect('contactus')
+            ->with(compact('msg', 'status'));
+
+
+            // if($add_contact['status'] == 'success') {
+            //     // dd($add_contact['status']);
+            //     // die();
+            //     return redirect()->back()->with('success_message', 'Your message has been submitted successfully!');
+            // } else {
+            //     return redirect('contactus')->withInput()->with(compact('msg', 'status'));
+            // }
         }
     } catch (Exception $e) {
         return redirect('contactus')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);
