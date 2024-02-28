@@ -173,7 +173,7 @@
             </p>
             <p class="p-0 m-0">
            
-              <span><a href="purchase@svicarbon.com" style="font-size: 14px"
+              <span><a href="mailto:purchase@svicarbon.com" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext telf">purchase@svicarbon.com</a></span>
             </p>
           </div>
@@ -234,7 +234,7 @@
             </p>
             <p class="p-0 m-0">
               <!-- FAX: -->
-              <span><a href="purchase@svicarbon.com" style="font-size: 14px"
+              <span><a href="mailto:purchase@svicarbon.com" style="font-size: 14px"
                   class="text-decoration-none text-black contactPtext">purchase@svicarbon.com</a></span>
             </p>
           </div>

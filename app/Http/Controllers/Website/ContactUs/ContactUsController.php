@@ -111,15 +111,15 @@ public function addContactUs(Request $request) {
 
 
             if ($add_contact) {
-                $msg = 'Contact Information Submitted Successfully!!';
+                $msg = 'Contact Us Information Submitted Successfully!!';
                 $status = 'success';
             } else {
-                $msg = 'Failed to Your Contact Information Submitted';
+                $msg = 'Failed to Your Contact Us Information Submitted';
                 $status = 'error';
             }
             
             // Session::flash('success_message', 'Contact Us submitted successfully!');
-            $request->session()->flash('success', 'Contact Information Submitted Successfully!!');
+            $request->session()->flash('success', 'Contact Us Information Submitted Successfully!!');
             return redirect('contactus')
             ->with(compact('msg', 'status'));
 
