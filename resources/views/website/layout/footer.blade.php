@@ -176,8 +176,9 @@
       <section class="copyright text-center">
         <div class="container wow fadeInUp" data-wow-delay="400ms">
             <p class="copyright__text">Copyright @2024 <span class="dynamic-year"></span><!-- /.dynamic-year --> 
-                | SVICPL Designed by Sumago with 
+                | SVICPL Designed by 
                 <a href="https://www.sumagoinfotech.com/index1.php" target="_blank">
+                  Sumago with 
                     <img src="{{ asset('website/assets/images/red-heart.png')}}" className="img-fluid" style="width:20px " alt="" />
                   </a>From Nashik 
                   {{-- <a to="https://sumagoinfotech.com/" class="cursor" target="_blank">
