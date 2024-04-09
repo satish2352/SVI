@@ -131,7 +131,7 @@
 
 .footer-copyright{
   font-size: 18px !important;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
 
@@ -216,6 +216,8 @@
     }
     .footer-copyright{
       font-size: 14px !important;
+      color: #fff !important;
+      text-decoration: none;
     }
 }
 @media only screen and (min-width: 568px) and (max-width: 1366px) {
