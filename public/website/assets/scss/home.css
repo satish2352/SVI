@@ -129,6 +129,12 @@
     text-transform: uppercase;
 }
 
+.footer-copyright{
+  font-size: 18px !important;
+  color: #fff;
+  text-decoration: none;
+}
+
 /* media query */
 
 @media only screen and (max-width: 576px) {
@@ -207,6 +213,9 @@
         color: #23569E;
         padding-left: 0rem;
         font-size: 1.8rem;
+    }
+    .footer-copyright{
+      font-size: 14px !important;
     }
 }
 @media only screen and (min-width: 568px) and (max-width: 1366px) {
