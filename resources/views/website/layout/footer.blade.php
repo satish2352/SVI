@@ -99,12 +99,10 @@
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 contactUsFooter">
               <h6 class="mb-3 mt-2">CONTACT US</h6>
               <p>
-                Shri Venkatesh Bungalow, behind Vandana Park, near Shri
-                Vrindavan Society, Wadala-Pathardi shivar, Indira Nagar, Nashik.
+                Shri Venkatesh Bungalow, behind Vandana Park, Indira Nagar, Nashik-422009, Maharashtra, India.
               </p>
               <p>
-              Plot B - 224, Plot B - 226, Plot B - 257, Malegaon MIDC Area, Sinnar, Dist.
-                Nashik. Maharashtra, India.
+                B-224, B-226, B-257, MIDC Malegaon, Taluka- Sinnar, District- Nashik, Maharashtra-422113, India.
               </p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 mt-4 socialIconsFooter">
