@@ -173,7 +173,7 @@
 
       <section class="copyright text-center">
         <div class="container wow fadeInUp" data-wow-delay="400ms">
-            <p class="copyright__text">Copyright @2024 <span class="dynamic-year"></span><!-- /.dynamic-year --> 
+            <p class="copyright__text">Copyright @{{ date('Y') }} <span class="dynamic-year"></span><!-- /.dynamic-year --> 
                 | SVICPL Designed by 
                 <a href="https://www.sumagoinfotech.com" target="_blank" class="footer-copyright">
                  Sumago with 
